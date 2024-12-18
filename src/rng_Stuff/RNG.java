@@ -1,20 +1,19 @@
 package rng_Stuff;
 import java.util.Random;
-import java.util.Scanner;
+
+import utilidades.Utilidades;
 public class RNG {
 
-	public static int menu(Scanner sc) {
-		int menu;
+	public static int menu() {
 		System.out.println("1. Tem Armor");
 		System.out.println("2. Other RNG");
 		System.out.println("RNG choice:");
-		menu=sc.nextInt();
-		return menu;
+		return Utilidades.leerInt();
 	}
 	
-	public static void temArmor(Scanner sc, Random a) {
+	public static void temArmor(Random a) {
 		System.out.println("Specify the hit count (Tem Armor DMG Heal RNG):");
-		int times=sc.nextInt();
+		int times=Utilidades.leerInt();
 		for (int i=0;i<times;i++) {
 			int rng=a.nextInt(11);
 			if (rng==0) {
@@ -35,15 +34,13 @@ public class RNG {
 	}
 	
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
 		Random a= new Random();
-		Scanner sc= new Scanner(System.in);
 		int menu;
 		do {
-			switch (menu=menu(sc)) {
+			switch (menu=menu()) {
 			
 			case 1:
-				temArmor(sc,a);
+				temArmor(a);
 				break;
 				
 			case 2:
@@ -51,6 +48,5 @@ public class RNG {
 				break;
 			}
 		} while (menu!=1&&menu!=2);
-		sc.close();
 	}
 }
