@@ -8,7 +8,7 @@ public class RNG {
 		System.out.println("1. Tem Armor");
 		System.out.println("2. Other RNG");
 		System.out.println("RNG choice:");
-		return Utilidades.leerInt();
+		return Utilidades.leerInt(1,2);
 	}
 	
 	public static void temArmor(Random a) {
