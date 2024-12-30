@@ -25,7 +25,7 @@ public class RNG {
 	}
 	
 	public static void otherRNG(Random a) {
-		int rng=a.nextInt(101);
+		int rng=a.nextInt(4);
 		if (rng==0) {
 			System.out.println("The roll landed on 0.");
 			rng++;
