@@ -6,9 +6,9 @@ public class RNG {
 
 	public static void main(String[] args) {
 		Random a= new Random();
-		int menu;
+		int menu=menu();
 		do {
-			switch (menu=menu()) {
+			switch (menu) {
 
 			case 1:
 				temArmor(a);
