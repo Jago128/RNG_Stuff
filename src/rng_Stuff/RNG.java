@@ -2,6 +2,7 @@ package rng_Stuff;
 import java.util.Random;
 
 import utilidades.Utilidades;
+
 public class RNG {
 
 	public static void main(String[] args) {
