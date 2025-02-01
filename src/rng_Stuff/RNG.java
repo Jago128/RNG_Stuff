@@ -8,30 +8,31 @@ public class RNG {
 	public static void main(String[] args) {
 		Random a= new Random();
 		int menu=menu();
+		do {
+			switch (menu) {
+			case 1:
+				temArmorOrConchSlasherRNG(a);
+				break;
 
-		switch (menu) {
-		case 1:
-			temArmor(a);
-			break;
+			case 2:
+				otherRNG(a);
+				break;
 
-		case 2:
-			otherRNG(a);
-			break;
+			case 3:
+				characterRandom(a);
+				break;
 
-		case 3:
-			conchSlasherRNG(a);
-			break;
+			case 4:
+				conchDestroyerRNG(a);
+				break;
 
-		case 4:
-			conchDestroyerRNG(a);
-			break;
-
-		case 0:
-			System.out.println("Program end.");
-		}
+			case 0:
+				System.out.println("Program end.");
+			}
+		} while (menu!=0);
 	}
 
-	public static void temArmor(Random a) {
+	public static void temArmorOrConchSlasherRNG(Random a) {
 		System.out.println("Temmie Armor Damage Heal. 10% of triggering");
 		System.out.println("Specify the hit count:");
 		int times=Utilidades.leerInt();
@@ -47,9 +48,10 @@ public class RNG {
 
 	public static void otherRNG(Random a) {
 		int num, times;
-		System.out.println("Number:");
+
+		System.out.println("What's the number?");
 		num=Utilidades.leerInt();
-		System.out.println("Times:");
+		System.out.println("How many times?");
 		times=Utilidades.leerInt();
 		for (int i=0;i<times;i++) {
 			int rng=a.nextInt(num+1);
@@ -61,13 +63,14 @@ public class RNG {
 		}
 	}
 
-	public static void conchSlasherRNG(Random a) {
+	public static void characterRandom(Random a) {		
 		int times;
-		System.out.println("Conch Slasher. 10% chance of critting.");
-		System.out.println("Attack count:");
+
+		System.out.println("Muse choice depends on number. 1 for Starfish, 2 for Stara, 3 for Chara.");
+		System.out.println("How many times?");
 		times=Utilidades.leerInt();
 		for (int i=0;i<times;i++) {
-			int rng=a.nextInt(11);
+			int rng=a.nextInt(4);
 			if (rng==0) {
 				System.out.println("RNG roll landed at 0.");
 				rng++;
@@ -78,6 +81,7 @@ public class RNG {
 
 	public static void conchDestroyerRNG(Random a) {
 		int times;
+
 		System.out.println("Conch Destroyer. 20% chance of critting.");
 		System.out.println("Attack count:");
 		times=Utilidades.leerInt();
@@ -92,9 +96,9 @@ public class RNG {
 	}
 
 	public static int menu() {
-		System.out.println("1. Tem Armor");
+		System.out.println("1. Tem Armor or Conch Slasher Crit RNG");
 		System.out.println("2. Other RNG");
-		System.out.println("3. Conch Slasher Crit RNG");
+		System.out.println("3. Character Randomizer");
 		System.out.println("4. Conch Destroyer Crit RNG");
 		return Utilidades.leerInt("RNG choice:",1,4);
 	}
