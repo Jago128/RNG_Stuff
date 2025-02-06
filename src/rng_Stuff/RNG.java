@@ -8,28 +8,23 @@ public class RNG {
 	public static void main(String[] args) {
 		Random a= new Random();
 		int menu=menu();
-		do {
-			switch (menu) {
-			case 1:
-				temArmorOrConchSlasherRNG(a);
-				break;
+		switch (menu) {
+		case 1:
+			temArmorOrConchSlasherRNG(a);
+			break;
 
-			case 2:
-				otherRNG(a);
-				break;
+		case 2:
+			otherRNG(a);
+			break;
 
-			case 3:
-				characterRandom(a);
-				break;
+		case 3:
+			characterRandom(a);
+			break;
 
-			case 4:
-				conchDestroyerRNG(a);
-				break;
-
-			case 0:
-				System.out.println("Program end.");
-			}
-		} while (menu!=0);
+		case 4:
+			conchDestroyerRNG(a);
+			break;
+		}
 	}
 
 	public static void temArmorOrConchSlasherRNG(Random a) {
