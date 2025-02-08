@@ -28,7 +28,7 @@ public class RNG {
 	}
 
 	public static void temArmorOrConchSlasherRNG(Random a) {
-		System.out.println("Temmie Armor Damage Heal. 10% of triggering");
+		System.out.println("Temmie Armor Damage Heal. 10% of triggering, or 10% Crit Chance from Conch Slasher.");
 		System.out.println("Specify the hit count:");
 		int times=Utilidades.leerInt();
 		for (int i=0;i<times;i++) {
