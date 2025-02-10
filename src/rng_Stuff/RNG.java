@@ -10,7 +10,7 @@ public class RNG {
 		int menu=menu();
 		switch (menu) {
 		case 1:
-			temArmorOrConchSlasherRNG(a);
+			temArmorDMGHealOrConchSlasherCritOrFrostedButlerDaggerFrostSnapRNG(a);
 			break;
 
 		case 2:
@@ -27,8 +27,8 @@ public class RNG {
 		}
 	}
 
-	public static void temArmorOrConchSlasherRNG(Random a) {
-		System.out.println("Temmie Armor Damage Heal. 10% of triggering, or 10% Crit Chance from Conch Slasher.");
+	public static void temArmorDMGHealOrConchSlasherCritOrFrostedButlerDaggerFrostSnapRNG(Random a) {
+		System.out.println("10% chance of Temmie Armor DMG Heal, 10% Crit Chance from Conch Slasher, or 10% chance of Frost Snap from the Frosted Butler's Daggers.");
 		System.out.println("Specify the hit count:");
 		int times=Utilidades.leerInt();
 		for (int i=0;i<times;i++) {
@@ -91,7 +91,7 @@ public class RNG {
 	}
 
 	public static int menu() {
-		System.out.println("1. Tem Armor or Conch Slasher Crit RNG");
+		System.out.println("1. Tem Armor DMG Heal, Conch Slasher Crit, or Frosted Butler's Daggers Frost Snap RNG");
 		System.out.println("2. Other RNG");
 		System.out.println("3. Character Randomizer");
 		System.out.println("4. Conch Destroyer Crit RNG");
