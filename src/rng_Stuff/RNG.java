@@ -28,7 +28,7 @@ public class RNG {
 	}
 
 	public static void temArmorDMGHealOrConchSlasherCritOrFrostedButlerDaggerFrostSnapRNG(Random a) {
-		System.out.println("10% chance of Temmie Armor DMG Heal, 10% Crit Chance from Conch Slasher, or 10% chance of Frost Snap from the Frosted Butler's Daggers.");
+		System.out.println("10% chance of Temmie Armor DMG Heal/Crit (Conch Slasher)/Frost Snap (Frosted Butler's Daggers).");
 		System.out.println("Specify the hit count:");
 		int times=Utilidades.leerInt();
 		for (int i=0;i<times;i++) {
@@ -61,15 +61,11 @@ public class RNG {
 	public static void characterRandom(Random a) {		
 		int times;
 
-		System.out.println("Muse choice depends on number. 1 for Starfish, 2 for Stara, 3 for Chara.");
+		System.out.println("Muse choice depends on number. 0 for Starfira, 1 for Starfish, 2 for Stara, 3 for Chara.");
 		System.out.println("How many times?");
 		times=Utilidades.leerInt();
 		for (int i=0;i<times;i++) {
 			int rng=a.nextInt(4);
-			if (rng==0) {
-				System.out.println("RNG roll landed at 0.");
-				rng++;
-			}
 			System.out.println(rng);
 		}
 	}
