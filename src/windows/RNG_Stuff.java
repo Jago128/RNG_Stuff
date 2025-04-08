@@ -10,14 +10,7 @@ public class RNG_Stuff extends JFrame implements ActionListener {
 
 	private static final long serialVersionUID = 1L;
 	private JPanel contentPane;
-	private JButton btn10PercentRNG;
-	private JButton btn15PercentRNG;
-	private JButton btn20PercentRNG;
-	private JButton btn25PercentRNG;
-	private JButton btn40PercentRNG;
-	private JButton btn12PercentRNG;
-	private JButton btnJustitiaRNG;
-	private JButton btn33PercentRNG;
+	private JButton btn8_12PercentRNG, btn10PercentRNG, btn15PercentRNG, btn20PercentRNG, btn25PercentRNG, btn33PercentRNG, btn40PercentRNG, btn50PercentRNG, btnJustitiaRNG, btnOtherRNG;
 
 	public RNG_Stuff() {
 		setTitle("RNG Stuff");
@@ -54,16 +47,16 @@ public class RNG_Stuff extends JFrame implements ActionListener {
 		btn40PercentRNG.setBounds(24, 209, 200, 64);
 		contentPane.add(btn40PercentRNG);
 		
-		btn12PercentRNG = new JButton("Status RNG with Chimera");
-		btn12PercentRNG.setFont(new Font("Determination Mono Web", Font.PLAIN, 16));
-		btn12PercentRNG.setBounds(234, 209, 223, 64);
-		contentPane.add(btn12PercentRNG);
+		btn8_12PercentRNG = new JButton("Skill Status RNG");
+		btn8_12PercentRNG.setFont(new Font("Determination Mono Web", Font.PLAIN, 16));
+		btn8_12PercentRNG.setBounds(255, 229, 202, 64);
+		contentPane.add(btn8_12PercentRNG);
 		
-		JLabel lblNewLabel = new JLabel("Jago's RNG Shenanigans");
-		lblNewLabel.setHorizontalAlignment(SwingConstants.CENTER);
-		lblNewLabel.setFont(new Font("Determination Mono Web", Font.PLAIN, 24));
-		lblNewLabel.setBounds(56, 10, 372, 41);
-		contentPane.add(lblNewLabel);
+		JLabel lblTitle = new JLabel("Jago's RNG Shenanigans");
+		lblTitle.setHorizontalAlignment(SwingConstants.CENTER);
+		lblTitle.setFont(new Font("Determination Mono Web", Font.PLAIN, 24));
+		lblTitle.setBounds(56, 10, 372, 41);
+		contentPane.add(lblTitle);
 		
 		btnJustitiaRNG = new JButton("Justitia RNG");
 		btnJustitiaRNG.setFont(new Font("Determination Mono Web", Font.PLAIN, 20));
@@ -72,22 +65,48 @@ public class RNG_Stuff extends JFrame implements ActionListener {
 		
 		btn33PercentRNG = new JButton("Void Tea Overheal RNG");
 		btn33PercentRNG.setFont(new Font("Determination Mono Web", Font.PLAIN, 16));
-		btn33PercentRNG.setBounds(244, 283, 211, 64);
+		btn33PercentRNG.setBounds(244, 295, 211, 64);
 		contentPane.add(btn33PercentRNG);
 		
-		JButton btn50PercentRNG = new JButton("Abysmal Surge RNG");
+		btn50PercentRNG = new JButton("Abysmal Surge RNG");
 		btn50PercentRNG.setFont(new Font("Determination Mono Web", Font.PLAIN, 18));
 		btn50PercentRNG.setBounds(24, 359, 200, 64);
 		contentPane.add(btn50PercentRNG);
 		
-		JButton btnOtherRNG = new JButton("Other RNG");
+		btnOtherRNG = new JButton("Other RNG");
 		btnOtherRNG.setFont(new Font("Determination Mono Web", Font.PLAIN, 20));
-		btnOtherRNG.setBounds(255, 357, 200, 64);
+		btnOtherRNG.setBounds(244, 369, 200, 64);
 		contentPane.add(btnOtherRNG);
+		
+		JLabel lblDamagingSkillsOnly = new JLabel("Damaging Skills only");
+		lblDamagingSkillsOnly.setHorizontalAlignment(SwingConstants.CENTER);
+		lblDamagingSkillsOnly.setFont(new Font("Determination Mono Web", Font.PLAIN, 16));
+		lblDamagingSkillsOnly.setBounds(247, 196, 219, 41);
+		contentPane.add(lblDamagingSkillsOnly);
 	}
 
 	@Override
 	public void actionPerformed(ActionEvent e) {
-		
+		if (e.getSource()==btn10PercentRNG) {
+			
+		} else if (e.getSource()==btn15PercentRNG) {
+			
+		} else if (e.getSource()==btn20PercentRNG) {
+			
+		} else if (e.getSource()==btn25PercentRNG) {
+			
+		} else if (e.getSource()==btn33PercentRNG) {
+			
+		} else if (e.getSource()==btn40PercentRNG) {
+			
+		} else if (e.getSource()==btn50PercentRNG) {
+			
+		} else if (e.getSource()==btn8_12PercentRNG) {
+			
+		} else if (e.getSource()==btnJustitiaRNG) {
+			
+		} else if (e.getSource()==btnOtherRNG) {
+			
+		}
 	}
 }
