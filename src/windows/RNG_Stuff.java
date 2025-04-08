@@ -72,11 +72,11 @@ public class RNG_Stuff extends JFrame implements ActionListener {
 		
 		btn33PercentRNG = new JButton("Void Tea Overheal RNG");
 		btn33PercentRNG.setFont(new Font("Determination Mono Web", Font.PLAIN, 16));
-		btn33PercentRNG.setBounds(255, 283, 200, 64);
+		btn33PercentRNG.setBounds(244, 283, 211, 64);
 		contentPane.add(btn33PercentRNG);
 		
 		JButton btn50PercentRNG = new JButton("Abysmal Surge RNG");
-		btn50PercentRNG.setFont(new Font("Determination Mono Web", Font.PLAIN, 20));
+		btn50PercentRNG.setFont(new Font("Determination Mono Web", Font.PLAIN, 18));
 		btn50PercentRNG.setBounds(24, 359, 200, 64);
 		contentPane.add(btn50PercentRNG);
 		
