@@ -80,10 +80,10 @@ public class RNG_Stuff extends JFrame implements ActionListener {
 		btn50PercentRNG.setBounds(24, 359, 200, 64);
 		contentPane.add(btn50PercentRNG);
 		
-		JButton btnStageViFrostbite = new JButton("Stage VI Frostbite Spread RNG");
-		btnStageViFrostbite.setFont(new Font("Determination Mono Web", Font.PLAIN, 16));
-		btnStageViFrostbite.setBounds(234, 357, 273, 64);
-		contentPane.add(btnStageViFrostbite);
+		JButton btnOtherRNG = new JButton("Other RNG");
+		btnOtherRNG.setFont(new Font("Determination Mono Web", Font.PLAIN, 20));
+		btnOtherRNG.setBounds(255, 357, 200, 64);
+		contentPane.add(btnOtherRNG);
 	}
 
 	@Override
