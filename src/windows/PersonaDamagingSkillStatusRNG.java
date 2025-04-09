@@ -14,7 +14,7 @@ public class PersonaDamagingSkillStatusRNG extends JDialog implements ActionList
 	private JTextArea txtrRNGResults;
 	private JSpinner spinnerEnemyCount;
 	private JButton btnRoll;
-	private JCheckBox checkBoxChimera;
+	private JCheckBox chckbxChimera;
 
 	public PersonaDamagingSkillStatusRNG(JFrame parent) {
 		super(parent, true);
@@ -31,11 +31,11 @@ public class PersonaDamagingSkillStatusRNG extends JDialog implements ActionList
 		lblEnemyCount.setBounds(33, 22, 129, 28);
 		contentPanel.add(lblEnemyCount);
 
-		checkBoxChimera = new JCheckBox("Chimera or not?");
-		checkBoxChimera.setHorizontalAlignment(SwingConstants.CENTER);
-		checkBoxChimera.setFont(new Font("Determination Mono Web", Font.PLAIN, 18));
-		checkBoxChimera.setBounds(180, 25, 168, 23);
-		contentPanel.add(checkBoxChimera);
+		chckbxChimera = new JCheckBox("Chimera or not?");
+		chckbxChimera.setHorizontalAlignment(SwingConstants.CENTER);
+		chckbxChimera.setFont(new Font("Determination Mono Web", Font.PLAIN, 18));
+		chckbxChimera.setBounds(180, 25, 168, 23);
+		contentPanel.add(chckbxChimera);
 
 		spinnerEnemyCount = new JSpinner();
 		spinnerEnemyCount.setFont(new Font("Determination Mono Web", Font.PLAIN, 18));
@@ -65,7 +65,7 @@ public class PersonaDamagingSkillStatusRNG extends JDialog implements ActionList
 			Random r = new Random();
 			int result, count=(int)spinnerEnemyCount.getValue();
 			StringBuilder results = new StringBuilder("");
-			if (checkBoxChimera.isSelected()) {
+			if (chckbxChimera.isSelected()) {
 				for (int i=0; i<count; i++) {
 					result = r.nextInt(12-1)+1;
 					if (result==12) {

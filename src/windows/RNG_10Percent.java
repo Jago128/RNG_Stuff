@@ -14,6 +14,7 @@ public class RNG_10Percent extends JDialog implements ActionListener {
 	private JTextArea txtrRNGResults;
 	private JButton btnRoll;
 	private JSpinner spinnerRollCount;
+	private JCheckBox chckbxElementalBomb;
 
 	public RNG_10Percent(JFrame parent) {
 		super(parent, true);
@@ -29,8 +30,8 @@ public class RNG_10Percent extends JDialog implements ActionListener {
 		txtrChoices.setWrapStyleWord(true);
 		txtrChoices.setLineWrap(true);
 		txtrChoices.setText("Starfish:\r\nTemmie Armor DMG heal\r\n\r\nStara:\r\nConch Slasher/Fusion Crit RNG\r\n\r\nChara:\r\nElemental Bomb Status RNG\r\nFire Slash Burn RNG\r\nFrost Snap Infliction RNG");
-		txtrChoices.setFont(new Font("Determination Mono Web", Font.PLAIN, 18));
-		txtrChoices.setBounds(10, 11, 271, 200);
+		txtrChoices.setFont(new Font("Determination Mono Web", Font.PLAIN, 16));
+		txtrChoices.setBounds(10, 11, 244, 200);
 		contentPanel.add(txtrChoices);
 
 		spinnerRollCount = new JSpinner();
@@ -63,23 +64,35 @@ public class RNG_10Percent extends JDialog implements ActionListener {
 		JScrollPane scrollPaneResults = new JScrollPane(txtrRNGResults);
 		scrollPaneResults.setBounds(20, 215, 364, 100);
 		contentPanel.add(scrollPaneResults);
+		
+		chckbxElementalBomb = new JCheckBox("Elemental Bomb");
+		chckbxElementalBomb.setFont(new Font("Determination Mono Web", Font.PLAIN, 14));
+		chckbxElementalBomb.setBounds(260, 147, 124, 23);
+		contentPanel.add(chckbxElementalBomb);
 	}
 
 	@Override
 	public void actionPerformed(ActionEvent e) {
 		if (e.getSource()==btnRoll) {
 			Random r = new Random();
-			int result, count=(int)spinnerRollCount.getValue();
+			int result, count=(int)spinnerRollCount.getValue(), elementalBombTriggers = 0;
 			StringBuilder results = new StringBuilder("");
 			for (int i=0; i<count; i++) {
 				result = r.nextInt(10-1)+1;
 				if (result==10) {
 					results.append("Roll ").append(i+1).append("result: Effect triggered/Crit! Exact value: "+result).append("\n");
+					if (chckbxElementalBomb.isSelected()) {
+						elementalBombTriggers++;
+					}
 				} else {
 					results.append("Roll ").append(i+1).append("result: Nothing happened. Exact value: "+result).append("\n");
 				}
 			}
 			txtrRNGResults.setText(results.toString());
+			if (elementalBombTriggers>0) {
+				ElementalBombStuff dialog = new ElementalBombStuff(this);
+				dialog.setVisible(true);
+			}
 		}
 	}
 }
