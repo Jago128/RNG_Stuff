@@ -1,34 +1,14 @@
 package windows;
 
-import java.awt.BorderLayout;
-import java.awt.FlowLayout;
-
-import javax.swing.JButton;
-import javax.swing.JDialog;
-import javax.swing.JPanel;
-import javax.swing.border.EmptyBorder;
+import java.awt.*;
+import javax.swing.*;
+import javax.swing.border.*;
 
 public class RNG_50Percent extends JDialog {
 
 	private static final long serialVersionUID = 1L;
 	private final JPanel contentPanel = new JPanel();
 
-	/**
-	 * Launch the application.
-	 */
-	public static void main(String[] args) {
-		try {
-			RNG_50Percent dialog = new RNG_50Percent();
-			dialog.setDefaultCloseOperation(JDialog.DISPOSE_ON_CLOSE);
-			dialog.setVisible(true);
-		} catch (Exception e) {
-			e.printStackTrace();
-		}
-	}
-
-	/**
-	 * Create the dialog.
-	 */
 	public RNG_50Percent() {
 		setBounds(100, 100, 450, 300);
 		getContentPane().setLayout(new BorderLayout());
