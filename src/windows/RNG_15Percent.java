@@ -2,6 +2,7 @@ package windows;
 
 import java.awt.*;
 import java.awt.event.*;
+import java.util.Random;
 
 import javax.swing.*;
 import javax.swing.border.*;
@@ -11,6 +12,8 @@ public class RNG_15Percent extends JDialog implements ActionListener {
 	private static final long serialVersionUID = 1L;
 	private final JPanel contentPanel = new JPanel();
 	private JTextArea txtrRNGResults;
+	private JSpinner spinnerRollCount;
+	private JButton btnRoll;
 
 	public RNG_15Percent(JFrame parent) {
 		super(parent, true);
@@ -26,24 +29,24 @@ public class RNG_15Percent extends JDialog implements ActionListener {
 		txtrChoices.setLineWrap(true);
 		txtrChoices.setText("Stara:\r\nFiery Sword Burn RNG\r\nUnderfell Outfit Conch Slasher Sting RNG\r\n\r\nChara:\r\nDual-Elemental Beam Burn RNG");
 		txtrChoices.setFont(new Font("Determination Mono Web", Font.PLAIN, 18));
-		txtrChoices.setBounds(20, 11, 238, 161);
+		txtrChoices.setBounds(20, 11, 215, 161);
 		contentPanel.add(txtrChoices);
 		
-		JSpinner spinnerCount = new JSpinner();
-		spinnerCount.setFont(new Font("Determination Mono Web", Font.PLAIN, 18));
-		spinnerCount.setModel(new SpinnerNumberModel(1, 1, 10, 1));
-		spinnerCount.setBounds(282, 43, 61, 30);
-		contentPanel.add(spinnerCount);
+		spinnerRollCount = new JSpinner();
+		spinnerRollCount.setFont(new Font("Determination Mono Web", Font.PLAIN, 18));
+		spinnerRollCount.setModel(new SpinnerNumberModel(1, 1, 10, 1));
+		spinnerRollCount.setBounds(267, 43, 61, 30);
+		contentPanel.add(spinnerRollCount);
 		
-		JLabel lblCount = new JLabel("Count:");
-		lblCount.setHorizontalAlignment(SwingConstants.CENTER);
-		lblCount.setFont(new Font("Determination Mono Web", Font.PLAIN, 18));
-		lblCount.setBounds(268, 12, 88, 20);
-		contentPanel.add(lblCount);
+		JLabel lblRollCount = new JLabel("Roll count:");
+		lblRollCount.setHorizontalAlignment(SwingConstants.CENTER);
+		lblRollCount.setFont(new Font("Determination Mono Web", Font.PLAIN, 18));
+		lblRollCount.setBounds(239, 12, 117, 20);
+		contentPanel.add(lblRollCount);
 		
-		JButton btnRoll = new JButton("Roll");
+		btnRoll = new JButton("Roll");
 		btnRoll.setFont(new Font("Determination Mono Web", Font.PLAIN, 18));
-		btnRoll.setBounds(267, 84, 89, 30);
+		btnRoll.setBounds(245, 84, 95, 30);
 		contentPanel.add(btnRoll);
 		btnRoll.addActionListener(this);
 		
@@ -63,6 +66,19 @@ public class RNG_15Percent extends JDialog implements ActionListener {
 
 	@Override
 	public void actionPerformed(ActionEvent e) {
-		
+		if (e.getSource()==btnRoll) {
+			Random r = new Random();
+			int result, count=(int)spinnerRollCount.getValue();
+			StringBuilder results = new StringBuilder("");
+			for (int i=0; i<count; i++) {
+				result = r.nextInt(15-1)+1;
+				if (result==15) {
+					results.append("Roll ").append(i+1).append("result: Effect triggered!").append("\n");
+				} else {
+					results.append("Roll ").append(i+1).append("result: Nothing happened.").append("\n");
+				}
+			}
+			txtrRNGResults.setText(results.toString());
+		}
 	}
 }

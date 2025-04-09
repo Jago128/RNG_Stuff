@@ -37,6 +37,7 @@ public class JustitiaRNG extends JDialog implements ActionListener {
 		btnRoll.setFont(new Font("Determination Mono Web", Font.PLAIN, 18));
 		btnRoll.setBounds(313, 49, 111, 27);
 		contentPanel.add(btnRoll);
+		btnRoll.addActionListener(this);
 
 		lblResult = new JLabel("");
 		lblResult.setFont(new Font("Determination Mono Web", Font.PLAIN, 18));

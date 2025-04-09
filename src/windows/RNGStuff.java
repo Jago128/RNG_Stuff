@@ -10,7 +10,7 @@ public class RNGStuff extends JFrame implements ActionListener {
 
 	private static final long serialVersionUID = 1L;
 	private JPanel contentPane;
-	private JButton btnPersonaDamagingSkillStatusRNG, btn10PercentRNG, btn15PercentRNG, btn20PercentRNG, btn25PercentRNG, btn33PercentRNG, btn40PercentRNG, btn50PercentRNG, btnJustitiaRNG, btnOtherRNG;
+	private JButton btnPersonaDamagingSkillStatusRNG, btn10PercentRNG, btn15PercentRNG, btn20PercentRNG, btn25PercentRNG, btnVoidTeaOverhealRNG, btnSoakStatusRNG, btn50PercentRNG, btnJustitiaRNG, btnOtherRNG;
 	private JButton btnCharacterRandomizer;
 
 	public RNGStuff() {
@@ -43,10 +43,10 @@ public class RNGStuff extends JFrame implements ActionListener {
 		btn25PercentRNG.setBounds(255, 135, 200, 64);
 		contentPane.add(btn25PercentRNG);
 
-		btn40PercentRNG = new JButton("Soak Status RNG");
-		btn40PercentRNG.setFont(new Font("Determination Mono Web", Font.PLAIN, 20));
-		btn40PercentRNG.setBounds(24, 285, 200, 64);
-		contentPane.add(btn40PercentRNG);
+		btnSoakStatusRNG = new JButton("Soak Status RNG");
+		btnSoakStatusRNG.setFont(new Font("Determination Mono Web", Font.PLAIN, 20));
+		btnSoakStatusRNG.setBounds(24, 285, 200, 64);
+		contentPane.add(btnSoakStatusRNG);
 
 		btnPersonaDamagingSkillStatusRNG = new JButton("Damaging Skill Status RNG");
 		btnPersonaDamagingSkillStatusRNG.setFont(new Font("Determination Mono Web", Font.PLAIN, 16));
@@ -64,10 +64,10 @@ public class RNGStuff extends JFrame implements ActionListener {
 		btnJustitiaRNG.setBounds(24, 359, 200, 64);
 		contentPane.add(btnJustitiaRNG);
 
-		btn33PercentRNG = new JButton("Void Tea Overheal RNG");
-		btn33PercentRNG.setFont(new Font("Determination Mono Web", Font.PLAIN, 16));
-		btn33PercentRNG.setBounds(244, 286, 211, 64);
-		contentPane.add(btn33PercentRNG);
+		btnVoidTeaOverhealRNG = new JButton("Void Tea Overheal RNG");
+		btnVoidTeaOverhealRNG.setFont(new Font("Determination Mono Web", Font.PLAIN, 16));
+		btnVoidTeaOverhealRNG.setBounds(244, 286, 211, 64);
+		contentPane.add(btnVoidTeaOverhealRNG);
 
 		btn50PercentRNG = new JButton("50% Stuff");
 		btn50PercentRNG.setFont(new Font("Determination Mono Web", Font.PLAIN, 20));
@@ -83,6 +83,18 @@ public class RNGStuff extends JFrame implements ActionListener {
 		btnCharacterRandomizer.setFont(new Font("Determination Mono Web", Font.PLAIN, 16));
 		btnCharacterRandomizer.setBounds(255, 360, 200, 64);
 		contentPane.add(btnCharacterRandomizer);
+		
+		btn10PercentRNG.addActionListener(this);
+		btn15PercentRNG.addActionListener(this);
+		btn20PercentRNG.addActionListener(this);
+		btn25PercentRNG.addActionListener(this);
+		btnVoidTeaOverhealRNG.addActionListener(this);
+		btnSoakStatusRNG.addActionListener(this);
+		btn50PercentRNG.addActionListener(this);
+		btnCharacterRandomizer.addActionListener(this);
+		btnJustitiaRNG.addActionListener(this);
+		btnOtherRNG.addActionListener(this);
+		btnPersonaDamagingSkillStatusRNG.addActionListener(this);
 	}
 
 	@Override
@@ -99,11 +111,11 @@ public class RNGStuff extends JFrame implements ActionListener {
 		} else if (e.getSource()==btn25PercentRNG) {
 			RNG_25Percent dialog = new RNG_25Percent(this);
 			dialog.setVisible(true);
-		} else if (e.getSource()==btn33PercentRNG) {
-			RNG_33Percent dialog = new RNG_33Percent(this);
+		} else if (e.getSource()==btnVoidTeaOverhealRNG) {
+			VoidTeaOverhealRNG dialog = new VoidTeaOverhealRNG(this);
 			dialog.setVisible(true);
-		} else if (e.getSource()==btn40PercentRNG) {
-			RNG_40Percent dialog = new RNG_40Percent(this);
+		} else if (e.getSource()==btnSoakStatusRNG) {
+			SoakStatusRNG dialog = new SoakStatusRNG(this);
 			dialog.setVisible(true);
 		} else if (e.getSource()==btn50PercentRNG) {
 			RNG_50Percent dialog = new RNG_50Percent(this);
