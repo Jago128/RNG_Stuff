@@ -1,10 +1,12 @@
 package windows;
 
 import java.awt.*;
+import java.awt.event.*;
+
 import javax.swing.*;
 import javax.swing.border.*;
 
-public class RNG_10Percent extends JDialog {
+public class RNG_10Percent extends JDialog implements ActionListener {
 
 	private static final long serialVersionUID = 1L;
 	private final JPanel contentPanel = new JPanel();
@@ -57,5 +59,10 @@ public class RNG_10Percent extends JDialog {
 		JScrollPane scrollPane = new JScrollPane(rngResults);
 		scrollPane.setBounds(20, 230, 334, 100);
 		contentPanel.add(scrollPane);
+	}
+
+	@Override
+	public void actionPerformed(ActionEvent e) {
+		
 	}
 }

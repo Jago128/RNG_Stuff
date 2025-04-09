@@ -24,15 +24,18 @@ public class JustitiaRNG extends JDialog implements ActionListener {
 		contentPanel.setLayout(null);
 
 		JTextArea txtrChances = new JTextArea();
+		txtrChances.setLineWrap(true);
+		txtrChances.setWrapStyleWord(true);
+		txtrChances.setEditable(false);
 		txtrChances.setText("Chances:\n40% chance to do a normal attack\n40% chance to do a 5 hit combo\n20% chance to do a 10 hit combo");
 		txtrChances.setBackground(UIManager.getColor("Button.background"));
 		txtrChances.setFont(new Font("Determination Mono Web", Font.PLAIN, 18));
-		txtrChances.setBounds(10, 11, 293, 100);
+		txtrChances.setBounds(10, 11, 299, 100);
 		contentPanel.add(txtrChances);
 
 		btnRoll = new JButton("Roll");
 		btnRoll.setFont(new Font("Determination Mono Web", Font.PLAIN, 18));
-		btnRoll.setBounds(313, 28, 111, 27);
+		btnRoll.setBounds(313, 49, 111, 27);
 		contentPanel.add(btnRoll);
 
 		lblResult = new JLabel("");

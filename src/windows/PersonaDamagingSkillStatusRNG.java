@@ -19,7 +19,7 @@ public class PersonaDamagingSkillStatusRNG extends JDialog implements ActionList
 	public PersonaDamagingSkillStatusRNG(JFrame parent) {
 		super(parent, true);
 		setTitle("Persona Skill RNG");
-		setBounds(100, 100, 450, 240);
+		setBounds(100, 100, 370, 240);
 		getContentPane().setLayout(new BorderLayout());
 		contentPanel.setBorder(new EmptyBorder(5, 5, 5, 5));
 		getContentPane().add(contentPanel, BorderLayout.CENTER);
@@ -32,8 +32,9 @@ public class PersonaDamagingSkillStatusRNG extends JDialog implements ActionList
 		contentPanel.add(lblEnemyCount);
 
 		chimeraCheckBox = new JCheckBox("Chimera or not?");
+		chimeraCheckBox.setHorizontalAlignment(SwingConstants.CENTER);
 		chimeraCheckBox.setFont(new Font("Determination Mono Web", Font.PLAIN, 18));
-		chimeraCheckBox.setBounds(245, 25, 168, 23);
+		chimeraCheckBox.setBounds(180, 25, 168, 23);
 		contentPanel.add(chimeraCheckBox);
 
 		spinnerEnemyCount = new JSpinner();
@@ -44,7 +45,7 @@ public class PersonaDamagingSkillStatusRNG extends JDialog implements ActionList
 
 		btnRoll = new JButton("Roll");
 		btnRoll.setFont(new Font("Determination Mono Web", Font.PLAIN, 18));
-		btnRoll.setBounds(280, 62, 89, 28);
+		btnRoll.setBounds(227, 62, 89, 28);
 		contentPanel.add(btnRoll);
 
 		rngResults = new JTextArea();
@@ -53,7 +54,7 @@ public class PersonaDamagingSkillStatusRNG extends JDialog implements ActionList
 		rngResults.setWrapStyleWord(true);
 		rngResults.setFont(new Font("Determination Mono Web", Font.PLAIN, 11));
 		rngResults.setBackground(UIManager.getColor("Button.background"));
-		rngResults.setBounds(10, 101, 414, 84);
+		rngResults.setBounds(10, 101, 330, 84);
 		contentPanel.add(rngResults);
 	}
 
