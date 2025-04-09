@@ -9,7 +9,8 @@ public class RNG_15Percent extends JDialog {
 	private static final long serialVersionUID = 1L;
 	private final JPanel contentPanel = new JPanel();
 
-	public RNG_15Percent() {
+	public RNG_15Percent(JFrame parent) {
+		super(parent, true);
 		setBounds(100, 100, 450, 300);
 		getContentPane().setLayout(new BorderLayout());
 		contentPanel.setBorder(new EmptyBorder(5, 5, 5, 5));

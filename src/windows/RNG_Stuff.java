@@ -16,7 +16,7 @@ public class RNG_Stuff extends JFrame implements ActionListener {
 	public RNG_Stuff() {
 		setTitle("RNG Stuff");
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		setBounds(100, 100, 480, 540);
+		setBounds(100, 100, 480, 550);
 		contentPane = new JPanel();
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 
@@ -66,7 +66,7 @@ public class RNG_Stuff extends JFrame implements ActionListener {
 
 		btn33PercentRNG = new JButton("Void Tea Overheal RNG");
 		btn33PercentRNG.setFont(new Font("Determination Mono Web", Font.PLAIN, 16));
-		btn33PercentRNG.setBounds(244, 295, 211, 64);
+		btn33PercentRNG.setBounds(244, 302, 211, 64);
 		contentPane.add(btn33PercentRNG);
 
 		btn50PercentRNG = new JButton("Abysmal Surge RNG");
@@ -76,7 +76,7 @@ public class RNG_Stuff extends JFrame implements ActionListener {
 
 		btnOtherRNG = new JButton("Other RNG");
 		btnOtherRNG.setFont(new Font("Determination Mono Web", Font.PLAIN, 20));
-		btnOtherRNG.setBounds(244, 369, 200, 64);
+		btnOtherRNG.setBounds(255, 377, 200, 64);
 		contentPane.add(btnOtherRNG);
 
 		JLabel lblDamagingSkillsOnly = new JLabel("Damaging Skills only");
@@ -87,44 +87,44 @@ public class RNG_Stuff extends JFrame implements ActionListener {
 		
 		btnCharacterRandomizer = new JButton("Character Randomizer");
 		btnCharacterRandomizer.setFont(new Font("Determination Mono Web", Font.PLAIN, 16));
-		btnCharacterRandomizer.setBounds(122, 434, 200, 64);
+		btnCharacterRandomizer.setBounds(24, 434, 200, 64);
 		contentPane.add(btnCharacterRandomizer);
 	}
 
 	@Override
 	public void actionPerformed(ActionEvent e) {
 		if (e.getSource()==btn10PercentRNG) {
-			RNG_10Percent dialog = new RNG_10Percent();
+			RNG_10Percent dialog = new RNG_10Percent(this);
 			dialog.setVisible(true);
 		} else if (e.getSource()==btn15PercentRNG) {
-			RNG_15Percent dialog = new RNG_15Percent();
+			RNG_15Percent dialog = new RNG_15Percent(this);
 			dialog.setVisible(true);
 		} else if (e.getSource()==btn20PercentRNG) {
-			RNG_20Percent dialog = new RNG_20Percent();
+			RNG_20Percent dialog = new RNG_20Percent(this);
 			dialog.setVisible(true);
 		} else if (e.getSource()==btn25PercentRNG) {
-			RNG_25Percent dialog = new RNG_25Percent();
+			RNG_25Percent dialog = new RNG_25Percent(this);
 			dialog.setVisible(true);
 		} else if (e.getSource()==btn33PercentRNG) {
-			RNG_33Percent dialog = new RNG_33Percent();
+			RNG_33Percent dialog = new RNG_33Percent(this);
 			dialog.setVisible(true);
 		} else if (e.getSource()==btn40PercentRNG) {
-			RNG_40Percent dialog = new RNG_40Percent();
+			RNG_40Percent dialog = new RNG_40Percent(this);
 			dialog.setVisible(true);
 		} else if (e.getSource()==btn50PercentRNG) {
-			RNG_50Percent dialog = new RNG_50Percent();
+			RNG_50Percent dialog = new RNG_50Percent(this);
 			dialog.setVisible(true);
 		} else if (e.getSource()==btn8_12PercentRNG) {
-			RNG_8_12Percent dialog = new RNG_8_12Percent();
+			RNG_8_12Percent dialog = new RNG_8_12Percent(this);
 			dialog.setVisible(true);
 		} else if (e.getSource()==btnJustitiaRNG) {
-			JustitiaRNG dialog = new JustitiaRNG();
+			JustitiaRNG dialog = new JustitiaRNG(this);
 			dialog.setVisible(true);
 		} else if (e.getSource()==btnOtherRNG) {
-			OtherRNG dialog = new OtherRNG();
+			OtherRNG dialog = new OtherRNG(this);
 			dialog.setVisible(true);
 		} else if (e.getSource()==btnCharacterRandomizer) {
-			CharacterRandomizer dialog = new CharacterRandomizer();
+			CharacterRandomizer dialog = new CharacterRandomizer(this);
 			dialog.setVisible(true);
 		}
 	}

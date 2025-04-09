@@ -15,7 +15,8 @@ public class CharacterRandomizer extends JDialog implements ActionListener {
 	private JButton btnRolling;
 	private JTextArea rngResults;
 
-	public CharacterRandomizer() {
+	public CharacterRandomizer(JFrame parent) {
+		super(parent, true);
 		setTitle("Character Randomizer");
 		setBounds(100, 100, 450, 300);
 		getContentPane().setLayout(new BorderLayout());
@@ -39,6 +40,7 @@ public class CharacterRandomizer extends JDialog implements ActionListener {
 		btnRolling.setFont(new Font("Determination Mono Web", Font.PLAIN, 18));
 		btnRolling.setBounds(266, 95, 144, 55);
 		contentPanel.add(btnRolling);
+		btnRolling.addActionListener(this);
 
 		JTextArea choices = new JTextArea();
 		choices.setBackground(UIManager.getColor("Button.background"));

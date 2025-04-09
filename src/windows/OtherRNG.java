@@ -15,7 +15,8 @@ public class OtherRNG extends JDialog implements ActionListener {
 	private JButton btnRolling;
 	private JTextArea rngResults;
 
-	public OtherRNG() {
+	public OtherRNG(JFrame parent) {
+		super(parent, true);
 		setTitle("Other RNG");
 		setBounds(100, 100, 450, 300);
 		getContentPane().setLayout(new BorderLayout());
@@ -51,6 +52,7 @@ public class OtherRNG extends JDialog implements ActionListener {
 		btnRolling.setFont(new Font("Determination Mono Web", Font.PLAIN, 18));
 		btnRolling.setBounds(144, 100, 144, 55);
 		contentPanel.add(btnRolling);
+		btnRolling.addActionListener(this);
 		
 		rngResults = new JTextArea();
 		rngResults.setEditable(false);
