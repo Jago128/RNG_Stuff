@@ -13,24 +13,26 @@ public class RNG_25Percent extends JDialog implements ActionListener {
 	private final JPanel contentPanel = new JPanel();
 	private JSpinner spinnerRollCount;
 	private JButton btnRoll;
-	private JTextArea txtrRNGResults;
+	private JTextArea textAreaRNGResults;
 
 	public RNG_25Percent(JFrame parent) {
 		super(parent, true);
-		setBounds(100, 100, 420, 340);
+		setTitle("25% Stuff");
+		setBounds(100, 100, 450, 340);
 		getContentPane().setLayout(new BorderLayout());
 		contentPanel.setBorder(new EmptyBorder(5, 5, 5, 5));
 		getContentPane().add(contentPanel, BorderLayout.CENTER);
 		contentPanel.setLayout(null);
-		JTextArea txtrChoices = new JTextArea();
-		txtrChoices.setBackground(UIManager.getColor("Button.background"));
-		txtrChoices.setEditable(false);
-		txtrChoices.setWrapStyleWord(true);
-		txtrChoices.setLineWrap(true);
-		txtrChoices.setText("Stara:\r\nUnderfell Outfit Conch Destroyer Sting RNG\r\nOutertale Outfit Pull on hit RNG\r\nConch Fusion (Geno Variation) Sting RNG");
-		txtrChoices.setFont(new Font("Determination Mono Web", Font.PLAIN, 18));
-		txtrChoices.setBounds(10, 11, 394, 91);
-		contentPanel.add(txtrChoices);
+		
+		JTextArea textAreaChoices = new JTextArea();
+		textAreaChoices.setBackground(UIManager.getColor("Button.background"));
+		textAreaChoices.setEditable(false);
+		textAreaChoices.setWrapStyleWord(true);
+		textAreaChoices.setLineWrap(true);
+		textAreaChoices.setText("Stara:\r\nUnderfell Outfit Conch Destroyer Sting RNG\r\nOutertale Outfit Pull on hit RNG\r\nConch Fusion (Geno Variation) Sting RNG");
+		textAreaChoices.setFont(new Font("Determination Mono Web", Font.PLAIN, 18));
+		textAreaChoices.setBounds(10, 11, 414, 88);
+		contentPanel.add(textAreaChoices);
 		
 		spinnerRollCount = new JSpinner();
 		spinnerRollCount.setFont(new Font("Determination Mono Web", Font.PLAIN, 18));
@@ -50,17 +52,17 @@ public class RNG_25Percent extends JDialog implements ActionListener {
 		contentPanel.add(btnRoll);
 		btnRoll.addActionListener(this);
 		
-		txtrRNGResults = new JTextArea();
-		txtrRNGResults.setEditable(false);
-		txtrRNGResults.setLineWrap(true);
-		txtrRNGResults.setWrapStyleWord(true);
-		txtrRNGResults.setFont(new Font("Determination Mono Web", Font.PLAIN, 18));
-		txtrRNGResults.setBackground(UIManager.getColor("Button.background"));
-		txtrRNGResults.setBounds(20, 185, 374, 100);
-		contentPanel.add(txtrRNGResults);
+		textAreaRNGResults = new JTextArea();
+		textAreaRNGResults.setEditable(false);
+		textAreaRNGResults.setLineWrap(true);
+		textAreaRNGResults.setWrapStyleWord(true);
+		textAreaRNGResults.setFont(new Font("Determination Mono Web", Font.PLAIN, 18));
+		textAreaRNGResults.setBackground(UIManager.getColor("Button.background"));
+		textAreaRNGResults.setBounds(20, 185, 404, 100);
+		contentPanel.add(textAreaRNGResults);
 		
-		JScrollPane scrollPaneResults = new JScrollPane(txtrRNGResults);
-		scrollPaneResults.setBounds(20, 185, 374, 100);
+		JScrollPane scrollPaneResults = new JScrollPane(textAreaRNGResults);
+		scrollPaneResults.setBounds(20, 185, 404, 100);
 		contentPanel.add(scrollPaneResults);
 	}
 
@@ -73,12 +75,12 @@ public class RNG_25Percent extends JDialog implements ActionListener {
 			for (int i=0; i<count; i++) {
 				result = r.nextInt(4-1)+1;
 				if (result==4) {
-					results.append("Roll ").append(i+1).append("result: Effect triggered! Exact value: "+result).append("\n");
+					results.append("Roll ").append(i+1).append(" result: Effect triggered! Exact value: "+result).append("\n");
 				} else {
-					results.append("Roll ").append(i+1).append("result: Nothing happened. Exact value: "+result).append("\n");
+					results.append("Roll ").append(i+1).append(" result: Nothing happened. Exact value: "+result).append("\n");
 				}
 			}
-			txtrRNGResults.setText(results.toString());
+			textAreaRNGResults.setText(results.toString());
 		}
 	}
 }

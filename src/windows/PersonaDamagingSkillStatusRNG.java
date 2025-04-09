@@ -11,7 +11,7 @@ public class PersonaDamagingSkillStatusRNG extends JDialog implements ActionList
 
 	private static final long serialVersionUID = 1L;
 	private final JPanel contentPanel = new JPanel();
-	private JTextArea txtrRNGResults;
+	private JTextArea textAreaRNGResults;
 	private JSpinner spinnerEnemyCount;
 	private JButton btnRoll;
 	private JCheckBox chckbxChimera;
@@ -49,14 +49,14 @@ public class PersonaDamagingSkillStatusRNG extends JDialog implements ActionList
 		contentPanel.add(btnRoll);
 		btnRoll.addActionListener(this);
 
-		txtrRNGResults = new JTextArea();
-		txtrRNGResults.setEditable(false);
-		txtrRNGResults.setLineWrap(true);
-		txtrRNGResults.setWrapStyleWord(true);
-		txtrRNGResults.setFont(new Font("Determination Mono Web", Font.PLAIN, 11));
-		txtrRNGResults.setBackground(UIManager.getColor("Button.background"));
-		txtrRNGResults.setBounds(10, 101, 330, 84);
-		contentPanel.add(txtrRNGResults);
+		textAreaRNGResults = new JTextArea();
+		textAreaRNGResults.setEditable(false);
+		textAreaRNGResults.setLineWrap(true);
+		textAreaRNGResults.setWrapStyleWord(true);
+		textAreaRNGResults.setFont(new Font("Determination Mono Web", Font.PLAIN, 11));
+		textAreaRNGResults.setBackground(UIManager.getColor("Button.background"));
+		textAreaRNGResults.setBounds(10, 101, 330, 84);
+		contentPanel.add(textAreaRNGResults);
 	}
 
 	@Override
@@ -80,11 +80,11 @@ public class PersonaDamagingSkillStatusRNG extends JDialog implements ActionList
 					if (result==8) {
 						results.append("Enemy ").append(i+1).append(" was hit with a status! Exact value: "+result).append("\n");
 					} else {
-						results.append("No status effect on enemy ").append(i+1).append(".Exact value: "+result).append("\n");
+						results.append("No status effect on enemy ").append(i+1).append(". Exact value: "+result).append("\n");
 					}
 				}
 			}
-			txtrRNGResults.setText(results.toString());
+			textAreaRNGResults.setText(results.toString());
 		}
 	}
 }

@@ -16,6 +16,7 @@ public class VoidTeaOverhealRNG extends JDialog implements ActionListener {
 
 	public VoidTeaOverhealRNG(JFrame parent) {
 		super(parent, true);
+		setTitle("Void Tea Overheal RNG");
 		setBounds(100, 100, 450, 160);
 		getContentPane().setLayout(new BorderLayout());
 		contentPanel.setBorder(new EmptyBorder(5, 5, 5, 5));

@@ -13,7 +13,7 @@ public class OtherRNG extends JDialog implements ActionListener {
 	private final JPanel contentPanel = new JPanel();
 	private JSpinner spinnerNum, spinnerRollCount;
 	private JButton btnRolling;
-	private JTextArea txtrRNGResults;
+	private JTextArea textAreaRNGResults;
 
 	public OtherRNG(JFrame parent) {
 		super(parent, true);
@@ -54,16 +54,16 @@ public class OtherRNG extends JDialog implements ActionListener {
 		contentPanel.add(btnRolling);
 		btnRolling.addActionListener(this);
 		
-		txtrRNGResults = new JTextArea();
-		txtrRNGResults.setEditable(false);
-		txtrRNGResults.setLineWrap(true);
-		txtrRNGResults.setWrapStyleWord(true);
-		txtrRNGResults.setFont(new Font("Determination Mono Web", Font.PLAIN, 11));
-		txtrRNGResults.setBackground(UIManager.getColor("Button.background"));
-		txtrRNGResults.setBounds(10, 166, 301, 84);
-		contentPanel.add(txtrRNGResults);
+		textAreaRNGResults = new JTextArea();
+		textAreaRNGResults.setEditable(false);
+		textAreaRNGResults.setLineWrap(true);
+		textAreaRNGResults.setWrapStyleWord(true);
+		textAreaRNGResults.setFont(new Font("Determination Mono Web", Font.PLAIN, 11));
+		textAreaRNGResults.setBackground(UIManager.getColor("Button.background"));
+		textAreaRNGResults.setBounds(10, 166, 301, 84);
+		contentPanel.add(textAreaRNGResults);
 		
-		JScrollPane scrollPaneResults = new JScrollPane(txtrRNGResults);
+		JScrollPane scrollPaneResults = new JScrollPane(textAreaRNGResults);
 		scrollPaneResults.setBounds(10, 166, 301, 84);
 		contentPanel.add(scrollPaneResults);
 	}
@@ -76,9 +76,9 @@ public class OtherRNG extends JDialog implements ActionListener {
 			StringBuilder results = new StringBuilder("");
 			for (int i=0; i<count; i++) {
 				result = r.nextInt(num-1)+1;
-				results.append("Roll ").append(i+1).append("result: ").append(result).append("\n");
+				results.append("Roll ").append(i+1).append(" result: ").append(result).append("\n");
 			}
-			txtrRNGResults.setText(results.toString());
+			textAreaRNGResults.setText(results.toString());
 		}
 	}
 }

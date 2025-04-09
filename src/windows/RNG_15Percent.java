@@ -11,56 +11,58 @@ public class RNG_15Percent extends JDialog implements ActionListener {
 
 	private static final long serialVersionUID = 1L;
 	private final JPanel contentPanel = new JPanel();
-	private JTextArea txtrRNGResults;
+	private JTextArea textAreaRNGResults;
 	private JSpinner spinnerRollCount;
 	private JButton btnRoll;
 
 	public RNG_15Percent(JFrame parent) {
 		super(parent, true);
-		setBounds(100, 100, 410, 370);
+		setTitle("15% Chance Stuff");
+		setBounds(100, 100, 390, 370);
 		getContentPane().setLayout(new BorderLayout());
 		contentPanel.setBorder(new EmptyBorder(5, 5, 5, 5));
 		getContentPane().add(contentPanel, BorderLayout.CENTER);
 		contentPanel.setLayout(null);
-		JTextArea txtrChoices = new JTextArea();
-		txtrChoices.setBackground(UIManager.getColor("Button.background"));
-		txtrChoices.setEditable(false);
-		txtrChoices.setWrapStyleWord(true);
-		txtrChoices.setLineWrap(true);
-		txtrChoices.setText("Stara:\r\nFiery Sword Burn RNG\r\nUnderfell Outfit Conch Slasher Sting RNG\r\n\r\nChara:\r\nDual-Elemental Beam Burn RNG");
-		txtrChoices.setFont(new Font("Determination Mono Web", Font.PLAIN, 18));
-		txtrChoices.setBounds(10, 11, 374, 123);
-		contentPanel.add(txtrChoices);
+		
+		JTextArea textAreaChoices = new JTextArea();
+		textAreaChoices.setBackground(UIManager.getColor("Button.background"));
+		textAreaChoices.setEditable(false);
+		textAreaChoices.setWrapStyleWord(true);
+		textAreaChoices.setLineWrap(true);
+		textAreaChoices.setText("Stara:\nFiery Sword Burn RNG\n(UF Outfit) Conch Slasher Sting RNG\n\nChara:\nDual-Elemental Beam Burn RNG");
+		textAreaChoices.setFont(new Font("Determination Mono Web", Font.PLAIN, 18));
+		textAreaChoices.setBounds(10, 11, 347, 127);
+		contentPanel.add(textAreaChoices);
 		
 		spinnerRollCount = new JSpinner();
 		spinnerRollCount.setFont(new Font("Determination Mono Web", Font.PLAIN, 18));
 		spinnerRollCount.setModel(new SpinnerNumberModel(1, 1, 10, 1));
-		spinnerRollCount.setBounds(53, 176, 79, 30);
+		spinnerRollCount.setBounds(53, 180, 79, 30);
 		contentPanel.add(spinnerRollCount);
 		
 		JLabel lblRollCount = new JLabel("Roll count:");
 		lblRollCount.setHorizontalAlignment(SwingConstants.CENTER);
 		lblRollCount.setFont(new Font("Determination Mono Web", Font.PLAIN, 18));
-		lblRollCount.setBounds(42, 145, 117, 20);
+		lblRollCount.setBounds(42, 149, 117, 20);
 		contentPanel.add(lblRollCount);
 		
 		btnRoll = new JButton("Roll");
 		btnRoll.setFont(new Font("Determination Mono Web", Font.PLAIN, 18));
-		btnRoll.setBounds(237, 175, 95, 30);
+		btnRoll.setBounds(218, 168, 95, 30);
 		contentPanel.add(btnRoll);
 		btnRoll.addActionListener(this);
 		
-		txtrRNGResults = new JTextArea();
-		txtrRNGResults.setEditable(false);
-		txtrRNGResults.setLineWrap(true);
-		txtrRNGResults.setWrapStyleWord(true);
-		txtrRNGResults.setFont(new Font("Determination Mono Web", Font.PLAIN, 18));
-		txtrRNGResults.setBackground(UIManager.getColor("Button.background"));
-		txtrRNGResults.setBounds(20, 217, 334, 100);
-		contentPanel.add(txtrRNGResults);
+		textAreaRNGResults = new JTextArea();
+		textAreaRNGResults.setEditable(false);
+		textAreaRNGResults.setLineWrap(true);
+		textAreaRNGResults.setWrapStyleWord(true);
+		textAreaRNGResults.setFont(new Font("Determination Mono Web", Font.PLAIN, 18));
+		textAreaRNGResults.setBackground(UIManager.getColor("Button.background"));
+		textAreaRNGResults.setBounds(10, 220, 347, 100);
+		contentPanel.add(textAreaRNGResults);
 		
-		JScrollPane scrollPaneResults = new JScrollPane(txtrRNGResults);
-		scrollPaneResults.setBounds(20, 217, 334, 100);
+		JScrollPane scrollPaneResults = new JScrollPane(textAreaRNGResults);
+		scrollPaneResults.setBounds(10, 220, 347, 100);
 		contentPanel.add(scrollPaneResults);
 	}
 
@@ -73,12 +75,12 @@ public class RNG_15Percent extends JDialog implements ActionListener {
 			for (int i=0; i<count; i++) {
 				result = r.nextInt(15-1)+1;
 				if (result==15) {
-					results.append("Roll ").append(i+1).append("result: Effect triggered! Exact value: "+result).append("\n");
+					results.append("Roll ").append(i+1).append(" result: Effect triggered! Exact value: "+result).append("\n");
 				} else {
-					results.append("Roll ").append(i+1).append("result: Nothing happened. Exact value: "+result).append("\n");
+					results.append("Roll ").append(i+1).append(" result: Nothing happened. Exact value: "+result).append("\n");
 				}
 			}
-			txtrRNGResults.setText(results.toString());
+			textAreaRNGResults.setText(results.toString());
 		}
 	}
 }

@@ -13,7 +13,7 @@ public class CharacterRandomizer extends JDialog implements ActionListener {
 	private final JPanel contentPanel = new JPanel();
 	private JSpinner spinnerRollCount;
 	private JButton btnRolling;
-	private JTextArea rngResults;
+	private JTextArea textAreaRNGResults;
 
 	public CharacterRandomizer(JFrame parent) {
 		super(parent, true);
@@ -27,41 +27,41 @@ public class CharacterRandomizer extends JDialog implements ActionListener {
 		JLabel lblRollCount = new JLabel("Roll count:");
 		lblRollCount.setHorizontalAlignment(SwingConstants.CENTER);
 		lblRollCount.setFont(new Font("Determination Mono Web", Font.PLAIN, 18));
-		lblRollCount.setBounds(225, 11, 170, 37);
+		lblRollCount.setBounds(235, 11, 141, 37);
 		contentPanel.add(lblRollCount);
 
 		spinnerRollCount = new JSpinner();
 		spinnerRollCount.setModel(new SpinnerNumberModel(1, 1, 15, 1));
 		spinnerRollCount.setFont(new Font("Determination Mono Web", Font.PLAIN, 18));
-		spinnerRollCount.setBounds(269, 47, 90, 37);
+		spinnerRollCount.setBounds(257, 54, 90, 37);
 		contentPanel.add(spinnerRollCount);
 
 		btnRolling = new JButton("Rolls");
 		btnRolling.setFont(new Font("Determination Mono Web", Font.PLAIN, 18));
-		btnRolling.setBounds(269, 95, 90, 55);
+		btnRolling.setBounds(257, 101, 90, 55);
 		contentPanel.add(btnRolling);
 		btnRolling.addActionListener(this);
 
-		JTextArea txtrChoices = new JTextArea();
-		txtrChoices.setBackground(UIManager.getColor("Button.background"));
-		txtrChoices.setFont(new Font("Determination Mono Web", Font.PLAIN, 18));
-		txtrChoices.setText("Available choices:\nStarfish\nStara\nChara\nStarfira");
-		txtrChoices.setEditable(false);
-		txtrChoices.setWrapStyleWord(true);
-		txtrChoices.setLineWrap(true);
-		txtrChoices.setBounds(59, 11, 170, 104);
-		contentPanel.add(txtrChoices);
+		JTextArea textAreaChoices = new JTextArea();
+		textAreaChoices.setBackground(UIManager.getColor("Button.background"));
+		textAreaChoices.setFont(new Font("Determination Mono Web", Font.PLAIN, 18));
+		textAreaChoices.setText("Available choices:\nStarfish\nStara\nChara\nStarfira");
+		textAreaChoices.setEditable(false);
+		textAreaChoices.setWrapStyleWord(true);
+		textAreaChoices.setLineWrap(true);
+		textAreaChoices.setBounds(20, 11, 182, 106);
+		contentPanel.add(textAreaChoices);
 
-		rngResults = new JTextArea();
-		rngResults.setEditable(false);
-		rngResults.setLineWrap(true);
-		rngResults.setWrapStyleWord(true);
-		rngResults.setFont(new Font("Determination Mono Web", Font.PLAIN, 11));
-		rngResults.setBackground(UIManager.getColor("Button.background"));
-		rngResults.setBounds(10, 166, 349, 84);
-		contentPanel.add(rngResults);
+		textAreaRNGResults = new JTextArea();
+		textAreaRNGResults.setEditable(false);
+		textAreaRNGResults.setLineWrap(true);
+		textAreaRNGResults.setWrapStyleWord(true);
+		textAreaRNGResults.setFont(new Font("Determination Mono Web", Font.PLAIN, 11));
+		textAreaRNGResults.setBackground(UIManager.getColor("Button.background"));
+		textAreaRNGResults.setBounds(10, 166, 349, 84);
+		contentPanel.add(textAreaRNGResults);
 
-		JScrollPane scrollPaneResults = new JScrollPane(rngResults);
+		JScrollPane scrollPaneResults = new JScrollPane(textAreaRNGResults);
 		scrollPaneResults.setBounds(10, 166, 349, 84);
 		contentPanel.add(scrollPaneResults);
 	}
@@ -76,23 +76,23 @@ public class CharacterRandomizer extends JDialog implements ActionListener {
 				result = r.nextInt(4-1)+1;
 				switch (result) {
 				case 1:
-					results.append("Roll ").append(i+1).append("result: ").append("Starfish. Exact value: "+result).append("\n");
+					results.append("Roll ").append(i+1).append(" result: ").append("Starfish. Exact value: "+result).append("\n");
 					break;
 					
 				case 2:
-					results.append("Roll ").append(i+1).append("result: ").append("Stara. Exact value: "+result).append("\n");
+					results.append("Roll ").append(i+1).append(" result: ").append("Stara. Exact value: "+result).append("\n");
 					break;
 					
 				case 3:
-					results.append("Roll ").append(i+1).append("result: ").append("Chara. Exact value:"+result).append("\n");
+					results.append("Roll ").append(i+1).append(" result: ").append("Chara. Exact value:"+result).append("\n");
 					break;
 					
 				case 4:
-					results.append("Roll ").append(i+1).append("result: ").append("Starfira. Exact value:"+result).append("\n");
+					results.append("Roll ").append(i+1).append(" result: ").append("Starfira. Exact value:"+result).append("\n");
 					break;
 				}
 			}
-			rngResults.setText(results.toString());
+			textAreaRNGResults.setText(results.toString());
 		}
 	}
 }

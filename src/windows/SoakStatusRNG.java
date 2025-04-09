@@ -16,21 +16,22 @@ public class SoakStatusRNG extends JDialog implements ActionListener {
 
 	public SoakStatusRNG(JFrame parent) {
 		super(parent, true);
+		setTitle("Soak Status RNG");
 		setBounds(100, 100, 350, 160);
 		getContentPane().setLayout(new BorderLayout());
 		contentPanel.setBorder(new EmptyBorder(5, 5, 5, 5));
 		getContentPane().add(contentPanel, BorderLayout.CENTER);
 		contentPanel.setLayout(null);
 		
-		JTextArea txtrChances = new JTextArea();
-		txtrChances.setLineWrap(true);
-		txtrChances.setWrapStyleWord(true);
-		txtrChances.setEditable(false);
-		txtrChances.setText("(Mal)Aquadyne\r\n40% chance to Soak");
-		txtrChances.setBackground(UIManager.getColor("Button.background"));
-		txtrChances.setFont(new Font("Determination Mono Web", Font.PLAIN, 18));
-		txtrChances.setBounds(10, 11, 184, 50);
-		contentPanel.add(txtrChances);
+		JTextArea textAreaChances = new JTextArea();
+		textAreaChances.setLineWrap(true);
+		textAreaChances.setWrapStyleWord(true);
+		textAreaChances.setEditable(false);
+		textAreaChances.setText("(Mal)Aquadyne\r\n40% chance to Soak");
+		textAreaChances.setBackground(UIManager.getColor("Button.background"));
+		textAreaChances.setFont(new Font("Determination Mono Web", Font.PLAIN, 18));
+		textAreaChances.setBounds(10, 11, 184, 50);
+		contentPanel.add(textAreaChances);
 
 		btnRoll = new JButton("Roll");
 		btnRoll.setFont(new Font("Determination Mono Web", Font.PLAIN, 18));
