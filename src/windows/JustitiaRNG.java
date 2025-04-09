@@ -52,11 +52,11 @@ public class JustitiaRNG extends JDialog implements ActionListener {
 			Random r = new Random();
 			int result = r.nextInt(10-1)+1;
 			if (result>=1 && result<=4) {
-				lblResult.setText("The result is a normal attack.");
+				lblResult.setText("The result is a normal attack. Exact value: "+result);
 			} else if (result>=5 && result<=8) {
-				lblResult.setText("The result is a 5 hit combo.");
+				lblResult.setText("The result is a 5 hit combo. Exact value: "+result);
 			} else {
-				lblResult.setText("The result is a 10 hit combo.");
+				lblResult.setText("The result is a 10 hit combo. Exact value: "+result);
 			}
 		}
 	}

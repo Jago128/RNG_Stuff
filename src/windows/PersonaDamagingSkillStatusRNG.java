@@ -69,18 +69,18 @@ public class PersonaDamagingSkillStatusRNG extends JDialog implements ActionList
 				for (int i=0; i<count; i++) {
 					result = r.nextInt(12-1)+1;
 					if (result==12) {
-						results.append("Enemy ").append(i+1).append(" was hit with a status!").append("\n");
+						results.append("Enemy ").append(i+1).append(" was hit with a status! Exact value: "+result).append("\n");
 					} else {
-						results.append("No status effect on enemy ").append(i+1).append(".").append("\n");
+						results.append("No status effect on enemy ").append(i+1).append(". Exact value: "+result).append("\n");
 					}
 				}
 			} else {
 				for (int i=0; i<count; i++) {
 					result = r.nextInt(8-1)+1;
 					if (result==8) {
-						results.append("Enemy ").append(i+1).append(" was hit with a status!").append("\n");
+						results.append("Enemy ").append(i+1).append(" was hit with a status! Exact value: "+result).append("\n");
 					} else {
-						results.append("No status effect on enemy ").append(i+1).append(".").append("\n");
+						results.append("No status effect on enemy ").append(i+1).append(".Exact value: "+result).append("\n");
 					}
 				}
 			}
