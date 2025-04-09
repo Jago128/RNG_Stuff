@@ -1,11 +1,11 @@
 package main;
 
-import windows.RNG_Stuff;
+import windows.RNGStuff;
 
 public class Main {
 
 	public static void main(String[] args) {
-		RNG_Stuff frame = new RNG_Stuff();
+		RNGStuff frame = new RNGStuff();
 		frame.setVisible(true);
 	}
 }

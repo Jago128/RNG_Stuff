@@ -6,14 +6,14 @@ import javax.swing.*;
 import javax.swing.border.*;
 import java.awt.*;
 
-public class RNG_Stuff extends JFrame implements ActionListener {
+public class RNGStuff extends JFrame implements ActionListener {
 
 	private static final long serialVersionUID = 1L;
 	private JPanel contentPane;
 	private JButton btn8_12PercentRNG, btn10PercentRNG, btn15PercentRNG, btn20PercentRNG, btn25PercentRNG, btn33PercentRNG, btn40PercentRNG, btn50PercentRNG, btnJustitiaRNG, btnOtherRNG;
 	private JButton btnCharacterRandomizer;
 
-	public RNG_Stuff() {
+	public RNGStuff() {
 		setTitle("RNG Stuff");
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 480, 550);
