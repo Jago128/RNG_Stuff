@@ -2,6 +2,7 @@ package windows;
 
 import java.awt.*;
 import java.awt.event.*;
+import java.util.Random;
 
 import javax.swing.*;
 import javax.swing.border.*;
@@ -38,7 +39,7 @@ public class CharacterRandomizer extends JDialog implements ActionListener {
 		btnRolling.setFont(new Font("Determination Mono Web", Font.PLAIN, 18));
 		btnRolling.setBounds(266, 95, 144, 55);
 		contentPanel.add(btnRolling);
-		
+
 		JTextArea choices = new JTextArea();
 		choices.setBackground(UIManager.getColor("Button.background"));
 		choices.setFont(new Font("Determination Mono Web", Font.PLAIN, 18));
@@ -48,7 +49,7 @@ public class CharacterRandomizer extends JDialog implements ActionListener {
 		choices.setLineWrap(true);
 		choices.setBounds(45, 11, 170, 144);
 		contentPanel.add(choices);
-		
+
 		rngResults = new JTextArea();
 		rngResults.setEditable(false);
 		rngResults.setLineWrap(true);
@@ -57,7 +58,7 @@ public class CharacterRandomizer extends JDialog implements ActionListener {
 		rngResults.setBackground(UIManager.getColor("Button.background"));
 		rngResults.setBounds(10, 166, 414, 84);
 		contentPanel.add(rngResults);
-		
+
 		JScrollPane scrollPane = new JScrollPane(rngResults);
 		scrollPane.setBounds(10, 166, 414, 84);
 		contentPanel.add(scrollPane);
@@ -66,7 +67,30 @@ public class CharacterRandomizer extends JDialog implements ActionListener {
 	@Override
 	public void actionPerformed(ActionEvent e) {
 		if (e.getSource()==btnRolling) {
-			
+			Random r = new Random();
+			int result, count=(int)spinnerRollCount.getValue();
+			StringBuilder results = new StringBuilder("");
+			for (int i=0; i<count; i++) {
+				result = r.nextInt(4-1)+1;
+				switch (result) {
+				case 1:
+					results.append("Roll ").append(i+1).append(": ").append("Starfish").append("\n");
+					break;
+					
+				case 2:
+					results.append("Roll ").append(i+1).append(": ").append("Stara").append("\n");
+					break;
+					
+				case 3:
+					results.append("Roll ").append(i+1).append(": ").append("Chara").append("\n");
+					break;
+					
+				case 4:
+					results.append("Roll ").append(i+1).append(": ").append("Starfira").append("\n");
+					break;
+				}
+			}
+			rngResults.setText(results.toString());
 		}
 	}
 }
