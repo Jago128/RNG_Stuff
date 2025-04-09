@@ -11,11 +11,12 @@ public class RNG_Stuff extends JFrame implements ActionListener {
 	private static final long serialVersionUID = 1L;
 	private JPanel contentPane;
 	private JButton btn8_12PercentRNG, btn10PercentRNG, btn15PercentRNG, btn20PercentRNG, btn25PercentRNG, btn33PercentRNG, btn40PercentRNG, btn50PercentRNG, btnJustitiaRNG, btnOtherRNG;
+	private JButton btnCharacterRandomizer;
 
 	public RNG_Stuff() {
 		setTitle("RNG Stuff");
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		setBounds(100, 100, 480, 490);
+		setBounds(100, 100, 480, 540);
 		contentPane = new JPanel();
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 
@@ -83,6 +84,11 @@ public class RNG_Stuff extends JFrame implements ActionListener {
 		lblDamagingSkillsOnly.setFont(new Font("Determination Mono Web", Font.PLAIN, 18));
 		lblDamagingSkillsOnly.setBounds(244, 196, 219, 41);
 		contentPane.add(lblDamagingSkillsOnly);
+		
+		btnCharacterRandomizer = new JButton("Character Randomizer");
+		btnCharacterRandomizer.setFont(new Font("Determination Mono Web", Font.PLAIN, 16));
+		btnCharacterRandomizer.setBounds(122, 434, 200, 64);
+		contentPane.add(btnCharacterRandomizer);
 	}
 
 	@Override
@@ -116,6 +122,9 @@ public class RNG_Stuff extends JFrame implements ActionListener {
 			dialog.setVisible(true);
 		} else if (e.getSource()==btnOtherRNG) {
 			OtherRNG dialog = new OtherRNG();
+			dialog.setVisible(true);
+		} else if (e.getSource()==btnCharacterRandomizer) {
+			CharacterRandomizer dialog = new CharacterRandomizer();
 			dialog.setVisible(true);
 		}
 	}
