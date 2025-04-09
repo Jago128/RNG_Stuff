@@ -66,21 +66,21 @@ public class PersonaDamagingSkillStatusRNG extends JDialog implements ActionList
 			int result, count=(int)spinnerEnemyCount.getValue();
 			StringBuilder results = new StringBuilder("");
 			if (chckbxChimera.isSelected()) {
-				for (int i=0; i<count; i++) {
-					result = r.nextInt(12)+1;
-					if (result==12) {
-						results.append("Enemy ").append(i+1).append(" was hit with a status! Exact value: "+result).append("\n");
+				for (int i = 0; i < count; i++) {
+					result = r.nextInt(25)+1;
+					if (result<=3) {
+						results.append("Enemy ").append(i+1).append(" was hit with a status! Exact value: ").append(result).append("\n");
 					} else {
-						results.append("No status effect on enemy ").append(i+1).append(". Exact value: "+result).append("\n");
+						results.append("No status effect on enemy ").append(i+1).append(". Exact value: ").append(result).append("\n");
 					}
 				}
 			} else {
-				for (int i=0; i<count; i++) {
-					result = r.nextInt(8)+1;
-					if (result==8) {
-						results.append("Enemy ").append(i+1).append(" was hit with a status! Exact value: "+result).append("\n");
+				for (int i = 0; i < count; i++) {
+					result = r.nextInt(25)+1;
+					if (result<=2) {
+						results.append("Enemy ").append(i+1).append(" was hit with a status! Exact value: ").append(result).append("\n");
 					} else {
-						results.append("No status effect on enemy ").append(i+1).append(". Exact value: "+result).append("\n");
+						results.append("No status effect on enemy ").append(i+1).append(". Exact value: ").append(result).append("\n");
 					}
 				}
 			}

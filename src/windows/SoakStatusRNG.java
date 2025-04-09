@@ -50,11 +50,11 @@ public class SoakStatusRNG extends JDialog implements ActionListener {
 	public void actionPerformed(ActionEvent e) {
 		if (e.getSource() == btnRoll) {
 			Random r = new Random();
-			int result = r.nextInt(40)+1;
-			if (result==4) {
-				lblResult.setText("The enemy got soaked! Exact value: "+result);
+			int result = r.nextInt(100)+1;
+			if (result<=40) {
+				lblResult.setText("The enemy got soaked! Exact value: " + result);
 			} else {
-				lblResult.setText("The effect didn't trigger. Exact value: "+result);
+				lblResult.setText("The effect didn't trigger. Exact value: " + result);
 			}
 		}
 	}
