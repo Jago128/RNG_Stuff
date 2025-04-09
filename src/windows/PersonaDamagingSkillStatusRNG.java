@@ -67,7 +67,7 @@ public class PersonaDamagingSkillStatusRNG extends JDialog implements ActionList
 			StringBuilder results = new StringBuilder("");
 			if (chckbxChimera.isSelected()) {
 				for (int i=0; i<count; i++) {
-					result = r.nextInt(12-1)+1;
+					result = r.nextInt(12)+1;
 					if (result==12) {
 						results.append("Enemy ").append(i+1).append(" was hit with a status! Exact value: "+result).append("\n");
 					} else {

@@ -47,7 +47,7 @@ public class VoidTeaOverhealRNG extends JDialog implements ActionListener {
 		if (e.getSource()==btnRoll) {
 			Random r = new Random();
 			int result;
-			result = r.nextInt(3-1)+1;
+			result = r.nextInt(3)+1;
 			if (result==3) {
 				lblResult.setText("Overheal triggered! Exact value: "+result);
 			} else {

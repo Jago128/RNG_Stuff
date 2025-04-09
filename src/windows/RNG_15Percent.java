@@ -73,7 +73,7 @@ public class RNG_15Percent extends JDialog implements ActionListener {
 			int result, count=(int)spinnerRollCount.getValue();
 			StringBuilder results = new StringBuilder("");
 			for (int i=0; i<count; i++) {
-				result = r.nextInt(15-1)+1;
+				result = r.nextInt(15)+1;
 				if (result==15) {
 					results.append("Roll ").append(i+1).append(" result: Effect triggered! Exact value: "+result).append("\n");
 				} else {

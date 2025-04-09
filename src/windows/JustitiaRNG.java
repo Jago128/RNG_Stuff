@@ -50,7 +50,7 @@ public class JustitiaRNG extends JDialog implements ActionListener {
 	public void actionPerformed(ActionEvent e) {
 		if (e.getSource() == btnRoll) {
 			Random r = new Random();
-			int result = r.nextInt(10-1)+1;
+			int result = r.nextInt(10)+1;
 			if (result>=1 && result<=4) {
 				lblResult.setText("The result is a normal attack. Exact value: "+result);
 			} else if (result>=5 && result<=8) {

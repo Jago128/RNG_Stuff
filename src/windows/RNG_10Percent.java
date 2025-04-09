@@ -79,7 +79,7 @@ public class RNG_10Percent extends JDialog implements ActionListener {
 			int result, count=(int)spinnerRollCount.getValue(), elementalBombTriggers = 0;
 			StringBuilder results = new StringBuilder("");
 			for (int i=0; i<count; i++) {
-				result = r.nextInt(10-1)+1;
+				result = r.nextInt(10)+1;
 				if (result==10) {
 					results.append("Roll ").append(i+1).append(" result: Effect triggered/Crit! Exact value: "+result).append("\n");
 					if (chckbxElementalBomb.isSelected()) {

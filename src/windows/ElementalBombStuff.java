@@ -63,7 +63,7 @@ public class ElementalBombStuff extends JDialog implements ActionListener {
 			int result;
 			StringBuilder results = new StringBuilder("");
 			for (int i = 0; i < elementalBombTriggers; i++) {
-				result = r.nextInt(2-1)+1;
+				result = r.nextInt(2)+1;
 				switch (result) {
 				case 1:
 					results.append("Roll ").append(i+1).append(" result: Burn triggered! Exact value: "+result).append("\n");

@@ -75,7 +75,7 @@ public class OtherRNG extends JDialog implements ActionListener {
 			int result, num=(int)spinnerNum.getValue(), count=(int)spinnerRollCount.getValue();
 			StringBuilder results = new StringBuilder("");
 			for (int i=0; i<count; i++) {
-				result = r.nextInt(num-1)+1;
+				result = r.nextInt(num)+1;
 				results.append("Roll ").append(i+1).append(" result: ").append(result).append("\n");
 			}
 			textAreaRNGResults.setText(results.toString());
