@@ -45,12 +45,12 @@ public class RNGStuff extends JFrame implements ActionListener {
 
 		btn40PercentRNG = new JButton("Soak Status RNG");
 		btn40PercentRNG.setFont(new Font("Determination Mono Web", Font.PLAIN, 20));
-		btn40PercentRNG.setBounds(24, 209, 200, 64);
+		btn40PercentRNG.setBounds(24, 285, 200, 64);
 		contentPane.add(btn40PercentRNG);
 
-		btnPersonaDamagingSkillStatusRNG = new JButton("Skill Status RNG");
-		btnPersonaDamagingSkillStatusRNG.setFont(new Font("Determination Mono Web", Font.PLAIN, 18));
-		btnPersonaDamagingSkillStatusRNG.setBounds(254, 227, 202, 64);
+		btnPersonaDamagingSkillStatusRNG = new JButton("Damaging Skill Status RNG");
+		btnPersonaDamagingSkillStatusRNG.setFont(new Font("Determination Mono Web", Font.PLAIN, 16));
+		btnPersonaDamagingSkillStatusRNG.setBounds(222, 210, 233, 64);
 		contentPane.add(btnPersonaDamagingSkillStatusRNG);
 
 		JLabel lblTitle = new JLabel("Jago's RNG Shenanigans");
@@ -61,33 +61,27 @@ public class RNGStuff extends JFrame implements ActionListener {
 
 		btnJustitiaRNG = new JButton("Justitia RNG");
 		btnJustitiaRNG.setFont(new Font("Determination Mono Web", Font.PLAIN, 20));
-		btnJustitiaRNG.setBounds(24, 283, 200, 64);
+		btnJustitiaRNG.setBounds(24, 359, 200, 64);
 		contentPane.add(btnJustitiaRNG);
 
 		btn33PercentRNG = new JButton("Void Tea Overheal RNG");
 		btn33PercentRNG.setFont(new Font("Determination Mono Web", Font.PLAIN, 16));
-		btn33PercentRNG.setBounds(244, 302, 211, 64);
+		btn33PercentRNG.setBounds(244, 286, 211, 64);
 		contentPane.add(btn33PercentRNG);
 
-		btn50PercentRNG = new JButton("Abysmal Surge RNG");
-		btn50PercentRNG.setFont(new Font("Determination Mono Web", Font.PLAIN, 18));
-		btn50PercentRNG.setBounds(24, 359, 200, 64);
+		btn50PercentRNG = new JButton("50% Stuff");
+		btn50PercentRNG.setFont(new Font("Determination Mono Web", Font.PLAIN, 20));
+		btn50PercentRNG.setBounds(10, 210, 200, 64);
 		contentPane.add(btn50PercentRNG);
 
 		btnOtherRNG = new JButton("Other RNG");
 		btnOtherRNG.setFont(new Font("Determination Mono Web", Font.PLAIN, 20));
-		btnOtherRNG.setBounds(255, 377, 200, 64);
+		btnOtherRNG.setBounds(130, 434, 200, 64);
 		contentPane.add(btnOtherRNG);
-
-		JLabel lblDamagingSkillsOnly = new JLabel("Damaging Skills only");
-		lblDamagingSkillsOnly.setHorizontalAlignment(SwingConstants.CENTER);
-		lblDamagingSkillsOnly.setFont(new Font("Determination Mono Web", Font.PLAIN, 18));
-		lblDamagingSkillsOnly.setBounds(244, 196, 219, 41);
-		contentPane.add(lblDamagingSkillsOnly);
 		
 		btnCharacterRandomizer = new JButton("Character Randomizer");
 		btnCharacterRandomizer.setFont(new Font("Determination Mono Web", Font.PLAIN, 16));
-		btnCharacterRandomizer.setBounds(24, 434, 200, 64);
+		btnCharacterRandomizer.setBounds(255, 360, 200, 64);
 		contentPane.add(btnCharacterRandomizer);
 	}
 
