@@ -11,9 +11,9 @@ public class OtherRNG extends JDialog implements ActionListener {
 
 	private static final long serialVersionUID = 1L;
 	private final JPanel contentPanel = new JPanel();
-	private JSpinner spinnerNum;
-	private JSpinner spinnerRollCount;
+	private JSpinner spinnerNum, spinnerRollCount;
 	private JButton btnRolling;
+	private JTextArea rngResults;
 
 	public OtherRNG() {
 		setTitle("Other RNG");
@@ -51,17 +51,32 @@ public class OtherRNG extends JDialog implements ActionListener {
 		btnRolling.setFont(new Font("Determination Mono Web", Font.PLAIN, 18));
 		btnRolling.setBounds(144, 100, 144, 55);
 		contentPanel.add(btnRolling);
+		
+		rngResults = new JTextArea();
+		rngResults.setEditable(false);
+		rngResults.setLineWrap(true);
+		rngResults.setWrapStyleWord(true);
+		rngResults.setFont(new Font("Determination Mono Web", Font.PLAIN, 11));
+		rngResults.setBackground(UIManager.getColor("Button.background"));
+		rngResults.setBounds(10, 166, 414, 84);
+		contentPanel.add(rngResults);
+		
+		JScrollPane scrollPane = new JScrollPane(rngResults);
+		scrollPane.setBounds(10, 166, 414, 84);
+		contentPanel.add(scrollPane);
 	}
 
 	@Override
 	public void actionPerformed(ActionEvent e) {
 		if (e.getSource() == btnRolling) {
 			Random r = new Random();
-			int result;
-			for (int i=0; i<(int)spinnerRollCount.getValue(); i++) {
-				result = r.nextInt((int)spinnerNum.getValue()-1)+1;
-				
+			int result, num=(int)spinnerNum.getValue(), count=(int)spinnerRollCount.getValue();
+			StringBuilder results = new StringBuilder("");
+			for (int i=0; i<count; i++) {
+				result = r.nextInt(num-1)+1;
+				results.append("Roll ").append(i+1).append(": ").append(result).append("\n");
 			}
+			rngResults.setText(results.toString());
 		}
 	}
 }
