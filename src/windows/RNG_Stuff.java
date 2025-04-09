@@ -48,8 +48,8 @@ public class RNG_Stuff extends JFrame implements ActionListener {
 		contentPane.add(btn40PercentRNG);
 		
 		btn8_12PercentRNG = new JButton("Skill Status RNG");
-		btn8_12PercentRNG.setFont(new Font("Determination Mono Web", Font.PLAIN, 16));
-		btn8_12PercentRNG.setBounds(255, 229, 202, 64);
+		btn8_12PercentRNG.setFont(new Font("Determination Mono Web", Font.PLAIN, 18));
+		btn8_12PercentRNG.setBounds(254, 227, 202, 64);
 		contentPane.add(btn8_12PercentRNG);
 		
 		JLabel lblTitle = new JLabel("Jago's RNG Shenanigans");
@@ -80,8 +80,8 @@ public class RNG_Stuff extends JFrame implements ActionListener {
 		
 		JLabel lblDamagingSkillsOnly = new JLabel("Damaging Skills only");
 		lblDamagingSkillsOnly.setHorizontalAlignment(SwingConstants.CENTER);
-		lblDamagingSkillsOnly.setFont(new Font("Determination Mono Web", Font.PLAIN, 16));
-		lblDamagingSkillsOnly.setBounds(247, 196, 219, 41);
+		lblDamagingSkillsOnly.setFont(new Font("Determination Mono Web", Font.PLAIN, 18));
+		lblDamagingSkillsOnly.setBounds(244, 196, 219, 41);
 		contentPane.add(lblDamagingSkillsOnly);
 	}
 
