@@ -115,7 +115,7 @@ public class RNG_Stuff extends JFrame implements ActionListener {
 			RNG_50Percent dialog = new RNG_50Percent(this);
 			dialog.setVisible(true);
 		} else if (e.getSource()==btn8_12PercentRNG) {
-			PersonaSkillRNG dialog = new PersonaSkillRNG(this);
+			PersonaDamagingSkillStatusRNG dialog = new PersonaDamagingSkillStatusRNG(this);
 			dialog.setVisible(true);
 		} else if (e.getSource()==btnJustitiaRNG) {
 			JustitiaRNG dialog = new JustitiaRNG(this);
