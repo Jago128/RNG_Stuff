@@ -29,7 +29,7 @@ public class RNG_15Percent extends JDialog implements ActionListener {
 		txtrChoices.setLineWrap(true);
 		txtrChoices.setText("Stara:\r\nFiery Sword Burn RNG\r\nUnderfell Outfit Conch Slasher Sting RNG\r\n\r\nChara:\r\nDual-Elemental Beam Burn RNG");
 		txtrChoices.setFont(new Font("Determination Mono Web", Font.PLAIN, 18));
-		txtrChoices.setBounds(20, 11, 385, 123);
+		txtrChoices.setBounds(10, 11, 374, 123);
 		contentPanel.add(txtrChoices);
 		
 		spinnerRollCount = new JSpinner();

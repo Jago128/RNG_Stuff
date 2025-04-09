@@ -17,7 +17,7 @@ public class RNG_10Percent extends JDialog implements ActionListener {
 
 	public RNG_10Percent(JFrame parent) {
 		super(parent, true);
-		setBounds(100, 100, 400, 400);
+		setBounds(100, 100, 420, 370);
 		getContentPane().setLayout(new BorderLayout());
 		contentPanel.setBorder(new EmptyBorder(5, 5, 5, 5));
 		getContentPane().add(contentPanel, BorderLayout.CENTER);
@@ -28,26 +28,26 @@ public class RNG_10Percent extends JDialog implements ActionListener {
 		txtrChoices.setEditable(false);
 		txtrChoices.setWrapStyleWord(true);
 		txtrChoices.setLineWrap(true);
-		txtrChoices.setText("Starfish:\r\nTemmie Armor DMG heal\r\n\r\nStara:\r\nConch Slasher Crit\r\n\r\nChara:\r\nElemental Bomb Status RNG\r\nFire Slash Burn RNG\r\nFrost Snap Infliction RNG");
+		txtrChoices.setText("Starfish:\r\nTemmie Armor DMG heal\r\n\r\nStara:\r\nConch Slasher/Fusion Crit RNG\r\n\r\nChara:\r\nElemental Bomb Status RNG\r\nFire Slash Burn RNG\r\nFrost Snap Infliction RNG");
 		txtrChoices.setFont(new Font("Determination Mono Web", Font.PLAIN, 18));
-		txtrChoices.setBounds(20, 11, 237, 213);
+		txtrChoices.setBounds(10, 11, 271, 200);
 		contentPanel.add(txtrChoices);
 
 		spinnerRollCount = new JSpinner();
 		spinnerRollCount.setFont(new Font("Determination Mono Web", Font.PLAIN, 18));
 		spinnerRollCount.setModel(new SpinnerNumberModel(1, 1, 10, 1));
-		spinnerRollCount.setBounds(301, 59, 61, 30);
+		spinnerRollCount.setBounds(312, 56, 61, 30);
 		contentPanel.add(spinnerRollCount);
 
 		JLabel lblRollCount = new JLabel("Roll count:");
 		lblRollCount.setHorizontalAlignment(SwingConstants.CENTER);
 		lblRollCount.setFont(new Font("Determination Mono Web", Font.PLAIN, 18));
-		lblRollCount.setBounds(263, 28, 130, 20);
+		lblRollCount.setBounds(274, 25, 130, 20);
 		contentPanel.add(lblRollCount);
 
 		btnRoll = new JButton("Roll");
 		btnRoll.setFont(new Font("Determination Mono Web", Font.PLAIN, 18));
-		btnRoll.setBounds(283, 100, 90, 30);
+		btnRoll.setBounds(294, 97, 90, 30);
 		contentPanel.add(btnRoll);
 		btnRoll.addActionListener(this);
 
@@ -57,11 +57,11 @@ public class RNG_10Percent extends JDialog implements ActionListener {
 		txtrRNGResults.setWrapStyleWord(true);
 		txtrRNGResults.setFont(new Font("Determination Mono Web", Font.PLAIN, 18));
 		txtrRNGResults.setBackground(UIManager.getColor("Button.background"));
-		txtrRNGResults.setBounds(20, 250, 353, 100);
+		txtrRNGResults.setBounds(20, 215, 364, 100);
 		contentPanel.add(txtrRNGResults);
 
 		JScrollPane scrollPaneResults = new JScrollPane(txtrRNGResults);
-		scrollPaneResults.setBounds(20, 250, 353, 100);
+		scrollPaneResults.setBounds(20, 215, 364, 100);
 		contentPanel.add(scrollPaneResults);
 	}
 
