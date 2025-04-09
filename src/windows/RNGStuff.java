@@ -10,7 +10,7 @@ public class RNGStuff extends JFrame implements ActionListener {
 
 	private static final long serialVersionUID = 1L;
 	private JPanel contentPane;
-	private JButton btn8_12PercentRNG, btn10PercentRNG, btn15PercentRNG, btn20PercentRNG, btn25PercentRNG, btn33PercentRNG, btn40PercentRNG, btn50PercentRNG, btnJustitiaRNG, btnOtherRNG;
+	private JButton btnPersonaDamagingSkillStatusRNG, btn10PercentRNG, btn15PercentRNG, btn20PercentRNG, btn25PercentRNG, btn33PercentRNG, btn40PercentRNG, btn50PercentRNG, btnJustitiaRNG, btnOtherRNG;
 	private JButton btnCharacterRandomizer;
 
 	public RNGStuff() {
@@ -48,10 +48,10 @@ public class RNGStuff extends JFrame implements ActionListener {
 		btn40PercentRNG.setBounds(24, 209, 200, 64);
 		contentPane.add(btn40PercentRNG);
 
-		btn8_12PercentRNG = new JButton("Skill Status RNG");
-		btn8_12PercentRNG.setFont(new Font("Determination Mono Web", Font.PLAIN, 18));
-		btn8_12PercentRNG.setBounds(254, 227, 202, 64);
-		contentPane.add(btn8_12PercentRNG);
+		btnPersonaDamagingSkillStatusRNG = new JButton("Skill Status RNG");
+		btnPersonaDamagingSkillStatusRNG.setFont(new Font("Determination Mono Web", Font.PLAIN, 18));
+		btnPersonaDamagingSkillStatusRNG.setBounds(254, 227, 202, 64);
+		contentPane.add(btnPersonaDamagingSkillStatusRNG);
 
 		JLabel lblTitle = new JLabel("Jago's RNG Shenanigans");
 		lblTitle.setHorizontalAlignment(SwingConstants.CENTER);
@@ -114,7 +114,7 @@ public class RNGStuff extends JFrame implements ActionListener {
 		} else if (e.getSource()==btn50PercentRNG) {
 			RNG_50Percent dialog = new RNG_50Percent(this);
 			dialog.setVisible(true);
-		} else if (e.getSource()==btn8_12PercentRNG) {
+		} else if (e.getSource()==btnPersonaDamagingSkillStatusRNG) {
 			PersonaDamagingSkillStatusRNG dialog = new PersonaDamagingSkillStatusRNG(this);
 			dialog.setVisible(true);
 		} else if (e.getSource()==btnJustitiaRNG) {
