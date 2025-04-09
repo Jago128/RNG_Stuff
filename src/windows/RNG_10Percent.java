@@ -10,7 +10,7 @@ public class RNG_10Percent extends JDialog implements ActionListener {
 
 	private static final long serialVersionUID = 1L;
 	private final JPanel contentPanel = new JPanel();
-	private JTextArea rngResults;
+	private JTextArea txtrRNGResults;
 
 	public RNG_10Percent(JFrame parent) {
 		super(parent, true);
@@ -20,45 +20,46 @@ public class RNG_10Percent extends JDialog implements ActionListener {
 		getContentPane().add(contentPanel, BorderLayout.CENTER);
 		contentPanel.setLayout(null);
 		
-		JTextArea txtrAvailableChoicesStarfish = new JTextArea();
-		txtrAvailableChoicesStarfish.setBackground(UIManager.getColor("Button.background"));
-		txtrAvailableChoicesStarfish.setEditable(false);
-		txtrAvailableChoicesStarfish.setWrapStyleWord(true);
-		txtrAvailableChoicesStarfish.setLineWrap(true);
-		txtrAvailableChoicesStarfish.setText("Starfish:\r\nTemmie Armor DMG heal\r\n\r\nStara:\r\nConch Slasher Crit\r\n\r\nChara:\r\nElemental Bomb Status RNG\r\nFire Slash Burn RNG\r\nFrost Snap RNG");
-		txtrAvailableChoicesStarfish.setFont(new Font("Determination Mono Web", Font.PLAIN, 18));
-		txtrAvailableChoicesStarfish.setBounds(20, 11, 238, 202);
-		contentPanel.add(txtrAvailableChoicesStarfish);
+		JTextArea txtrChoices = new JTextArea();
+		txtrChoices.setBackground(UIManager.getColor("Button.background"));
+		txtrChoices.setEditable(false);
+		txtrChoices.setWrapStyleWord(true);
+		txtrChoices.setLineWrap(true);
+		txtrChoices.setText("Starfish:\r\nTemmie Armor DMG heal\r\n\r\nStara:\r\nConch Slasher Crit\r\n\r\nChara:\r\nElemental Bomb Status RNG\r\nFire Slash Burn RNG\r\nFrost Snap RNG");
+		txtrChoices.setFont(new Font("Determination Mono Web", Font.PLAIN, 18));
+		txtrChoices.setBounds(20, 11, 238, 202);
+		contentPanel.add(txtrChoices);
 		
-		JSpinner spinner = new JSpinner();
-		spinner.setFont(new Font("Determination Mono Web", Font.PLAIN, 18));
-		spinner.setModel(new SpinnerNumberModel(1, 1, 10, 1));
-		spinner.setBounds(282, 43, 61, 30);
-		contentPanel.add(spinner);
+		JSpinner spinnerCount = new JSpinner();
+		spinnerCount.setFont(new Font("Determination Mono Web", Font.PLAIN, 18));
+		spinnerCount.setModel(new SpinnerNumberModel(1, 1, 10, 1));
+		spinnerCount.setBounds(282, 43, 61, 30);
+		contentPanel.add(spinnerCount);
 		
-		JLabel lblNewLabel = new JLabel("Count:");
-		lblNewLabel.setHorizontalAlignment(SwingConstants.CENTER);
-		lblNewLabel.setFont(new Font("Determination Mono Web", Font.PLAIN, 18));
-		lblNewLabel.setBounds(268, 12, 88, 20);
-		contentPanel.add(lblNewLabel);
+		JLabel lblCount = new JLabel("Count:");
+		lblCount.setHorizontalAlignment(SwingConstants.CENTER);
+		lblCount.setFont(new Font("Determination Mono Web", Font.PLAIN, 18));
+		lblCount.setBounds(268, 12, 88, 20);
+		contentPanel.add(lblCount);
 		
-		JButton btnNewButton = new JButton("Roll");
-		btnNewButton.setFont(new Font("Determination Mono Web", Font.PLAIN, 18));
-		btnNewButton.setBounds(268, 84, 89, 23);
-		contentPanel.add(btnNewButton);
+		JButton btnRoll = new JButton("Roll");
+		btnRoll.setFont(new Font("Determination Mono Web", Font.PLAIN, 18));
+		btnRoll.setBounds(267, 84, 89, 30);
+		contentPanel.add(btnRoll);
+		btnRoll.addActionListener(this);
 		
-		rngResults = new JTextArea();
-		rngResults.setEditable(false);
-		rngResults.setLineWrap(true);
-		rngResults.setWrapStyleWord(true);
-		rngResults.setFont(new Font("Determination Mono Web", Font.PLAIN, 18));
-		rngResults.setBackground(UIManager.getColor("Button.background"));
-		rngResults.setBounds(20, 230, 334, 100);
-		contentPanel.add(rngResults);
+		txtrRNGResults = new JTextArea();
+		txtrRNGResults.setEditable(false);
+		txtrRNGResults.setLineWrap(true);
+		txtrRNGResults.setWrapStyleWord(true);
+		txtrRNGResults.setFont(new Font("Determination Mono Web", Font.PLAIN, 18));
+		txtrRNGResults.setBackground(UIManager.getColor("Button.background"));
+		txtrRNGResults.setBounds(20, 230, 334, 100);
+		contentPanel.add(txtrRNGResults);
 		
-		JScrollPane scrollPane = new JScrollPane(rngResults);
-		scrollPane.setBounds(20, 230, 334, 100);
-		contentPanel.add(scrollPane);
+		JScrollPane scrollPaneResults = new JScrollPane(txtrRNGResults);
+		scrollPaneResults.setBounds(20, 230, 334, 100);
+		contentPanel.add(scrollPaneResults);
 	}
 
 	@Override

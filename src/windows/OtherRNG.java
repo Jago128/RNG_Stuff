@@ -13,7 +13,7 @@ public class OtherRNG extends JDialog implements ActionListener {
 	private final JPanel contentPanel = new JPanel();
 	private JSpinner spinnerNum, spinnerRollCount;
 	private JButton btnRolling;
-	private JTextArea rngResults;
+	private JTextArea txtrRNGResults;
 
 	public OtherRNG(JFrame parent) {
 		super(parent, true);
@@ -54,18 +54,18 @@ public class OtherRNG extends JDialog implements ActionListener {
 		contentPanel.add(btnRolling);
 		btnRolling.addActionListener(this);
 		
-		rngResults = new JTextArea();
-		rngResults.setEditable(false);
-		rngResults.setLineWrap(true);
-		rngResults.setWrapStyleWord(true);
-		rngResults.setFont(new Font("Determination Mono Web", Font.PLAIN, 11));
-		rngResults.setBackground(UIManager.getColor("Button.background"));
-		rngResults.setBounds(10, 166, 301, 84);
-		contentPanel.add(rngResults);
+		txtrRNGResults = new JTextArea();
+		txtrRNGResults.setEditable(false);
+		txtrRNGResults.setLineWrap(true);
+		txtrRNGResults.setWrapStyleWord(true);
+		txtrRNGResults.setFont(new Font("Determination Mono Web", Font.PLAIN, 11));
+		txtrRNGResults.setBackground(UIManager.getColor("Button.background"));
+		txtrRNGResults.setBounds(10, 166, 301, 84);
+		contentPanel.add(txtrRNGResults);
 		
-		JScrollPane scrollPane = new JScrollPane(rngResults);
-		scrollPane.setBounds(10, 166, 301, 84);
-		contentPanel.add(scrollPane);
+		JScrollPane scrollPaneResults = new JScrollPane(txtrRNGResults);
+		scrollPaneResults.setBounds(10, 166, 301, 84);
+		contentPanel.add(scrollPaneResults);
 	}
 
 	@Override
@@ -78,7 +78,7 @@ public class OtherRNG extends JDialog implements ActionListener {
 				result = r.nextInt(num-1)+1;
 				results.append("Roll ").append(i+1).append("result: ").append(result).append("\n");
 			}
-			rngResults.setText(results.toString());
+			txtrRNGResults.setText(results.toString());
 		}
 	}
 }

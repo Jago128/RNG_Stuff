@@ -42,15 +42,15 @@ public class CharacterRandomizer extends JDialog implements ActionListener {
 		contentPanel.add(btnRolling);
 		btnRolling.addActionListener(this);
 
-		JTextArea choices = new JTextArea();
-		choices.setBackground(UIManager.getColor("Button.background"));
-		choices.setFont(new Font("Determination Mono Web", Font.PLAIN, 18));
-		choices.setText("Available choices:\r\nStarfish\r\nStara\r\nChara\r\nStarfira");
-		choices.setEditable(false);
-		choices.setWrapStyleWord(true);
-		choices.setLineWrap(true);
-		choices.setBounds(45, 11, 170, 104);
-		contentPanel.add(choices);
+		JTextArea txtrChoices = new JTextArea();
+		txtrChoices.setBackground(UIManager.getColor("Button.background"));
+		txtrChoices.setFont(new Font("Determination Mono Web", Font.PLAIN, 18));
+		txtrChoices.setText("Available choices:\r\nStarfish\r\nStara\r\nChara\r\nStarfira");
+		txtrChoices.setEditable(false);
+		txtrChoices.setWrapStyleWord(true);
+		txtrChoices.setLineWrap(true);
+		txtrChoices.setBounds(59, 11, 170, 104);
+		contentPanel.add(txtrChoices);
 
 		rngResults = new JTextArea();
 		rngResults.setEditable(false);
@@ -61,9 +61,9 @@ public class CharacterRandomizer extends JDialog implements ActionListener {
 		rngResults.setBounds(10, 166, 349, 84);
 		contentPanel.add(rngResults);
 
-		JScrollPane scrollPane = new JScrollPane(rngResults);
-		scrollPane.setBounds(10, 166, 349, 84);
-		contentPanel.add(scrollPane);
+		JScrollPane scrollPaneResults = new JScrollPane(rngResults);
+		scrollPaneResults.setBounds(10, 166, 349, 84);
+		contentPanel.add(scrollPaneResults);
 	}
 
 	@Override
@@ -76,19 +76,19 @@ public class CharacterRandomizer extends JDialog implements ActionListener {
 				result = r.nextInt(4-1)+1;
 				switch (result) {
 				case 1:
-					results.append("Roll ").append(i+1).append(": ").append("Starfish").append("\n");
+					results.append("Roll ").append(i+1).append("result: ").append("Starfish").append("\n");
 					break;
 					
 				case 2:
-					results.append("Roll ").append(i+1).append(": ").append("Stara").append("\n");
+					results.append("Roll ").append(i+1).append("result: ").append("Stara").append("\n");
 					break;
 					
 				case 3:
-					results.append("Roll ").append(i+1).append(": ").append("Chara").append("\n");
+					results.append("Roll ").append(i+1).append("result: ").append("Chara").append("\n");
 					break;
 					
 				case 4:
-					results.append("Roll ").append(i+1).append(": ").append("Starfira").append("\n");
+					results.append("Roll ").append(i+1).append("result: ").append("Starfira").append("\n");
 					break;
 				}
 			}

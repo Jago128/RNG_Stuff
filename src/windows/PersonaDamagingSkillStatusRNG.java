@@ -11,10 +11,10 @@ public class PersonaDamagingSkillStatusRNG extends JDialog implements ActionList
 
 	private static final long serialVersionUID = 1L;
 	private final JPanel contentPanel = new JPanel();
-	private JTextArea rngResults;
+	private JTextArea txtrRNGResults;
 	private JSpinner spinnerEnemyCount;
 	private JButton btnRoll;
-	private JCheckBox chimeraCheckBox;
+	private JCheckBox checkBoxChimera;
 
 	public PersonaDamagingSkillStatusRNG(JFrame parent) {
 		super(parent, true);
@@ -31,11 +31,11 @@ public class PersonaDamagingSkillStatusRNG extends JDialog implements ActionList
 		lblEnemyCount.setBounds(33, 22, 129, 28);
 		contentPanel.add(lblEnemyCount);
 
-		chimeraCheckBox = new JCheckBox("Chimera or not?");
-		chimeraCheckBox.setHorizontalAlignment(SwingConstants.CENTER);
-		chimeraCheckBox.setFont(new Font("Determination Mono Web", Font.PLAIN, 18));
-		chimeraCheckBox.setBounds(180, 25, 168, 23);
-		contentPanel.add(chimeraCheckBox);
+		checkBoxChimera = new JCheckBox("Chimera or not?");
+		checkBoxChimera.setHorizontalAlignment(SwingConstants.CENTER);
+		checkBoxChimera.setFont(new Font("Determination Mono Web", Font.PLAIN, 18));
+		checkBoxChimera.setBounds(180, 25, 168, 23);
+		contentPanel.add(checkBoxChimera);
 
 		spinnerEnemyCount = new JSpinner();
 		spinnerEnemyCount.setFont(new Font("Determination Mono Web", Font.PLAIN, 18));
@@ -48,14 +48,14 @@ public class PersonaDamagingSkillStatusRNG extends JDialog implements ActionList
 		btnRoll.setBounds(227, 62, 89, 28);
 		contentPanel.add(btnRoll);
 
-		rngResults = new JTextArea();
-		rngResults.setEditable(false);
-		rngResults.setLineWrap(true);
-		rngResults.setWrapStyleWord(true);
-		rngResults.setFont(new Font("Determination Mono Web", Font.PLAIN, 11));
-		rngResults.setBackground(UIManager.getColor("Button.background"));
-		rngResults.setBounds(10, 101, 330, 84);
-		contentPanel.add(rngResults);
+		txtrRNGResults = new JTextArea();
+		txtrRNGResults.setEditable(false);
+		txtrRNGResults.setLineWrap(true);
+		txtrRNGResults.setWrapStyleWord(true);
+		txtrRNGResults.setFont(new Font("Determination Mono Web", Font.PLAIN, 11));
+		txtrRNGResults.setBackground(UIManager.getColor("Button.background"));
+		txtrRNGResults.setBounds(10, 101, 330, 84);
+		contentPanel.add(txtrRNGResults);
 	}
 
 	@Override
@@ -64,7 +64,7 @@ public class PersonaDamagingSkillStatusRNG extends JDialog implements ActionList
 			Random r = new Random();
 			int result, count=(int)spinnerEnemyCount.getValue();
 			StringBuilder results = new StringBuilder("");
-			if (chimeraCheckBox.isSelected()) {
+			if (checkBoxChimera.isSelected()) {
 				for (int i=0; i<count; i++) {
 					result = r.nextInt(12-1)+1;
 					if (result==12) {
@@ -83,7 +83,7 @@ public class PersonaDamagingSkillStatusRNG extends JDialog implements ActionList
 					}
 				}
 			}
-			rngResults.setText(results.toString());
+			txtrRNGResults.setText(results.toString());
 		}
 	}
 }
