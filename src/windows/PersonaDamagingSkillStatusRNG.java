@@ -76,7 +76,7 @@ public class PersonaDamagingSkillStatusRNG extends JDialog implements ActionList
 				}
 			} else {
 				for (int i=0; i<count; i++) {
-					result = r.nextInt(8-1)+1;
+					result = r.nextInt(8)+1;
 					if (result==8) {
 						results.append("Enemy ").append(i+1).append(" was hit with a status! Exact value: "+result).append("\n");
 					} else {
