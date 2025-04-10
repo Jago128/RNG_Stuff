@@ -51,7 +51,7 @@ public class RNGStuff extends JFrame implements ActionListener {
 
 		btnPersonaDamagingSkillStatusRNG = new JButton("Damaging Skill Status RNG");
 		btnPersonaDamagingSkillStatusRNG.setFont(new Font("Determination Mono Web", Font.PLAIN, 16));
-		btnPersonaDamagingSkillStatusRNG.setBounds(222, 210, 233, 64);
+		btnPersonaDamagingSkillStatusRNG.setBounds(222, 210, 244, 64);
 		contentPane.add(btnPersonaDamagingSkillStatusRNG);
 
 		JLabel lblTitle = new JLabel("Jago's RP/Parody RNG Shenanigans");
@@ -67,7 +67,7 @@ public class RNGStuff extends JFrame implements ActionListener {
 
 		btnVoidTeaOverhealRNG = new JButton("Void Tea Overheal RNG");
 		btnVoidTeaOverhealRNG.setFont(new Font("Determination Mono Web", Font.PLAIN, 16));
-		btnVoidTeaOverhealRNG.setBounds(24, 285, 200, 64);
+		btnVoidTeaOverhealRNG.setBounds(10, 285, 214, 64);
 		contentPane.add(btnVoidTeaOverhealRNG);
 
 		btnOtherRNG = new JButton("Other RNG");
