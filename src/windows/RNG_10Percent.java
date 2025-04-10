@@ -18,6 +18,8 @@ public class RNG_10Percent extends JDialog implements ActionListener {
 
 	public RNG_10Percent(JFrame parent) {
 		super(parent, true);
+		
+		setResizable(false);
 		setTitle("10% Chance Stuff");
 		setBounds(100, 100, 420, 370);
 		getContentPane().setLayout(new BorderLayout());

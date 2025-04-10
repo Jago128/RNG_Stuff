@@ -17,6 +17,8 @@ public class CharacterRandomizer extends JDialog implements ActionListener {
 
 	public CharacterRandomizer(JFrame parent) {
 		super(parent, true);
+		
+		setResizable(false);
 		setTitle("Character Randomizer");
 		setBounds(100, 100, 390, 300);
 		getContentPane().setLayout(new BorderLayout());

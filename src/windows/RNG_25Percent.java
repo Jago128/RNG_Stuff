@@ -17,6 +17,8 @@ public class RNG_25Percent extends JDialog implements ActionListener {
 
 	public RNG_25Percent(JFrame parent) {
 		super(parent, true);
+		
+		setResizable(false);
 		setTitle("25% Stuff");
 		setBounds(100, 100, 450, 340);
 		getContentPane().setLayout(new BorderLayout());
@@ -29,7 +31,7 @@ public class RNG_25Percent extends JDialog implements ActionListener {
 		textAreaChoices.setEditable(false);
 		textAreaChoices.setWrapStyleWord(true);
 		textAreaChoices.setLineWrap(true);
-		textAreaChoices.setText("Stara:\r\nUnderfell Outfit Conch Destroyer Sting RNG\r\nOutertale Outfit Pull on hit RNG\r\nConch Fusion (Geno Variation) Sting RNG");
+		textAreaChoices.setText("Stara:\nUnderfell Outfit Conch Destroyer Sting RNG\nOutertale Outfit Pull on hit RNG\nConch Fusion (Geno Variation) Sting RNG");
 		textAreaChoices.setFont(new Font("Determination Mono Web", Font.PLAIN, 18));
 		textAreaChoices.setBounds(10, 11, 414, 88);
 		contentPanel.add(textAreaChoices);

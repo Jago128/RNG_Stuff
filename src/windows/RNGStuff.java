@@ -14,6 +14,7 @@ public class RNGStuff extends JFrame implements ActionListener {
 	private JButton btnCharacterRandomizer;
 
 	public RNGStuff() {
+		setResizable(false);
 		setTitle("RNG Stuff");
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 490, 470);

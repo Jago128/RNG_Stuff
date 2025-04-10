@@ -16,6 +16,8 @@ public class JustitiaRNG extends JDialog implements ActionListener {
 
 	public JustitiaRNG(JFrame parent) {
 		super(parent, true);
+		
+		setResizable(false);
 		setTitle("Justitia RNG");
 		setBounds(100, 100, 450, 210);
 		getContentPane().setLayout(new BorderLayout());

@@ -18,6 +18,8 @@ public class PersonaDamagingSkillStatusRNG extends JDialog implements ActionList
 
 	public PersonaDamagingSkillStatusRNG(JFrame parent) {
 		super(parent, true);
+		
+		setResizable(false);
 		setTitle("Persona Skill RNG");
 		setBounds(100, 100, 370, 240);
 		getContentPane().setLayout(new BorderLayout());
@@ -68,7 +70,7 @@ public class PersonaDamagingSkillStatusRNG extends JDialog implements ActionList
 			if (chckbxChimera.isSelected()) {
 				for (int i = 0; i < count; i++) {
 					result = r.nextInt(25)+1;
-					if (result<=3) {
+					if (result>=23) {
 						results.append("Enemy ").append(i+1).append(" was hit with a status! Exact value: ").append(result).append("\n");
 					} else {
 						results.append("No status effect on enemy ").append(i+1).append(". Exact value: ").append(result).append("\n");
@@ -77,7 +79,7 @@ public class PersonaDamagingSkillStatusRNG extends JDialog implements ActionList
 			} else {
 				for (int i = 0; i < count; i++) {
 					result = r.nextInt(25)+1;
-					if (result<=2) {
+					if (result>=24) {
 						results.append("Enemy ").append(i+1).append(" was hit with a status! Exact value: ").append(result).append("\n");
 					} else {
 						results.append("No status effect on enemy ").append(i+1).append(". Exact value: ").append(result).append("\n");

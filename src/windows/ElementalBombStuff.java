@@ -18,7 +18,8 @@ public class ElementalBombStuff extends JDialog implements ActionListener {
 	public ElementalBombStuff(JDialog parent, int elementalBombTriggers) {
 		super(parent, true);
 		this.elementalBombTriggers=elementalBombTriggers;
-
+		
+		setResizable(false);
 		setTitle("Elemental Bomb Stuff");
 		setBounds(100, 100, 450, 236);
 		getContentPane().setLayout(new BorderLayout());

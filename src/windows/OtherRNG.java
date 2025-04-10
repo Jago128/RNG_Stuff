@@ -17,6 +17,8 @@ public class OtherRNG extends JDialog implements ActionListener {
 
 	public OtherRNG(JFrame parent) {
 		super(parent, true);
+		
+		setResizable(false);
 		setTitle("Other RNG");
 		setBounds(100, 100, 340, 300);
 		getContentPane().setLayout(new BorderLayout());

@@ -17,6 +17,8 @@ public class RNG_15Percent extends JDialog implements ActionListener {
 
 	public RNG_15Percent(JFrame parent) {
 		super(parent, true);
+		
+		setResizable(false);
 		setTitle("15% Chance Stuff");
 		setBounds(100, 100, 390, 370);
 		getContentPane().setLayout(new BorderLayout());
@@ -74,7 +76,7 @@ public class RNG_15Percent extends JDialog implements ActionListener {
 			StringBuilder results = new StringBuilder("");
 			for (int i=0; i<count; i++) {
 				result = r.nextInt(20)+1;
-				if (result<=3) {
+				if (result>=18) {
 					results.append("Roll ").append(i+1).append(" result: Effect triggered! Exact value: ").append(result).append("\n");
 				} else {
 					results.append("Roll ").append(i+1).append(" result: Nothing happened. Exact value: ").append(result).append("\n");
