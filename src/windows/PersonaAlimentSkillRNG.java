@@ -90,6 +90,7 @@ public class PersonaAlimentSkillRNG extends JDialog implements ActionListener{
 		if (e.getSource()==btnRoll) {
 			Random r = new Random();
 			int result, count=(int)spinnerEnemyCount.getValue();
+			effectCount=0;
 			StringBuilder results = new StringBuilder("");
 			if (!chckbxTargetting.isSelected()) {
 				for (int i = 0; i < count; i++) {
