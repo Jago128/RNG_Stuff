@@ -14,13 +14,16 @@ public class SoakStatusRNG extends JDialog implements ActionListener {
 	private JButton btnRoll;
 	private JSpinner spinnerEnemyCount;
 	private JTextArea textAreaRNGResults;
+	private int effectCount;
+	private JLabel lblEffectCount;
 
 	public SoakStatusRNG(JFrame parent) {
 		super(parent, true);
+		effectCount=0;
 
 		setResizable(false);
 		setTitle("Soak Status RNG");
-		setBounds(100, 100, 449, 248);
+		setBounds(100, 100, 449, 290);
 		getContentPane().setLayout(new BorderLayout());
 		contentPanel.setBorder(new EmptyBorder(5, 5, 5, 5));
 		getContentPane().add(contentPanel, BorderLayout.CENTER);
@@ -50,7 +53,7 @@ public class SoakStatusRNG extends JDialog implements ActionListener {
 
 		spinnerEnemyCount = new JSpinner();
 		spinnerEnemyCount.setFont(new Font("Determination Mono Web", Font.PLAIN, 18));
-		spinnerEnemyCount.setModel(new SpinnerNumberModel(1, 1, 30, 1));
+		spinnerEnemyCount.setModel(new SpinnerNumberModel(1, 1, 90, 1));
 		spinnerEnemyCount.setBounds(204, 45, 85, 40);
 		contentPanel.add(spinnerEnemyCount);
 
@@ -66,6 +69,13 @@ public class SoakStatusRNG extends JDialog implements ActionListener {
 		JScrollPane scrollPaneResults = new JScrollPane(textAreaRNGResults);
 		scrollPaneResults.setBounds(10, 95, 415, 106);
 		contentPanel.add(scrollPaneResults);
+		
+		lblEffectCount = new JLabel("Effect count: "+effectCount);
+		lblEffectCount.setEnabled(false);
+		lblEffectCount.setHorizontalAlignment(SwingConstants.CENTER);
+		lblEffectCount.setFont(new Font("Determination Mono Web", Font.PLAIN, 18));
+		lblEffectCount.setBounds(10, 211, 415, 28);
+		contentPanel.add(lblEffectCount);
 	}
 
 	@Override
@@ -73,17 +83,23 @@ public class SoakStatusRNG extends JDialog implements ActionListener {
 		if (e.getSource() == btnRoll) {
 			Random r = new Random();
 			int result, count=(int)spinnerEnemyCount.getValue();
+			effectCount=0;
 			result = r.nextInt(5)+1;
 			StringBuilder results = new StringBuilder("");
 			for (int i = 0; i < count; i++) {
 				result = r.nextInt(10)+1;
 				if (result<=2) {
 					results.append("Enemy ").append(i+1).append(" was soaked! Exact value: ").append(result).append("\n");
+					effectCount++;
 				} else {
 					results.append("The effect didn't trigger on enemy ").append(i+1).append(". Exact value: ").append(result).append("\n");
 				}
 			}
 			textAreaRNGResults.setText(results.toString());
+			if ((int)spinnerEnemyCount.getValue()>5) {
+				lblEffectCount.setEnabled(true);
+				lblEffectCount.setText("Effect count: "+effectCount);
+			}
 		}
 	}
 }

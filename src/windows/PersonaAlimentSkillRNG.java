@@ -15,9 +15,12 @@ public class PersonaAlimentSkillRNG extends JDialog implements ActionListener{
 	private JButton btnRoll;
 	private JCheckBox chckbxTargetting;
 	private JTextArea textAreaRNGResults;
+	private JLabel lblEffectCount;
+	private int effectCount;
 
 	public PersonaAlimentSkillRNG(JFrame parent) {
 		super(parent, true);
+		effectCount=0;
 		
 		setResizable(false);
 		setTitle("Persona Skill RNG");
@@ -52,7 +55,7 @@ public class PersonaAlimentSkillRNG extends JDialog implements ActionListener{
 		btnRoll.addActionListener(this);
 		
 		JTextArea textAreaChoice = new JTextArea();
-		textAreaChoice.setText("Not Selected: Single Target\r\nSelected: All Targets\r\n");
+		textAreaChoice.setText("Not Selected: Single Target\nSelected: All Targets\n");
 		textAreaChoice.setWrapStyleWord(true);
 		textAreaChoice.setLineWrap(true);
 		textAreaChoice.setFont(new Font("Determination Mono Web", Font.PLAIN, 16));
@@ -72,7 +75,14 @@ public class PersonaAlimentSkillRNG extends JDialog implements ActionListener{
 		
 		JScrollPane scrollPaneResults = new JScrollPane(textAreaRNGResults);
 		scrollPaneResults.setBounds(10, 100, 432, 93);
-		contentPanel.add(scrollPaneResults); 
+		contentPanel.add(scrollPaneResults);
+		
+		lblEffectCount = new JLabel("Effect count: "+effectCount);
+		lblEffectCount.setEnabled(false);
+		lblEffectCount.setHorizontalAlignment(SwingConstants.CENTER);
+		lblEffectCount.setFont(new Font("Determination Mono Web", Font.PLAIN, 18));
+		lblEffectCount.setBounds(12, 195, 336, 28);
+		contentPanel.add(lblEffectCount);
 	}
 
 	@Override
@@ -86,6 +96,7 @@ public class PersonaAlimentSkillRNG extends JDialog implements ActionListener{
 					result = r.nextInt(10)+1;
 					if (result<=7) {
 						results.append("Enemy ").append(i+1).append(" was hit with a status! Exact value: ").append(result).append("\n");
+						effectCount++;
 					} else {
 						results.append("No status effect on enemy ").append(i+1).append(". Exact value: ").append(result).append("\n");
 					}
@@ -95,12 +106,17 @@ public class PersonaAlimentSkillRNG extends JDialog implements ActionListener{
 					result = r.nextInt(2)+1;
 					if (result==2) {
 						results.append("Enemy ").append(i+1).append(" was hit with a status! Exact value: ").append(result).append("\n");
+						effectCount++;
 					} else {
 						results.append("No status effect on enemy ").append(i+1).append(". Exact value: ").append(result).append("\n");
 					}
 				}
 			}
 			textAreaRNGResults.setText(results.toString());
+			if ((int)spinnerEnemyCount.getValue()>5) {
+				lblEffectCount.setEnabled(true);
+				lblEffectCount.setText("Effect count: "+effectCount);
+			}
 		}
 	}
 }

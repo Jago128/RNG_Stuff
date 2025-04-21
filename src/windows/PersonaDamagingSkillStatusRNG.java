@@ -15,13 +15,16 @@ public class PersonaDamagingSkillStatusRNG extends JDialog implements ActionList
 	private JSpinner spinnerEnemyCount;
 	private JButton btnRoll;
 	private JCheckBox chckbxChimera;
+	private JLabel lblEffectCount;
+	private int effectCount;
 
 	public PersonaDamagingSkillStatusRNG(JFrame parent) {
 		super(parent, true);
+		effectCount=0;
 
 		setResizable(false);
 		setTitle("Persona Skill RNG");
-		setBounds(100, 100, 370, 240);
+		setBounds(100, 100, 370, 270);
 		getContentPane().setLayout(new BorderLayout());
 		contentPanel.setBorder(new EmptyBorder(5, 5, 5, 5));
 		getContentPane().add(contentPanel, BorderLayout.CENTER);
@@ -63,6 +66,13 @@ public class PersonaDamagingSkillStatusRNG extends JDialog implements ActionList
 		JScrollPane scrollPaneResults = new JScrollPane(textAreaRNGResults);
 		scrollPaneResults.setBounds(10, 101, 330, 84);
 		contentPanel.add(scrollPaneResults);
+		
+		lblEffectCount = new JLabel("Effect count: "+effectCount);
+		lblEffectCount.setEnabled(false);
+		lblEffectCount.setHorizontalAlignment(SwingConstants.CENTER);
+		lblEffectCount.setFont(new Font("Determination Mono Web", Font.PLAIN, 18));
+		lblEffectCount.setBounds(12, 195, 336, 28);
+		contentPanel.add(lblEffectCount);
 	}
 
 	@Override
@@ -70,12 +80,14 @@ public class PersonaDamagingSkillStatusRNG extends JDialog implements ActionList
 		if (e.getSource()==btnRoll) {
 			Random r = new Random();
 			int result, count=(int)spinnerEnemyCount.getValue();
+			effectCount=0;
 			StringBuilder results = new StringBuilder("");
 			if (chckbxChimera.isSelected()) {
 				for (int i = 0; i < count; i++) {
 					result = r.nextInt(25)+1;
 					if (result>=23) {
 						results.append("Enemy ").append(i+1).append(" was hit with a status! Exact value: ").append(result).append("\n");
+						effectCount++;
 					} else {
 						results.append("No status effect on enemy ").append(i+1).append(". Exact value: ").append(result).append("\n");
 					}
@@ -85,12 +97,17 @@ public class PersonaDamagingSkillStatusRNG extends JDialog implements ActionList
 					result = r.nextInt(25)+1;
 					if (result>=24) {
 						results.append("Enemy ").append(i+1).append(" was hit with a status! Exact value: ").append(result).append("\n");
+						effectCount++;
 					} else {
 						results.append("No status effect on enemy ").append(i+1).append(". Exact value: ").append(result).append("\n");
 					}
 				}
 			}
 			textAreaRNGResults.setText(results.toString());
+			if ((int)spinnerEnemyCount.getValue()>5) {
+				lblEffectCount.setEnabled(true);
+				lblEffectCount.setText("Effect count: "+effectCount);
+			}
 		}
 	}
 }
