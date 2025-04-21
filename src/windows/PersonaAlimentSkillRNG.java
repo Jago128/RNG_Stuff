@@ -81,7 +81,7 @@ public class PersonaAlimentSkillRNG extends JDialog implements ActionListener{
 			Random r = new Random();
 			int result, count=(int)spinnerEnemyCount.getValue();
 			StringBuilder results = new StringBuilder("");
-			if (chckbxTargetting.isSelected()) {
+			if (!chckbxTargetting.isSelected()) {
 				for (int i = 0; i < count; i++) {
 					result = r.nextInt(10)+1;
 					if (result<=7) {
