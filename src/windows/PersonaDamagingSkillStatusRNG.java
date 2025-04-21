@@ -105,8 +105,6 @@ public class PersonaDamagingSkillStatusRNG extends JDialog implements ActionList
 			if ((int)spinnerEnemyCount.getValue()>5) {
 				contentPanel.add(lblEffectCount);
 				lblEffectCount.setText("Effect count: "+effectCount);
-			} else {
-				contentPanel.remove(lblEffectCount);
 			}
 		}
 	}

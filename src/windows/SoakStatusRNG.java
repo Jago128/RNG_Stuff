@@ -97,8 +97,6 @@ public class SoakStatusRNG extends JDialog implements ActionListener {
 			if ((int)spinnerEnemyCount.getValue()>5) {
 				contentPanel.add(lblEffectCount);
 				lblEffectCount.setText("Effect count: "+effectCount);
-			} else {
-				contentPanel.remove(lblEffectCount);
 			}
 		}
 	}
