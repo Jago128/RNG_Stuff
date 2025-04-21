@@ -68,11 +68,9 @@ public class PersonaDamagingSkillStatusRNG extends JDialog implements ActionList
 		contentPanel.add(scrollPaneResults);
 		
 		lblEffectCount = new JLabel("Effect count: "+effectCount);
-		lblEffectCount.setEnabled(false);
 		lblEffectCount.setHorizontalAlignment(SwingConstants.CENTER);
 		lblEffectCount.setFont(new Font("Determination Mono Web", Font.PLAIN, 18));
 		lblEffectCount.setBounds(12, 195, 336, 28);
-		contentPanel.add(lblEffectCount);
 	}
 
 	@Override
@@ -105,8 +103,10 @@ public class PersonaDamagingSkillStatusRNG extends JDialog implements ActionList
 			}
 			textAreaRNGResults.setText(results.toString());
 			if ((int)spinnerEnemyCount.getValue()>5) {
-				lblEffectCount.setEnabled(true);
+				contentPanel.add(lblEffectCount);
 				lblEffectCount.setText("Effect count: "+effectCount);
+			} else {
+				contentPanel.remove(lblEffectCount);
 			}
 		}
 	}
