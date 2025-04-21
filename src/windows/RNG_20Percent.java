@@ -38,7 +38,7 @@ public class RNG_20Percent extends JDialog implements ActionListener {
 		
 		spinnerRollCount = new JSpinner();
 		spinnerRollCount.setFont(new Font("Determination Mono Web", Font.PLAIN, 18));
-		spinnerRollCount.setModel(new SpinnerNumberModel(1, 1, 10, 1));
+		spinnerRollCount.setModel(new SpinnerNumberModel(1, 1, 30, 1));
 		spinnerRollCount.setBounds(287, 55, 61, 30);
 		contentPanel.add(spinnerRollCount);
 		

@@ -18,7 +18,7 @@ public class PersonaDamagingSkillStatusRNG extends JDialog implements ActionList
 
 	public PersonaDamagingSkillStatusRNG(JFrame parent) {
 		super(parent, true);
-		
+
 		setResizable(false);
 		setTitle("Persona Skill RNG");
 		setBounds(100, 100, 370, 240);
@@ -41,7 +41,7 @@ public class PersonaDamagingSkillStatusRNG extends JDialog implements ActionList
 
 		spinnerEnemyCount = new JSpinner();
 		spinnerEnemyCount.setFont(new Font("Determination Mono Web", Font.PLAIN, 18));
-		spinnerEnemyCount.setModel(new SpinnerNumberModel(1, 1, 5, 1));
+		spinnerEnemyCount.setModel(new SpinnerNumberModel(1, 1, 30, 1));
 		spinnerEnemyCount.setBounds(53, 50, 85, 40);
 		contentPanel.add(spinnerEnemyCount);
 
@@ -59,7 +59,7 @@ public class PersonaDamagingSkillStatusRNG extends JDialog implements ActionList
 		textAreaRNGResults.setBackground(UIManager.getColor("Button.background"));
 		textAreaRNGResults.setBounds(10, 101, 330, 84);
 		contentPanel.add(textAreaRNGResults);
-		
+
 		JScrollPane scrollPaneResults = new JScrollPane(textAreaRNGResults);
 		scrollPaneResults.setBounds(10, 101, 330, 84);
 		contentPanel.add(scrollPaneResults);
