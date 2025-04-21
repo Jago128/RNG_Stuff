@@ -18,7 +18,7 @@ public class RNGStuff extends JFrame implements ActionListener {
 		setResizable(false);
 		setTitle("RNG Stuff");
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		setBounds(100, 100, 1040, 470);
+		setBounds(100, 100, 710, 400);
 		contentPane = new JPanel();
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 
@@ -73,12 +73,12 @@ public class RNGStuff extends JFrame implements ActionListener {
 
 		btnOtherRNG = new JButton("Other RNG");
 		btnOtherRNG.setFont(new Font("Determination Mono Web", Font.PLAIN, 20));
-		btnOtherRNG.setBounds(255, 283, 200, 64);
+		btnOtherRNG.setBounds(378, 283, 200, 64);
 		contentPane.add(btnOtherRNG);
 
 		btnCharacterRandomizer = new JButton("Character Randomizer");
 		btnCharacterRandomizer.setFont(new Font("Determination Mono Web", Font.PLAIN, 16));
-		btnCharacterRandomizer.setBounds(24, 279, 200, 64);
+		btnCharacterRandomizer.setBounds(133, 284, 200, 64);
 		contentPane.add(btnCharacterRandomizer);
 
 		btnPersonaAlimentSkillRNG = new JButton("Aliment Skill RNG");
