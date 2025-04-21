@@ -96,6 +96,7 @@ public class RNGStuff extends JFrame implements ActionListener {
 		btnJustitiaRNG.addActionListener(this);
 		btnOtherRNG.addActionListener(this);
 		btnPersonaDMGSkillStatusRNG.addActionListener(this);
+		btnPersonaAlimentSkillRNG.addActionListener(this);
 	}
 
 	@Override
