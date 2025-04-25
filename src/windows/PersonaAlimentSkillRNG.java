@@ -24,7 +24,7 @@ public class PersonaAlimentSkillRNG extends JDialog implements ActionListener{
 		
 		setResizable(false);
 		setTitle("Persona Skill RNG");
-		setBounds(100, 100, 462, 240);
+		setBounds(100, 100, 720, 240);
 		getContentPane().setLayout(new BorderLayout());
 		contentPanel.setBorder(new EmptyBorder(5, 5, 5, 5));
 		getContentPane().add(contentPanel, BorderLayout.CENTER);
@@ -33,24 +33,24 @@ public class PersonaAlimentSkillRNG extends JDialog implements ActionListener{
 		JLabel lblEnemyCount = new JLabel("Enemy count:");
 		lblEnemyCount.setFont(new Font("Determination Mono Web", Font.PLAIN, 18));
 		lblEnemyCount.setHorizontalAlignment(SwingConstants.CENTER);
-		lblEnemyCount.setBounds(33, 22, 129, 28);
+		lblEnemyCount.setBounds(10, 6, 129, 28);
 		contentPanel.add(lblEnemyCount);
 
 		chckbxTargetting = new JCheckBox("Single or Multiple targets?");
 		chckbxTargetting.setHorizontalAlignment(SwingConstants.CENTER);
 		chckbxTargetting.setFont(new Font("Determination Mono Web", Font.PLAIN, 18));
-		chckbxTargetting.setBounds(157, 6, 285, 23);
+		chckbxTargetting.setBounds(10, 88, 288, 23);
 		contentPanel.add(chckbxTargetting);
 
 		spinnerEnemyCount = new JSpinner();
 		spinnerEnemyCount.setFont(new Font("Determination Mono Web", Font.PLAIN, 18));
 		spinnerEnemyCount.setModel(new SpinnerNumberModel(1, 1, 30, 1));
-		spinnerEnemyCount.setBounds(53, 50, 85, 40);
+		spinnerEnemyCount.setBounds(20, 44, 85, 40);
 		contentPanel.add(spinnerEnemyCount);
 
 		btnRoll = new JButton("Roll");
 		btnRoll.setFont(new Font("Determination Mono Web", Font.PLAIN, 18));
-		btnRoll.setBounds(157, 66, 89, 28);
+		btnRoll.setBounds(20, 165, 89, 28);
 		contentPanel.add(btnRoll);
 		btnRoll.addActionListener(this);
 		
@@ -61,7 +61,7 @@ public class PersonaAlimentSkillRNG extends JDialog implements ActionListener{
 		textAreaChoice.setFont(new Font("Determination Mono Web", Font.PLAIN, 16));
 		textAreaChoice.setEditable(false);
 		textAreaChoice.setBackground(UIManager.getColor("Button.background"));
-		textAreaChoice.setBounds(167, 27, 257, 40);
+		textAreaChoice.setBounds(10, 117, 257, 40);
 		contentPanel.add(textAreaChoice);
 		
 		textAreaRNGResults = new JTextArea();
@@ -70,11 +70,11 @@ public class PersonaAlimentSkillRNG extends JDialog implements ActionListener{
 		textAreaRNGResults.setFont(new Font("Determination Mono Web", Font.PLAIN, 18));
 		textAreaRNGResults.setEditable(false);
 		textAreaRNGResults.setBackground(UIManager.getColor("Button.background"));
-		textAreaRNGResults.setBounds(10, 100, 432, 93);
+		textAreaRNGResults.setBounds(304, 9, 386, 187);
 		contentPanel.add(textAreaRNGResults);
 		
 		JScrollPane scrollPaneResults = new JScrollPane(textAreaRNGResults);
-		scrollPaneResults.setBounds(10, 100, 432, 93);
+		scrollPaneResults.setBounds(304, 9, 386, 187);
 		contentPanel.add(scrollPaneResults);
 		
 		lblEffectCount = new JLabel("Effect count: "+effectCount);

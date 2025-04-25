@@ -7,7 +7,7 @@ import java.util.Random;
 import javax.swing.*;
 import javax.swing.border.*;
 
-public class ElementalBombStuff extends JDialog implements ActionListener {
+public class ElementalBombStatusedRNG extends JDialog implements ActionListener {
 
 	private static final long serialVersionUID = 1L;
 	private final JPanel contentPanel = new JPanel();
@@ -15,13 +15,13 @@ public class ElementalBombStuff extends JDialog implements ActionListener {
 	private int elementalBombTriggers;
 	private JTextArea textAreaRNGResults;
 
-	public ElementalBombStuff(JDialog parent, int elementalBombTriggers) {
+	public ElementalBombStatusedRNG(JDialog parent, int elementalBombTriggers) {
 		super(parent, true);
 		this.elementalBombTriggers=elementalBombTriggers;
 		
 		setResizable(false);
 		setTitle("Elemental Bomb Stuff");
-		setBounds(100, 100, 450, 236);
+		setBounds(100, 100, 700, 200);
 		getContentPane().setLayout(new BorderLayout());
 		contentPanel.setBorder(new EmptyBorder(5, 5, 5, 5));
 		getContentPane().add(contentPanel, BorderLayout.CENTER);
@@ -39,7 +39,7 @@ public class ElementalBombStuff extends JDialog implements ActionListener {
 
 		btnRoll = new JButton("Roll");
 		btnRoll.setFont(new Font("Determination Mono Web", Font.PLAIN, 18));
-		btnRoll.setBounds(331, 47, 93, 27);
+		btnRoll.setBounds(106, 121, 93, 27);
 		contentPanel.add(btnRoll);
 		btnRoll.addActionListener(this);
 
@@ -49,11 +49,11 @@ public class ElementalBombStuff extends JDialog implements ActionListener {
 		textAreaRNGResults.setWrapStyleWord(true);
 		textAreaRNGResults.setLineWrap(true);
 		textAreaRNGResults.setEditable(false);
-		textAreaRNGResults.setBounds(20, 109, 404, 80);
+		textAreaRNGResults.setBounds(315, 11, 361, 142);
 		contentPanel.add(textAreaRNGResults);
 
 		JScrollPane scrollPaneResults = new JScrollPane(textAreaRNGResults);
-		scrollPaneResults.setBounds(20, 109, 404, 80);
+		scrollPaneResults.setBounds(315, 11, 361, 142);
 		contentPanel.add(scrollPaneResults);
 	}
 

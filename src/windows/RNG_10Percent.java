@@ -21,7 +21,7 @@ public class RNG_10Percent extends JDialog implements ActionListener {
 		
 		setResizable(false);
 		setTitle("10% Chance Stuff");
-		setBounds(100, 100, 420, 370);
+		setBounds(100, 100, 790, 371);
 		getContentPane().setLayout(new BorderLayout());
 		contentPanel.setBorder(new EmptyBorder(5, 5, 5, 5));
 		getContentPane().add(contentPanel, BorderLayout.CENTER);
@@ -32,26 +32,26 @@ public class RNG_10Percent extends JDialog implements ActionListener {
 		textAreaChoices.setEditable(false);
 		textAreaChoices.setWrapStyleWord(true);
 		textAreaChoices.setLineWrap(true);
-		textAreaChoices.setText("Starfish:\nTemmie Armor DMG heal\n\nStara:\nConch Slasher/Fusion Crit RNG\n\nChara:\nElemental Bomb Status RNG\nFire Slash Burn RNG\nFrost Snap Infliction RNG");
+		textAreaChoices.setText("Starfish:\r\nTemmie Armor DMG heal");
 		textAreaChoices.setFont(new Font("Determination Mono Web", Font.PLAIN, 16));
-		textAreaChoices.setBounds(10, 11, 244, 183);
+		textAreaChoices.setBounds(10, 11, 212, 165);
 		contentPanel.add(textAreaChoices);
 
 		spinnerRollCount = new JSpinner();
 		spinnerRollCount.setFont(new Font("Determination Mono Web", Font.PLAIN, 18));
 		spinnerRollCount.setModel(new SpinnerNumberModel(1, 1, 50, 1));
-		spinnerRollCount.setBounds(312, 56, 61, 30);
+		spinnerRollCount.setBounds(31, 242, 61, 30);
 		contentPanel.add(spinnerRollCount);
 
 		JLabel lblRollCount = new JLabel("Roll count:");
 		lblRollCount.setHorizontalAlignment(SwingConstants.CENTER);
 		lblRollCount.setFont(new Font("Determination Mono Web", Font.PLAIN, 18));
-		lblRollCount.setBounds(274, 25, 130, 20);
+		lblRollCount.setBounds(10, 212, 121, 20);
 		contentPanel.add(lblRollCount);
 
 		btnRoll = new JButton("Roll");
 		btnRoll.setFont(new Font("Determination Mono Web", Font.PLAIN, 18));
-		btnRoll.setBounds(294, 97, 90, 30);
+		btnRoll.setBounds(120, 241, 90, 30);
 		contentPanel.add(btnRoll);
 		btnRoll.addActionListener(this);
 
@@ -61,17 +61,37 @@ public class RNG_10Percent extends JDialog implements ActionListener {
 		textAreaRNGResults.setWrapStyleWord(true);
 		textAreaRNGResults.setFont(new Font("Determination Mono Web", Font.PLAIN, 18));
 		textAreaRNGResults.setBackground(UIManager.getColor("Button.background"));
-		textAreaRNGResults.setBounds(20, 215, 364, 100);
+		textAreaRNGResults.setBounds(232, 186, 526, 138);
 		contentPanel.add(textAreaRNGResults);
 
 		JScrollPane scrollPaneResults = new JScrollPane(textAreaRNGResults);
-		scrollPaneResults.setBounds(20, 215, 364, 100);
+		scrollPaneResults.setBounds(232, 186, 526, 138);
 		contentPanel.add(scrollPaneResults);
 		
 		chckbxElementalBomb = new JCheckBox("Elemental Bomb");
-		chckbxElementalBomb.setFont(new Font("Determination Mono Web", Font.PLAIN, 14));
-		chckbxElementalBomb.setBounds(254, 147, 130, 23);
+		chckbxElementalBomb.setFont(new Font("Determination Mono Web", Font.PLAIN, 18));
+		chckbxElementalBomb.setBounds(30, 288, 168, 36);
 		contentPanel.add(chckbxElementalBomb);
+		
+		JTextArea txtrStaraConchSlasherfusion = new JTextArea();
+		txtrStaraConchSlasherfusion.setWrapStyleWord(true);
+		txtrStaraConchSlasherfusion.setText("Stara:\r\nConch Slasher/Fusion Crit RNG");
+		txtrStaraConchSlasherfusion.setLineWrap(true);
+		txtrStaraConchSlasherfusion.setFont(new Font("Determination Mono Web", Font.PLAIN, 16));
+		txtrStaraConchSlasherfusion.setEditable(false);
+		txtrStaraConchSlasherfusion.setBackground(UIManager.getColor("Button.background"));
+		txtrStaraConchSlasherfusion.setBounds(232, 11, 264, 165);
+		contentPanel.add(txtrStaraConchSlasherfusion);
+		
+		JTextArea txtrCharaElementalBomb = new JTextArea();
+		txtrCharaElementalBomb.setWrapStyleWord(true);
+		txtrCharaElementalBomb.setText("Chara:\r\nElemental Bomb Status RNG\r\nFire Slash Burn RNG\r\nFrost Snap Infliction RNG");
+		txtrCharaElementalBomb.setLineWrap(true);
+		txtrCharaElementalBomb.setFont(new Font("Determination Mono Web", Font.PLAIN, 16));
+		txtrCharaElementalBomb.setEditable(false);
+		txtrCharaElementalBomb.setBackground(UIManager.getColor("Button.background"));
+		txtrCharaElementalBomb.setBounds(506, 11, 252, 155);
+		contentPanel.add(txtrCharaElementalBomb);
 	}
 
 	@Override
@@ -92,7 +112,7 @@ public class RNG_10Percent extends JDialog implements ActionListener {
 				}
 			}
 			if (elementalBombTriggers>0) {
-				ElementalBombStuff dialog = new ElementalBombStuff(this, elementalBombTriggers);
+				ElementalBombStatusedRNG dialog = new ElementalBombStatusedRNG(this, elementalBombTriggers);
 				dialog.setVisible(true);
 			} else {
 				textAreaRNGResults.setText(results.toString());
