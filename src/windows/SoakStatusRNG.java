@@ -23,7 +23,7 @@ public class SoakStatusRNG extends JDialog implements ActionListener {
 
 		setResizable(false);
 		setTitle("Soak Status RNG");
-		setBounds(100, 100, 449, 290);
+		setBounds(100, 100, 630, 290);
 		getContentPane().setLayout(new BorderLayout());
 		contentPanel.setBorder(new EmptyBorder(5, 5, 5, 5));
 		getContentPane().add(contentPanel, BorderLayout.CENTER);
@@ -36,25 +36,25 @@ public class SoakStatusRNG extends JDialog implements ActionListener {
 		textAreaChances.setText("Aqua line skills\r\n40% chance to Soak");
 		textAreaChances.setBackground(UIManager.getColor("Button.background"));
 		textAreaChances.setFont(new Font("Determination Mono Web", Font.PLAIN, 18));
-		textAreaChances.setBounds(10, 16, 184, 50);
+		textAreaChances.setBounds(37, 17, 184, 50);
 		contentPanel.add(textAreaChances);
 
 		btnRoll = new JButton("Roll");
 		btnRoll.setFont(new Font("Determination Mono Web", Font.PLAIN, 18));
-		btnRoll.setBounds(314, 30, 111, 27);
+		btnRoll.setBounds(66, 183, 111, 27);
 		contentPanel.add(btnRoll);
 		btnRoll.addActionListener(this);
 
 		JLabel lblEnemyCount = new JLabel("Enemy count:");
 		lblEnemyCount.setFont(new Font("Determination Mono Web", Font.PLAIN, 18));
 		lblEnemyCount.setHorizontalAlignment(SwingConstants.CENTER);
-		lblEnemyCount.setBounds(186, 13, 129, 28);
+		lblEnemyCount.setBounds(66, 76, 129, 28);
 		contentPanel.add(lblEnemyCount);
 
 		spinnerEnemyCount = new JSpinner();
 		spinnerEnemyCount.setFont(new Font("Determination Mono Web", Font.PLAIN, 18));
 		spinnerEnemyCount.setModel(new SpinnerNumberModel(1, 1, 90, 1));
-		spinnerEnemyCount.setBounds(204, 45, 85, 40);
+		spinnerEnemyCount.setBounds(89, 114, 85, 40);
 		contentPanel.add(spinnerEnemyCount);
 
 		textAreaRNGResults = new JTextArea();
@@ -63,11 +63,11 @@ public class SoakStatusRNG extends JDialog implements ActionListener {
 		textAreaRNGResults.setFont(new Font("Determination Mono Web", Font.PLAIN, 18));
 		textAreaRNGResults.setEditable(false);
 		textAreaRNGResults.setBackground(UIManager.getColor("Button.background"));
-		textAreaRNGResults.setBounds(10, 95, 415, 106);
+		textAreaRNGResults.setBounds(231, 17, 377, 227);
 		contentPanel.add(textAreaRNGResults);
 
 		JScrollPane scrollPaneResults = new JScrollPane(textAreaRNGResults);
-		scrollPaneResults.setBounds(10, 95, 415, 106);
+		scrollPaneResults.setBounds(231, 16, 377, 227);
 		contentPanel.add(scrollPaneResults);
 		
 		lblEffectCount = new JLabel("Effect count: "+effectCount);

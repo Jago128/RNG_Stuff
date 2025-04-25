@@ -19,7 +19,7 @@ public class JustitiaRNG extends JDialog implements ActionListener {
 		
 		setResizable(false);
 		setTitle("Justitia RNG");
-		setBounds(100, 100, 450, 210);
+		setBounds(100, 100, 620, 210);
 		getContentPane().setLayout(new BorderLayout());
 		contentPanel.setBorder(new EmptyBorder(5, 5, 5, 5));
 		getContentPane().add(contentPanel, BorderLayout.CENTER);
@@ -37,14 +37,14 @@ public class JustitiaRNG extends JDialog implements ActionListener {
 
 		btnRoll = new JButton("Roll");
 		btnRoll.setFont(new Font("Determination Mono Web", Font.PLAIN, 18));
-		btnRoll.setBounds(322, 51, 102, 27);
+		btnRoll.setBounds(87, 121, 102, 27);
 		contentPanel.add(btnRoll);
 		btnRoll.addActionListener(this);
 
 		lblResult = new JLabel("");
 		lblResult.setFont(new Font("Determination Mono Web", Font.PLAIN, 18));
 		lblResult.setHorizontalAlignment(SwingConstants.CENTER);
-		lblResult.setBounds(10, 118, 414, 45);
+		lblResult.setBounds(301, 11, 292, 152);
 		contentPanel.add(lblResult);
 	}
 

@@ -19,7 +19,7 @@ public class VoidTeaOverhealRNG extends JDialog implements ActionListener {
 		
 		setResizable(false);
 		setTitle("Void Tea Overheal RNG");
-		setBounds(100, 100, 450, 160);
+		setBounds(100, 100, 700, 160);
 		getContentPane().setLayout(new BorderLayout());
 		contentPanel.setBorder(new EmptyBorder(5, 5, 5, 5));
 		getContentPane().add(contentPanel, BorderLayout.CENTER);
@@ -27,14 +27,14 @@ public class VoidTeaOverhealRNG extends JDialog implements ActionListener {
 
 		btnRoll = new JButton("Roll");
 		btnRoll.setFont(new Font("Determination Mono Web", Font.PLAIN, 18));
-		btnRoll.setBounds(314, 18, 95, 30);
+		btnRoll.setBounds(97, 66, 95, 30);
 		contentPanel.add(btnRoll);
 		btnRoll.addActionListener(this);
 		
 		lblResult = new JLabel("");
 		lblResult.setFont(new Font("Determination Mono Web", Font.PLAIN, 18));
 		lblResult.setHorizontalAlignment(SwingConstants.CENTER);
-		lblResult.setBounds(10, 59, 414, 45);
+		lblResult.setBounds(303, 11, 373, 102);
 		contentPanel.add(lblResult);
 		
 		JLabel lblChances = new JLabel("33% chance to overheal (+20 HP)");

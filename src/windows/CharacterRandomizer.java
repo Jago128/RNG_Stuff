@@ -20,7 +20,7 @@ public class CharacterRandomizer extends JDialog implements ActionListener {
 		
 		setResizable(false);
 		setTitle("Character Randomizer");
-		setBounds(100, 100, 390, 300);
+		setBounds(100, 100, 630, 270);
 		getContentPane().setLayout(new BorderLayout());
 		contentPanel.setBorder(new EmptyBorder(5, 5, 5, 5));
 		getContentPane().add(contentPanel, BorderLayout.CENTER);
@@ -29,18 +29,18 @@ public class CharacterRandomizer extends JDialog implements ActionListener {
 		JLabel lblRollCount = new JLabel("Roll count:");
 		lblRollCount.setHorizontalAlignment(SwingConstants.CENTER);
 		lblRollCount.setFont(new Font("Determination Mono Web", Font.PLAIN, 18));
-		lblRollCount.setBounds(235, 11, 141, 37);
+		lblRollCount.setBounds(22, 110, 141, 37);
 		contentPanel.add(lblRollCount);
 
 		spinnerRollCount = new JSpinner();
 		spinnerRollCount.setModel(new SpinnerNumberModel(1, 1, 15, 1));
 		spinnerRollCount.setFont(new Font("Determination Mono Web", Font.PLAIN, 18));
-		spinnerRollCount.setBounds(257, 54, 90, 37);
+		spinnerRollCount.setBounds(35, 157, 90, 37);
 		contentPanel.add(spinnerRollCount);
 
 		btnRolling = new JButton("Rolls");
 		btnRolling.setFont(new Font("Determination Mono Web", Font.PLAIN, 18));
-		btnRolling.setBounds(257, 101, 90, 55);
+		btnRolling.setBounds(145, 148, 90, 55);
 		contentPanel.add(btnRolling);
 		btnRolling.addActionListener(this);
 
@@ -51,7 +51,7 @@ public class CharacterRandomizer extends JDialog implements ActionListener {
 		textAreaChoices.setEditable(false);
 		textAreaChoices.setWrapStyleWord(true);
 		textAreaChoices.setLineWrap(true);
-		textAreaChoices.setBounds(20, 11, 182, 106);
+		textAreaChoices.setBounds(36, 11, 182, 106);
 		contentPanel.add(textAreaChoices);
 
 		textAreaRNGResults = new JTextArea();
@@ -60,11 +60,11 @@ public class CharacterRandomizer extends JDialog implements ActionListener {
 		textAreaRNGResults.setWrapStyleWord(true);
 		textAreaRNGResults.setFont(new Font("Determination Mono Web", Font.PLAIN, 11));
 		textAreaRNGResults.setBackground(UIManager.getColor("Button.background"));
-		textAreaRNGResults.setBounds(10, 166, 349, 84);
+		textAreaRNGResults.setBounds(256, 13, 349, 208);
 		contentPanel.add(textAreaRNGResults);
 
 		JScrollPane scrollPaneResults = new JScrollPane(textAreaRNGResults);
-		scrollPaneResults.setBounds(10, 166, 349, 84);
+		scrollPaneResults.setBounds(256, 13, 349, 208);
 		contentPanel.add(scrollPaneResults);
 	}
 
