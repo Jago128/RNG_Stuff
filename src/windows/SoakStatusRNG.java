@@ -86,7 +86,7 @@ public class SoakStatusRNG extends JDialog implements ActionListener {
 			StringBuilder results = new StringBuilder("");
 			for (int i = 0; i < count; i++) {
 				result = r.nextInt(10)+1;
-				if (result<=2) {
+				if (result<=2) { // 40% chance
 					results.append("Enemy ").append(i+1).append(" was soaked! Exact value: ").append(result).append("\n");
 					effectCount++;
 				} else {

@@ -27,32 +27,32 @@ public class RNGStuff extends JFrame implements ActionListener {
 
 		btn10PercentRNG = new JButton("10% Stuff");
 		btn10PercentRNG.setFont(new Font("Determination Mono Web", Font.PLAIN, 20));
-		btn10PercentRNG.setBounds(24, 61, 200, 64);
+		btn10PercentRNG.setBounds(255, 61, 200, 64);
 		contentPane.add(btn10PercentRNG);
 
 		btn15PercentRNG = new JButton("15% Stuff");
 		btn15PercentRNG.setFont(new Font("Determination Mono Web", Font.PLAIN, 20));
-		btn15PercentRNG.setBounds(255, 61, 200, 64);
+		btn15PercentRNG.setBounds(474, 61, 200, 64);
 		contentPane.add(btn15PercentRNG);
 
 		btn20PercentRNG = new JButton("20% Stuff");
 		btn20PercentRNG.setFont(new Font("Determination Mono Web", Font.PLAIN, 20));
-		btn20PercentRNG.setBounds(24, 135, 200, 64);
+		btn20PercentRNG.setBounds(255, 135, 200, 64);
 		contentPane.add(btn20PercentRNG);
 
 		btn25PercentRNG = new JButton("25% Stuff");
 		btn25PercentRNG.setFont(new Font("Determination Mono Web", Font.PLAIN, 20));
-		btn25PercentRNG.setBounds(474, 61, 200, 64);
+		btn25PercentRNG.setBounds(24, 135, 200, 64);
 		contentPane.add(btn25PercentRNG);
 
 		btnSoakStatusRNG = new JButton("Soak Status RNG");
 		btnSoakStatusRNG.setFont(new Font("Determination Mono Web", Font.PLAIN, 20));
-		btnSoakStatusRNG.setBounds(255, 135, 200, 64);
+		btnSoakStatusRNG.setBounds(474, 135, 200, 64);
 		contentPane.add(btnSoakStatusRNG);
 
 		btnPersonaDMGSkillStatusRNG = new JButton("Damaging Skill Status RNG");
 		btnPersonaDMGSkillStatusRNG.setFont(new Font("Determination Mono Web", Font.PLAIN, 16));
-		btnPersonaDMGSkillStatusRNG.setBounds(234, 209, 244, 64);
+		btnPersonaDMGSkillStatusRNG.setBounds(444, 209, 244, 64);
 		contentPane.add(btnPersonaDMGSkillStatusRNG);
 
 		JLabel lblTitle = new JLabel("Jago's RP/Parody RNG Shenanigans");
@@ -63,28 +63,33 @@ public class RNGStuff extends JFrame implements ActionListener {
 
 		btnJustitiaRNG = new JButton("Justitia RNG");
 		btnJustitiaRNG.setFont(new Font("Determination Mono Web", Font.PLAIN, 20));
-		btnJustitiaRNG.setBounds(24, 205, 200, 64);
+		btnJustitiaRNG.setBounds(234, 209, 200, 64);
 		contentPane.add(btnJustitiaRNG);
 
 		btnVoidTeaOverhealRNG = new JButton("Void Tea Overheal RNG");
 		btnVoidTeaOverhealRNG.setFont(new Font("Determination Mono Web", Font.PLAIN, 16));
-		btnVoidTeaOverhealRNG.setBounds(474, 136, 214, 64);
+		btnVoidTeaOverhealRNG.setBounds(10, 209, 214, 64);
 		contentPane.add(btnVoidTeaOverhealRNG);
 
 		btnOtherRNG = new JButton("Other RNG");
 		btnOtherRNG.setFont(new Font("Determination Mono Web", Font.PLAIN, 20));
-		btnOtherRNG.setBounds(378, 283, 200, 64);
+		btnOtherRNG.setBounds(474, 283, 200, 64);
 		contentPane.add(btnOtherRNG);
 
 		btnCharacterRandomizer = new JButton("Character Randomizer");
 		btnCharacterRandomizer.setFont(new Font("Determination Mono Web", Font.PLAIN, 16));
-		btnCharacterRandomizer.setBounds(133, 284, 200, 64);
+		btnCharacterRandomizer.setBounds(255, 283, 200, 64);
 		contentPane.add(btnCharacterRandomizer);
 
 		btnPersonaAlimentSkillRNG = new JButton("Aliment Skill RNG");
 		btnPersonaAlimentSkillRNG.setFont(new Font("Determination Mono Web", Font.PLAIN, 16));
-		btnPersonaAlimentSkillRNG.setBounds(488, 209, 200, 64);
+		btnPersonaAlimentSkillRNG.setBounds(24, 279, 200, 64);
 		contentPane.add(btnPersonaAlimentSkillRNG);
+		
+		JButton btn5PercentRNG = new JButton("5% Stuff");
+		btn5PercentRNG.setFont(new Font("Determination Mono Web", Font.PLAIN, 20));
+		btn5PercentRNG.setBounds(24, 61, 200, 64);
+		contentPane.add(btn5PercentRNG);
 
 		btn10PercentRNG.addActionListener(this);
 		btn15PercentRNG.addActionListener(this);

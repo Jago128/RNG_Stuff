@@ -14,7 +14,7 @@ public class RNG_50Percent extends JDialog implements ActionListener {
 	private JTextArea textAreaRNGResults;
 	private JSpinner spinnerRollCount;
 	private JButton btnRoll;
-	private JTextArea txtrCharaDualelementalBeam;
+	private JTextArea textAreaChara;
 
 	public RNG_50Percent(JFrame parent) {
 		super(parent, true);
@@ -27,15 +27,15 @@ public class RNG_50Percent extends JDialog implements ActionListener {
 		getContentPane().add(contentPanel, BorderLayout.CENTER);
 		contentPanel.setLayout(null);
 		
-		JTextArea textAreaChoices = new JTextArea();
-		textAreaChoices.setBackground(UIManager.getColor("Button.background"));
-		textAreaChoices.setEditable(false);
-		textAreaChoices.setWrapStyleWord(true);
-		textAreaChoices.setLineWrap(true);
-		textAreaChoices.setText("Stara:\r\nFiery Sword Burn RNG\r\n(Underfell Outfit) Conch Slasher Sting RNG");
-		textAreaChoices.setFont(new Font("Determination Mono Web", Font.PLAIN, 18));
-		textAreaChoices.setBounds(10, 11, 425, 144);
-		contentPanel.add(textAreaChoices);
+		JTextArea textAreaAll = new JTextArea();
+		textAreaAll.setBackground(UIManager.getColor("Button.background"));
+		textAreaAll.setEditable(false);
+		textAreaAll.setWrapStyleWord(true);
+		textAreaAll.setLineWrap(true);
+		textAreaAll.setText("All:\r\nTechnical Damage Down RNG");
+		textAreaAll.setFont(new Font("Determination Mono Web", Font.PLAIN, 18));
+		textAreaAll.setBounds(10, 11, 254, 144);
+		contentPanel.add(textAreaAll);
 		
 		spinnerRollCount = new JSpinner();
 		spinnerRollCount.setFont(new Font("Determination Mono Web", Font.PLAIN, 18));
@@ -68,15 +68,15 @@ public class RNG_50Percent extends JDialog implements ActionListener {
 		scrollPaneResults.setBounds(265, 179, 511, 144);
 		contentPanel.add(scrollPaneResults);
 		
-		txtrCharaDualelementalBeam = new JTextArea();
-		txtrCharaDualelementalBeam.setWrapStyleWord(true);
-		txtrCharaDualelementalBeam.setText("Chara:\r\nDual-Elemental Beam Burn RNG");
-		txtrCharaDualelementalBeam.setLineWrap(true);
-		txtrCharaDualelementalBeam.setFont(new Font("Determination Mono Web", Font.PLAIN, 18));
-		txtrCharaDualelementalBeam.setEditable(false);
-		txtrCharaDualelementalBeam.setBackground(UIManager.getColor("Button.background"));
-		txtrCharaDualelementalBeam.setBounds(445, 12, 331, 143);
-		contentPanel.add(txtrCharaDualelementalBeam);
+		textAreaChara = new JTextArea();
+		textAreaChara.setWrapStyleWord(true);
+		textAreaChara.setText("Chara:\r\nDual-Elemental Beam Burn RNG");
+		textAreaChara.setLineWrap(true);
+		textAreaChara.setFont(new Font("Determination Mono Web", Font.PLAIN, 18));
+		textAreaChara.setEditable(false);
+		textAreaChara.setBackground(UIManager.getColor("Button.background"));
+		textAreaChara.setBounds(445, 12, 331, 143);
+		contentPanel.add(textAreaChara);
 	}
 
 	@Override

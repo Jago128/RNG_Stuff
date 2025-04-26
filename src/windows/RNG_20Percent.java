@@ -14,7 +14,7 @@ public class RNG_20Percent extends JDialog implements ActionListener {
 	private JSpinner spinnerRollCount;
 	private JButton btnRoll;
 	private JTextArea textAreaRNGResults;
-	private JTextArea txtrCharaFieryBeam;
+	private JTextArea textAreaChara;
 
 	public RNG_20Percent(JFrame parent) {
 		super(parent, true);
@@ -27,15 +27,15 @@ public class RNG_20Percent extends JDialog implements ActionListener {
 		getContentPane().add(contentPanel, BorderLayout.CENTER);
 		contentPanel.setLayout(null);
 		
-		JTextArea textAreaChoices = new JTextArea();
-		textAreaChoices.setBackground(UIManager.getColor("Button.background"));
-		textAreaChoices.setEditable(false);
-		textAreaChoices.setWrapStyleWord(true);
-		textAreaChoices.setLineWrap(true);
-		textAreaChoices.setText("Stara:\r\nConch Destroyer Crit RNG");
-		textAreaChoices.setFont(new Font("Determination Mono Web", Font.PLAIN, 18));
-		textAreaChoices.setBounds(63, 11, 285, 135);
-		contentPanel.add(textAreaChoices);
+		JTextArea textAreaStara = new JTextArea();
+		textAreaStara.setBackground(UIManager.getColor("Button.background"));
+		textAreaStara.setEditable(false);
+		textAreaStara.setWrapStyleWord(true);
+		textAreaStara.setLineWrap(true);
+		textAreaStara.setText("Stara:\r\nConch Destroyer Crit RNG\r\nLunge Crit RNG");
+		textAreaStara.setFont(new Font("Determination Mono Web", Font.PLAIN, 18));
+		textAreaStara.setBounds(63, 11, 285, 135);
+		contentPanel.add(textAreaStara);
 		
 		spinnerRollCount = new JSpinner();
 		spinnerRollCount.setFont(new Font("Determination Mono Web", Font.PLAIN, 18));
@@ -68,15 +68,15 @@ public class RNG_20Percent extends JDialog implements ActionListener {
 		scrollPaneResults.setBounds(252, 176, 524, 117);
 		contentPanel.add(scrollPaneResults);
 		
-		txtrCharaFieryBeam = new JTextArea();
-		txtrCharaFieryBeam.setWrapStyleWord(true);
-		txtrCharaFieryBeam.setText("Chara:\r\nFiery Beam Burn RNG\r\nFrost Snap Spread RNG");
-		txtrCharaFieryBeam.setLineWrap(true);
-		txtrCharaFieryBeam.setFont(new Font("Determination Mono Web", Font.PLAIN, 18));
-		txtrCharaFieryBeam.setEditable(false);
-		txtrCharaFieryBeam.setBackground(UIManager.getColor("Button.background"));
-		txtrCharaFieryBeam.setBounds(425, 11, 291, 135);
-		contentPanel.add(txtrCharaFieryBeam);
+		textAreaChara = new JTextArea();
+		textAreaChara.setWrapStyleWord(true);
+		textAreaChara.setText("Chara:\r\nFiery Beam Burn RNG\r\nFrost Snap Spread RNG\r\nCleave Crit RNG\r\n(Unavailable) Power Slash Crit RNG");
+		textAreaChara.setLineWrap(true);
+		textAreaChara.setFont(new Font("Determination Mono Web", Font.PLAIN, 18));
+		textAreaChara.setEditable(false);
+		textAreaChara.setBackground(UIManager.getColor("Button.background"));
+		textAreaChara.setBounds(425, 11, 291, 135);
+		contentPanel.add(textAreaChara);
 	}
 
 	@Override

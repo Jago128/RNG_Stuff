@@ -91,7 +91,7 @@ public class PersonaAlimentSkillRNG extends JDialog implements ActionListener{
 			effectCount=0;
 			StringBuilder results = new StringBuilder("");
 			if (!chckbxTargetting.isSelected()) {
-				for (int i = 0; i < count; i++) {
+				for (int i = 0; i < count; i++) { // 70% chance
 					result = r.nextInt(10)+1;
 					if (result<=7) {
 						results.append("Enemy ").append(i+1).append(" was hit with a status! Exact value: ").append(result).append("\n");
@@ -101,7 +101,7 @@ public class PersonaAlimentSkillRNG extends JDialog implements ActionListener{
 					}
 				}
 			} else {
-				for (int i = 0; i < count; i++) {
+				for (int i = 0; i < count; i++) { // 50% chance
 					result = r.nextInt(2)+1;
 					if (result==2) {
 						results.append("Enemy ").append(i+1).append(" was hit with a status! Exact value: ").append(result).append("\n");

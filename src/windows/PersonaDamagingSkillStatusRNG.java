@@ -81,7 +81,7 @@ public class PersonaDamagingSkillStatusRNG extends JDialog implements ActionList
 			effectCount=0;
 			StringBuilder results = new StringBuilder("");
 			if (chckbxChimera.isSelected()) {
-				for (int i = 0; i < count; i++) {
+				for (int i = 0; i < count; i++) { // 12% chance
 					result = r.nextInt(25)+1;
 					if (result>=23) {
 						results.append("Enemy ").append(i+1).append(" was hit with a status! Exact value: ").append(result).append("\n");
@@ -91,7 +91,7 @@ public class PersonaDamagingSkillStatusRNG extends JDialog implements ActionList
 					}
 				}
 			} else {
-				for (int i = 0; i < count; i++) {
+				for (int i = 0; i < count; i++) { // 8% chance
 					result = r.nextInt(25)+1;
 					if (result>=24) {
 						results.append("Enemy ").append(i+1).append(" was hit with a status! Exact value: ").append(result).append("\n");

@@ -26,15 +26,15 @@ public class RNG_25Percent extends JDialog implements ActionListener {
 		getContentPane().add(contentPanel, BorderLayout.CENTER);
 		contentPanel.setLayout(null);
 		
-		JTextArea textAreaChoices = new JTextArea();
-		textAreaChoices.setBackground(UIManager.getColor("Button.background"));
-		textAreaChoices.setEditable(false);
-		textAreaChoices.setWrapStyleWord(true);
-		textAreaChoices.setLineWrap(true);
-		textAreaChoices.setText("Stara:\r\nUnderfell Outfit Conch Destroyer Sting RNG\r\n(Outertale Outfit) Pull on hit RNG\r\nConch Fusion (Geno Variation) Sting RNG");
-		textAreaChoices.setFont(new Font("Determination Mono Web", Font.PLAIN, 18));
-		textAreaChoices.setBounds(10, 11, 411, 138);
-		contentPanel.add(textAreaChoices);
+		JTextArea textAreaStara = new JTextArea();
+		textAreaStara.setBackground(UIManager.getColor("Button.background"));
+		textAreaStara.setEditable(false);
+		textAreaStara.setWrapStyleWord(true);
+		textAreaStara.setLineWrap(true);
+		textAreaStara.setText("Stara:\r\n(Underfell Outfit) Conch Destroyer Sting RNG\r\n(Outertale Outfit) Pull on hit RNG\r\nConch Fusion (Geno Variation) Sting RNG");
+		textAreaStara.setFont(new Font("Determination Mono Web", Font.PLAIN, 18));
+		textAreaStara.setBounds(10, 11, 427, 138);
+		contentPanel.add(textAreaStara);
 		
 		spinnerRollCount = new JSpinner();
 		spinnerRollCount.setFont(new Font("Determination Mono Web", Font.PLAIN, 18));
