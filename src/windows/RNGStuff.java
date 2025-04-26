@@ -60,7 +60,7 @@ public class RNGStuff extends JFrame implements ActionListener {
 		JLabel lblTitle = new JLabel("Jago's RP/Parody RNG Shenanigans");
 		lblTitle.setHorizontalAlignment(SwingConstants.CENTER);
 		lblTitle.setFont(new Font("Determination Mono Web", Font.PLAIN, 24));
-		lblTitle.setBounds(36, 10, 401, 41);
+		lblTitle.setBounds(151, 10, 401, 41);
 		contentPane.add(lblTitle);
 
 		btnJustitiaRNG = new JButton("Justitia RNG");
