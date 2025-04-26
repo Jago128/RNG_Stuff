@@ -34,24 +34,34 @@ public class RNG_20Percent extends JDialog implements ActionListener {
 		textAreaStara.setLineWrap(true);
 		textAreaStara.setText("Stara:\nConch Destroyer Crit RNG\nLunge Crit RNG");
 		textAreaStara.setFont(new Font("Determination Mono Web", Font.PLAIN, 18));
-		textAreaStara.setBounds(63, 11, 285, 135);
+		textAreaStara.setBounds(76, 11, 234, 70);
 		contentPanel.add(textAreaStara);
+		
+		textAreaChara = new JTextArea();
+		textAreaChara.setWrapStyleWord(true);
+		textAreaChara.setText("Chara:\nFiery Beam Burn RNG\nFrost Snap Spread RNG\nCleave Crit RNG\n(Unavailable) Power Slash Crit RNG");
+		textAreaChara.setLineWrap(true);
+		textAreaChara.setFont(new Font("Determination Mono Web", Font.PLAIN, 18));
+		textAreaChara.setEditable(false);
+		textAreaChara.setBackground(UIManager.getColor("Button.background"));
+		textAreaChara.setBounds(350, 11, 334, 117);
+		contentPanel.add(textAreaChara);
 		
 		spinnerRollCount = new JSpinner();
 		spinnerRollCount.setFont(new Font("Determination Mono Web", Font.PLAIN, 18));
 		spinnerRollCount.setModel(new SpinnerNumberModel(1, 1, 30, 1));
-		spinnerRollCount.setBounds(44, 238, 61, 30);
+		spinnerRollCount.setBounds(44, 197, 61, 30);
 		contentPanel.add(spinnerRollCount);
 		
 		JLabel lblRollCount = new JLabel("Roll count:");
 		lblRollCount.setHorizontalAlignment(SwingConstants.CENTER);
 		lblRollCount.setFont(new Font("Determination Mono Web", Font.PLAIN, 18));
-		lblRollCount.setBounds(20, 206, 117, 20);
+		lblRollCount.setBounds(20, 156, 117, 20);
 		contentPanel.add(lblRollCount);
 		
 		btnRoll = new JButton("Roll");
 		btnRoll.setFont(new Font("Determination Mono Web", Font.PLAIN, 18));
-		btnRoll.setBounds(147, 223, 95, 30);
+		btnRoll.setBounds(132, 173, 95, 30);
 		contentPanel.add(btnRoll);
 		btnRoll.addActionListener(this);
 		
@@ -61,22 +71,12 @@ public class RNG_20Percent extends JDialog implements ActionListener {
 		textAreaRNGResults.setWrapStyleWord(true);
 		textAreaRNGResults.setFont(new Font("Determination Mono Web", Font.PLAIN, 18));
 		textAreaRNGResults.setBackground(UIManager.getColor("Button.background"));
-		textAreaRNGResults.setBounds(252, 176, 524, 117);
+		textAreaRNGResults.setBounds(252, 138, 524, 155);
 		contentPanel.add(textAreaRNGResults);
 		
 		JScrollPane scrollPaneResults = new JScrollPane(textAreaRNGResults);
-		scrollPaneResults.setBounds(252, 176, 524, 117);
+		scrollPaneResults.setBounds(252, 138, 524, 155);
 		contentPanel.add(scrollPaneResults);
-		
-		textAreaChara = new JTextArea();
-		textAreaChara.setWrapStyleWord(true);
-		textAreaChara.setText("Chara:\nFiery Beam Burn RNG\nFrost Snap Spread RNG\nCleave Crit RNG\n(Unavailable) Power Slash Crit RNG");
-		textAreaChara.setLineWrap(true);
-		textAreaChara.setFont(new Font("Determination Mono Web", Font.PLAIN, 18));
-		textAreaChara.setEditable(false);
-		textAreaChara.setBackground(UIManager.getColor("Button.background"));
-		textAreaChara.setBounds(425, 11, 291, 135);
-		contentPanel.add(textAreaChara);
 	}
 
 	@Override

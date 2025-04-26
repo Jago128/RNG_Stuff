@@ -33,10 +33,30 @@ public class RNG_10Percent extends JDialog implements ActionListener {
 		textAreaStarfish.setEditable(false);
 		textAreaStarfish.setWrapStyleWord(true);
 		textAreaStarfish.setLineWrap(true);
-		textAreaStarfish.setText("Starfish:\nTemmie Armor DMG heal\nIce Beam Freeze RNG");
+		textAreaStarfish.setText("Starfish:\r\nTemmie Armor DMG Heal\r\nIce Beam Freeze RNG");
 		textAreaStarfish.setFont(new Font("Determination Mono Web", Font.PLAIN, 16));
-		textAreaStarfish.setBounds(12, 11, 198, 143);
+		textAreaStarfish.setBounds(12, 11, 185, 60);
 		contentPanel.add(textAreaStarfish);
+		
+		JTextArea textAreaStara = new JTextArea();
+		textAreaStara.setWrapStyleWord(true);
+		textAreaStara.setText("Stara:\nConch Slasher/Fusion Crit RNG\nFireball Burn RNG\nFire Breath Burn RNG (End of attack)\nThunderbolt/Chain Lightning/Thundercloud Paralysis RNG\n(Unavailable) Rampage Crit RNG");
+		textAreaStara.setLineWrap(true);
+		textAreaStara.setFont(new Font("Determination Mono Web", Font.PLAIN, 16));
+		textAreaStara.setEditable(false);
+		textAreaStara.setBackground(UIManager.getColor("Button.background"));
+		textAreaStara.setBounds(210, 11, 297, 130);
+		contentPanel.add(textAreaStara);
+		
+		JTextArea textAreaChara = new JTextArea();
+		textAreaChara.setWrapStyleWord(true);
+		textAreaChara.setText("Chara:\nElemental Bomb Status RNG\nFire Slash/Fireball Burn RNG\nFrost Snap Infliction RNG");
+		textAreaChara.setLineWrap(true);
+		textAreaChara.setFont(new Font("Determination Mono Web", Font.PLAIN, 16));
+		textAreaChara.setEditable(false);
+		textAreaChara.setBackground(UIManager.getColor("Button.background"));
+		textAreaChara.setBounds(506, 11, 236, 72);
+		contentPanel.add(textAreaChara);
 
 		spinnerRollCount = new JSpinner();
 		spinnerRollCount.setFont(new Font("Determination Mono Web", Font.PLAIN, 18));
@@ -55,50 +75,30 @@ public class RNG_10Percent extends JDialog implements ActionListener {
 		btnRoll.setBounds(120, 183, 90, 30);
 		contentPanel.add(btnRoll);
 		btnRoll.addActionListener(this);
-
-		textAreaRNGResults = new JTextArea();
-		textAreaRNGResults.setEditable(false);
-		textAreaRNGResults.setLineWrap(true);
-		textAreaRNGResults.setWrapStyleWord(true);
-		textAreaRNGResults.setFont(new Font("Determination Mono Web", Font.PLAIN, 18));
-		textAreaRNGResults.setBackground(UIManager.getColor("Button.background"));
-		textAreaRNGResults.setBounds(210, 110, 526, 138);
-		contentPanel.add(textAreaRNGResults);
-
-		JScrollPane scrollPaneResults = new JScrollPane(textAreaRNGResults);
-		scrollPaneResults.setBounds(232, 186, 526, 138);
-		contentPanel.add(scrollPaneResults);
 		
 		chckbxElementalBomb = new JCheckBox("Elemental Bomb");
 		chckbxElementalBomb.setFont(new Font("Determination Mono Web", Font.PLAIN, 18));
 		chckbxElementalBomb.setBounds(32, 230, 168, 36);
 		contentPanel.add(chckbxElementalBomb);
 		
-		JTextArea textAreaStara = new JTextArea();
-		textAreaStara.setWrapStyleWord(true);
-		textAreaStara.setText("Stara:\nConch Slasher/Fusion Crit RNG\nFireball Burn RNG\nFire Breath Burn RNG (End of attack)\nThunderbolt/Chain Lightning/Thundercloud Paralysis RNG\n(Unavailable) Rampage Crit RNG");
-		textAreaStara.setLineWrap(true);
-		textAreaStara.setFont(new Font("Determination Mono Web", Font.PLAIN, 16));
-		textAreaStara.setEditable(false);
-		textAreaStara.setBackground(UIManager.getColor("Button.background"));
-		textAreaStara.setBounds(210, 11, 297, 165);
-		contentPanel.add(textAreaStara);
-		
-		JTextArea textAreaChara = new JTextArea();
-		textAreaChara.setWrapStyleWord(true);
-		textAreaChara.setText("Chara:\nElemental Bomb Status RNG\nFire Slash/Fireball Burn RNG\nFrost Snap Infliction RNG");
-		textAreaChara.setLineWrap(true);
-		textAreaChara.setFont(new Font("Determination Mono Web", Font.PLAIN, 16));
-		textAreaChara.setEditable(false);
-		textAreaChara.setBackground(UIManager.getColor("Button.background"));
-		textAreaChara.setBounds(506, 11, 252, 155);
-		contentPanel.add(textAreaChara);
-		
 		chckbxRampage = new JCheckBox("Rampage");
 		chckbxRampage.setEnabled(false);
 		chckbxRampage.setFont(new Font("Determination Mono Web", Font.PLAIN, 18));
 		chckbxRampage.setBounds(32, 271, 168, 36);
 		contentPanel.add(chckbxRampage);
+		
+		textAreaRNGResults = new JTextArea();
+		textAreaRNGResults.setEditable(false);
+		textAreaRNGResults.setLineWrap(true);
+		textAreaRNGResults.setWrapStyleWord(true);
+		textAreaRNGResults.setFont(new Font("Determination Mono Web", Font.PLAIN, 18));
+		textAreaRNGResults.setBackground(UIManager.getColor("Button.background"));
+		textAreaRNGResults.setBounds(-16, 0, 526, 161);
+		contentPanel.add(textAreaRNGResults);
+		
+		JScrollPane scrollPaneResults = new JScrollPane(textAreaRNGResults);
+		scrollPaneResults.setBounds(220, 164, 526, 161);
+		contentPanel.add(scrollPaneResults);
 	}
 
 	@Override

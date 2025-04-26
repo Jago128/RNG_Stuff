@@ -32,7 +32,7 @@ public class JustitiaRNG extends JDialog implements ActionListener {
 		textAreaChances.setText("Chances:\n40% chance to do a normal attack\n40% chance to do a 5 hit combo\n20% chance to do a 10 hit combo");
 		textAreaChances.setBackground(UIManager.getColor("Button.background"));
 		textAreaChances.setFont(new Font("Determination Mono Web", Font.PLAIN, 18));
-		textAreaChances.setBounds(10, 11, 309, 100);
+		textAreaChances.setBounds(10, 11, 305, 100);
 		contentPanel.add(textAreaChances);
 
 		btnRoll = new JButton("Roll");

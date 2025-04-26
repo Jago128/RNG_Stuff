@@ -33,24 +33,24 @@ public class RNG_25Percent extends JDialog implements ActionListener {
 		textAreaStara.setLineWrap(true);
 		textAreaStara.setText("Stara:\n(Underfell Outfit) Conch Destroyer Sting RNG\n(Outertale Outfit) Pull on hit RNG\nConch Fusion (Geno Variation) Sting RNG");
 		textAreaStara.setFont(new Font("Determination Mono Web", Font.PLAIN, 18));
-		textAreaStara.setBounds(10, 11, 427, 138);
+		textAreaStara.setBounds(20, 10, 427, 91);
 		contentPanel.add(textAreaStara);
 		
 		spinnerRollCount = new JSpinner();
 		spinnerRollCount.setFont(new Font("Determination Mono Web", Font.PLAIN, 18));
 		spinnerRollCount.setModel(new SpinnerNumberModel(1, 1, 30, 1));
-		spinnerRollCount.setBounds(20, 234, 79, 30);
+		spinnerRollCount.setBounds(21, 191, 79, 30);
 		contentPanel.add(spinnerRollCount);
 		
 		JLabel lblRollCount = new JLabel("Roll count:");
 		lblRollCount.setHorizontalAlignment(SwingConstants.CENTER);
 		lblRollCount.setFont(new Font("Determination Mono Web", Font.PLAIN, 18));
-		lblRollCount.setBounds(10, 204, 117, 20);
+		lblRollCount.setBounds(10, 161, 117, 20);
 		contentPanel.add(lblRollCount);
 		
 		btnRoll = new JButton("Roll");
 		btnRoll.setFont(new Font("Determination Mono Web", Font.PLAIN, 18));
-		btnRoll.setBounds(125, 217, 95, 30);
+		btnRoll.setBounds(123, 179, 95, 30);
 		contentPanel.add(btnRoll);
 		btnRoll.addActionListener(this);
 		
@@ -60,11 +60,11 @@ public class RNG_25Percent extends JDialog implements ActionListener {
 		textAreaRNGResults.setWrapStyleWord(true);
 		textAreaRNGResults.setFont(new Font("Determination Mono Web", Font.PLAIN, 18));
 		textAreaRNGResults.setBackground(UIManager.getColor("Button.background"));
-		textAreaRNGResults.setBounds(236, 159, 540, 134);
+		textAreaRNGResults.setBounds(236, 111, 540, 182);
 		contentPanel.add(textAreaRNGResults);
 		
 		JScrollPane scrollPaneResults = new JScrollPane(textAreaRNGResults);
-		scrollPaneResults.setBounds(236, 159, 540, 134);
+		scrollPaneResults.setBounds(236, 111, 540, 182);
 		contentPanel.add(scrollPaneResults);
 	}
 

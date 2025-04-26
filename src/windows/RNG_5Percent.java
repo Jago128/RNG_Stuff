@@ -33,9 +33,9 @@ public class RNG_5Percent extends JDialog implements ActionListener {
 		textAreaStara.setEditable(false);
 		textAreaStara.setWrapStyleWord(true);
 		textAreaStara.setLineWrap(true);
-		textAreaStara.setText("Stara:\nVajira Blast Crit RNG");
+		textAreaStara.setText("Stara:\r\n(Unavailable) Vajira Blast Crit RNG");
 		textAreaStara.setFont(new Font("Determination Mono Web", Font.PLAIN, 18));
-		textAreaStara.setBounds(10, 11, 425, 144);
+		textAreaStara.setBounds(10, 11, 343, 50);
 		contentPanel.add(textAreaStara);
 
 		spinnerRollCount = new JSpinner();
@@ -76,7 +76,7 @@ public class RNG_5Percent extends JDialog implements ActionListener {
 		textAreaChara.setFont(new Font("Determination Mono Web", Font.PLAIN, 18));
 		textAreaChara.setEditable(false);
 		textAreaChara.setBackground(UIManager.getColor("Button.background"));
-		textAreaChara.setBounds(445, 12, 331, 143);
+		textAreaChara.setBounds(367, 11, 409, 88);
 		contentPanel.add(textAreaChara);
 
 		chckbxTempestSlash = new JCheckBox("Tempest Slash");

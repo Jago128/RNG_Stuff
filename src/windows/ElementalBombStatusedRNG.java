@@ -21,7 +21,7 @@ public class ElementalBombStatusedRNG extends JDialog implements ActionListener 
 		
 		setResizable(false);
 		setTitle("Elemental Bomb Stuff");
-		setBounds(100, 100, 700, 200);
+		setBounds(100, 100, 700, 230);
 		getContentPane().setLayout(new BorderLayout());
 		contentPanel.setBorder(new EmptyBorder(5, 5, 5, 5));
 		getContentPane().add(contentPanel, BorderLayout.CENTER);
@@ -34,7 +34,7 @@ public class ElementalBombStatusedRNG extends JDialog implements ActionListener 
 		textAreaChances.setText("Elemental Bomb status triggered!\nTrigger count: "+elementalBombTriggers+"\n50% chance to Burn\n50% chance to Freeze");
 		textAreaChances.setBackground(UIManager.getColor("Button.background"));
 		textAreaChances.setFont(new Font("Determination Mono Web", Font.PLAIN, 18));
-		textAreaChances.setBounds(10, 11, 313, 88);
+		textAreaChances.setBounds(10, 11, 318, 80);
 		contentPanel.add(textAreaChances);
 
 		btnRoll = new JButton("Roll");
@@ -49,11 +49,11 @@ public class ElementalBombStatusedRNG extends JDialog implements ActionListener 
 		textAreaRNGResults.setWrapStyleWord(true);
 		textAreaRNGResults.setLineWrap(true);
 		textAreaRNGResults.setEditable(false);
-		textAreaRNGResults.setBounds(315, 11, 361, 142);
+		textAreaRNGResults.setBounds(338, 11, 338, 172);
 		contentPanel.add(textAreaRNGResults);
 
 		JScrollPane scrollPaneResults = new JScrollPane(textAreaRNGResults);
-		scrollPaneResults.setBounds(315, 11, 361, 142);
+		scrollPaneResults.setBounds(338, 11, 338, 172);
 		contentPanel.add(scrollPaneResults);
 	}
 

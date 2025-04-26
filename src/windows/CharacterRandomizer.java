@@ -29,7 +29,7 @@ public class CharacterRandomizer extends JDialog implements ActionListener {
 		JLabel lblRollCount = new JLabel("Roll count:");
 		lblRollCount.setHorizontalAlignment(SwingConstants.CENTER);
 		lblRollCount.setFont(new Font("Determination Mono Web", Font.PLAIN, 18));
-		lblRollCount.setBounds(22, 110, 141, 37);
+		lblRollCount.setBounds(10, 119, 141, 28);
 		contentPanel.add(lblRollCount);
 
 		spinnerRollCount = new JSpinner();
@@ -40,7 +40,7 @@ public class CharacterRandomizer extends JDialog implements ActionListener {
 
 		btnRolling = new JButton("Rolls");
 		btnRolling.setFont(new Font("Determination Mono Web", Font.PLAIN, 18));
-		btnRolling.setBounds(145, 148, 90, 55);
+		btnRolling.setBounds(135, 142, 90, 35);
 		contentPanel.add(btnRolling);
 		btnRolling.addActionListener(this);
 
@@ -51,7 +51,7 @@ public class CharacterRandomizer extends JDialog implements ActionListener {
 		textAreaChoices.setEditable(false);
 		textAreaChoices.setWrapStyleWord(true);
 		textAreaChoices.setLineWrap(true);
-		textAreaChoices.setBounds(36, 11, 182, 106);
+		textAreaChoices.setBounds(36, 11, 178, 106);
 		contentPanel.add(textAreaChoices);
 
 		textAreaRNGResults = new JTextArea();

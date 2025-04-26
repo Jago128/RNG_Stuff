@@ -20,7 +20,7 @@ public class RNG_15Percent extends JDialog implements ActionListener {
 		
 		setResizable(false);
 		setTitle("15% Chance Stuff");
-		setBounds(100, 100, 800, 370);
+		setBounds(100, 100, 800, 320);
 		getContentPane().setLayout(new BorderLayout());
 		contentPanel.setBorder(new EmptyBorder(5, 5, 5, 5));
 		getContentPane().add(contentPanel, BorderLayout.CENTER);
@@ -33,24 +33,34 @@ public class RNG_15Percent extends JDialog implements ActionListener {
 		textAreaStara.setLineWrap(true);
 		textAreaStara.setText("Stara:\nFiery Sword/Shockwave/Fire Blast Burn RNG\n(Underfell Outfit) Conch Slasher Sting RNG");
 		textAreaStara.setFont(new Font("Determination Mono Web", Font.PLAIN, 18));
-		textAreaStara.setBounds(10, 11, 425, 144);
+		textAreaStara.setBounds(10, 11, 412, 61);
 		contentPanel.add(textAreaStara);
+		
+		JTextArea textAreaChara = new JTextArea();
+		textAreaChara.setWrapStyleWord(true);
+		textAreaChara.setText("Chara:\nDual-Elemental Beam Burn RNG");
+		textAreaChara.setLineWrap(true);
+		textAreaChara.setFont(new Font("Determination Mono Web", Font.PLAIN, 18));
+		textAreaChara.setEditable(false);
+		textAreaChara.setBackground(UIManager.getColor("Button.background"));
+		textAreaChara.setBounds(445, 12, 272, 48);
+		contentPanel.add(textAreaChara);
 		
 		spinnerRollCount = new JSpinner();
 		spinnerRollCount.setFont(new Font("Determination Mono Web", Font.PLAIN, 18));
 		spinnerRollCount.setModel(new SpinnerNumberModel(1, 1, 30, 1));
-		spinnerRollCount.setBounds(33, 256, 79, 30);
+		spinnerRollCount.setBounds(20, 155, 79, 30);
 		contentPanel.add(spinnerRollCount);
 		
 		JLabel lblRollCount = new JLabel("Roll count:");
 		lblRollCount.setHorizontalAlignment(SwingConstants.CENTER);
 		lblRollCount.setFont(new Font("Determination Mono Web", Font.PLAIN, 18));
-		lblRollCount.setBounds(21, 226, 117, 20);
+		lblRollCount.setBounds(10, 125, 117, 20);
 		contentPanel.add(lblRollCount);
 		
 		btnRoll = new JButton("Roll");
 		btnRoll.setFont(new Font("Determination Mono Web", Font.PLAIN, 18));
-		btnRoll.setBounds(148, 242, 95, 30);
+		btnRoll.setBounds(129, 138, 95, 30);
 		contentPanel.add(btnRoll);
 		btnRoll.addActionListener(this);
 		
@@ -60,22 +70,12 @@ public class RNG_15Percent extends JDialog implements ActionListener {
 		textAreaRNGResults.setWrapStyleWord(true);
 		textAreaRNGResults.setFont(new Font("Determination Mono Web", Font.PLAIN, 18));
 		textAreaRNGResults.setBackground(UIManager.getColor("Button.background"));
-		textAreaRNGResults.setBounds(265, 179, 511, 144);
+		textAreaRNGResults.setBounds(265, 93, 511, 182);
 		contentPanel.add(textAreaRNGResults);
 		
 		JScrollPane scrollPaneResults = new JScrollPane(textAreaRNGResults);
-		scrollPaneResults.setBounds(265, 179, 511, 144);
+		scrollPaneResults.setBounds(265, 93, 511, 182);
 		contentPanel.add(scrollPaneResults);
-		
-		JTextArea textAreaChara = new JTextArea();
-		textAreaChara.setWrapStyleWord(true);
-		textAreaChara.setText("Chara:\nDual-Elemental Beam Burn RNG");
-		textAreaChara.setLineWrap(true);
-		textAreaChara.setFont(new Font("Determination Mono Web", Font.PLAIN, 18));
-		textAreaChara.setEditable(false);
-		textAreaChara.setBackground(UIManager.getColor("Button.background"));
-		textAreaChara.setBounds(445, 12, 331, 143);
-		contentPanel.add(textAreaChara);
 	}
 
 	@Override

@@ -40,7 +40,7 @@ public class VoidTeaOverhealRNG extends JDialog implements ActionListener {
 		JLabel lblChances = new JLabel("33% chance to overheal (+20 HP)");
 		lblChances.setHorizontalAlignment(SwingConstants.CENTER);
 		lblChances.setFont(new Font("Determination Mono Web", Font.PLAIN, 18));
-		lblChances.setBounds(6, 11, 298, 45);
+		lblChances.setBounds(6, 26, 298, 30);
 		contentPanel.add(lblChances);
 	}
 

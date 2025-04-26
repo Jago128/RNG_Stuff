@@ -33,24 +33,24 @@ public class PersonaAlimentSkillRNG extends JDialog implements ActionListener{
 		JLabel lblEnemyCount = new JLabel("Enemy count:");
 		lblEnemyCount.setFont(new Font("Determination Mono Web", Font.PLAIN, 18));
 		lblEnemyCount.setHorizontalAlignment(SwingConstants.CENTER);
-		lblEnemyCount.setBounds(10, 6, 129, 28);
+		lblEnemyCount.setBounds(20, 6, 129, 28);
 		contentPanel.add(lblEnemyCount);
 
-		chckbxTargetting = new JCheckBox("Single or Multiple targets?");
+		chckbxTargetting = new JCheckBox("One or Multiple targets?");
 		chckbxTargetting.setHorizontalAlignment(SwingConstants.CENTER);
 		chckbxTargetting.setFont(new Font("Determination Mono Web", Font.PLAIN, 18));
-		chckbxTargetting.setBounds(10, 88, 288, 23);
+		chckbxTargetting.setBounds(10, 101, 272, 23);
 		contentPanel.add(chckbxTargetting);
 
 		spinnerEnemyCount = new JSpinner();
 		spinnerEnemyCount.setFont(new Font("Determination Mono Web", Font.PLAIN, 18));
 		spinnerEnemyCount.setModel(new SpinnerNumberModel(1, 1, 30, 1));
-		spinnerEnemyCount.setBounds(20, 44, 85, 40);
+		spinnerEnemyCount.setBounds(41, 44, 85, 40);
 		contentPanel.add(spinnerEnemyCount);
 
 		btnRoll = new JButton("Roll");
 		btnRoll.setFont(new Font("Determination Mono Web", Font.PLAIN, 18));
-		btnRoll.setBounds(20, 165, 89, 28);
+		btnRoll.setBounds(149, 29, 89, 28);
 		contentPanel.add(btnRoll);
 		btnRoll.addActionListener(this);
 		
@@ -58,10 +58,10 @@ public class PersonaAlimentSkillRNG extends JDialog implements ActionListener{
 		textAreaChoice.setText("Not Selected: Single Target\nSelected: All Targets\n");
 		textAreaChoice.setWrapStyleWord(true);
 		textAreaChoice.setLineWrap(true);
-		textAreaChoice.setFont(new Font("Determination Mono Web", Font.PLAIN, 16));
+		textAreaChoice.setFont(new Font("Determination Mono Web", Font.PLAIN, 18));
 		textAreaChoice.setEditable(false);
 		textAreaChoice.setBackground(UIManager.getColor("Button.background"));
-		textAreaChoice.setBounds(10, 117, 257, 40);
+		textAreaChoice.setBounds(20, 130, 274, 50);
 		contentPanel.add(textAreaChoice);
 		
 		textAreaRNGResults = new JTextArea();
