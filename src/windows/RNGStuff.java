@@ -13,6 +13,7 @@ public class RNGStuff extends JFrame implements ActionListener {
 	private JButton btnPersonaDMGSkillStatusRNG, btn10PercentRNG, btn15PercentRNG, btn20PercentRNG, btn25PercentRNG, btnVoidTeaOverhealRNG, btnSoakStatusRNG, btnJustitiaRNG, btnOtherRNG;
 	private JButton btnCharacterRandomizer;
 	private JButton btnPersonaAlimentSkillRNG;
+	private JButton btn5PercentRNG;
 
 	public RNGStuff() {
 		setResizable(false);
@@ -85,12 +86,13 @@ public class RNGStuff extends JFrame implements ActionListener {
 		btnPersonaAlimentSkillRNG.setFont(new Font("Determination Mono Web", Font.PLAIN, 16));
 		btnPersonaAlimentSkillRNG.setBounds(24, 279, 200, 64);
 		contentPane.add(btnPersonaAlimentSkillRNG);
-		
-		JButton btn5PercentRNG = new JButton("5% Stuff");
+
+		btn5PercentRNG = new JButton("5% Stuff");
 		btn5PercentRNG.setFont(new Font("Determination Mono Web", Font.PLAIN, 20));
 		btn5PercentRNG.setBounds(24, 61, 200, 64);
 		contentPane.add(btn5PercentRNG);
 
+		btn5PercentRNG.addActionListener(this);
 		btn10PercentRNG.addActionListener(this);
 		btn15PercentRNG.addActionListener(this);
 		btn20PercentRNG.addActionListener(this);
@@ -106,7 +108,10 @@ public class RNGStuff extends JFrame implements ActionListener {
 
 	@Override
 	public void actionPerformed(ActionEvent e) {
-		if (e.getSource()==btn10PercentRNG) {
+		if (e.getSource()==btn5PercentRNG) {
+			RNG_5Percent dialog = new RNG_5Percent(this);
+			dialog.setVisible(true);
+		} else if (e.getSource()==btn10PercentRNG) {
 			RNG_10Percent dialog = new RNG_10Percent(this);
 			dialog.setVisible(true);
 		} else if (e.getSource()==btn15PercentRNG) {
