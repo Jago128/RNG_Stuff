@@ -33,7 +33,7 @@ public class SoakStatusRNG extends JDialog implements ActionListener {
 		textAreaChances.setLineWrap(true);
 		textAreaChances.setWrapStyleWord(true);
 		textAreaChances.setEditable(false);
-		textAreaChances.setText("Aqua line skills\r\n40% chance to Soak");
+		textAreaChances.setText("Aqua line skills\n40% chance to Soak");
 		textAreaChances.setBackground(UIManager.getColor("Button.background"));
 		textAreaChances.setFont(new Font("Determination Mono Web", Font.PLAIN, 18));
 		textAreaChances.setBounds(37, 17, 184, 50);

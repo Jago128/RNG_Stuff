@@ -33,7 +33,7 @@ public class RNG_10Percent extends JDialog implements ActionListener {
 		textAreaStarfish.setEditable(false);
 		textAreaStarfish.setWrapStyleWord(true);
 		textAreaStarfish.setLineWrap(true);
-		textAreaStarfish.setText("Starfish:\r\nTemmie Armor DMG heal\r\nIce Beam Freeze RNG");
+		textAreaStarfish.setText("Starfish:\nTemmie Armor DMG heal\nIce Beam Freeze RNG");
 		textAreaStarfish.setFont(new Font("Determination Mono Web", Font.PLAIN, 16));
 		textAreaStarfish.setBounds(12, 11, 198, 143);
 		contentPanel.add(textAreaStarfish);
@@ -76,7 +76,7 @@ public class RNG_10Percent extends JDialog implements ActionListener {
 		
 		JTextArea textAreaStara = new JTextArea();
 		textAreaStara.setWrapStyleWord(true);
-		textAreaStara.setText("Stara:\r\nConch Slasher/Fusion Crit RNG\r\nFireball Burn RNG\r\nFire Breath Burn RNG (End of attack)\r\nThunderbolt/Chain Lightning/Thundercloud Paralysis RNG\r\n(Unavailable) Rampage Crit RNG");
+		textAreaStara.setText("Stara:\nConch Slasher/Fusion Crit RNG\nFireball Burn RNG\nFire Breath Burn RNG (End of attack)\nThunderbolt/Chain Lightning/Thundercloud Paralysis RNG\n(Unavailable) Rampage Crit RNG");
 		textAreaStara.setLineWrap(true);
 		textAreaStara.setFont(new Font("Determination Mono Web", Font.PLAIN, 16));
 		textAreaStara.setEditable(false);
@@ -86,7 +86,7 @@ public class RNG_10Percent extends JDialog implements ActionListener {
 		
 		JTextArea textAreaChara = new JTextArea();
 		textAreaChara.setWrapStyleWord(true);
-		textAreaChara.setText("Chara:\r\nElemental Bomb Status RNG\r\nFire Slash/Fireball Burn RNG\r\nFrost Snap Infliction RNG");
+		textAreaChara.setText("Chara:\nElemental Bomb Status RNG\nFire Slash/Fireball Burn RNG\nFrost Snap Infliction RNG");
 		textAreaChara.setLineWrap(true);
 		textAreaChara.setFont(new Font("Determination Mono Web", Font.PLAIN, 16));
 		textAreaChara.setEditable(false);
@@ -94,7 +94,7 @@ public class RNG_10Percent extends JDialog implements ActionListener {
 		textAreaChara.setBounds(506, 11, 252, 155);
 		contentPanel.add(textAreaChara);
 		
-		chckbxRampage = new JCheckBox("Rampage\r\n");
+		chckbxRampage = new JCheckBox("Rampage");
 		chckbxRampage.setEnabled(false);
 		chckbxRampage.setFont(new Font("Determination Mono Web", Font.PLAIN, 18));
 		chckbxRampage.setBounds(32, 271, 168, 36);

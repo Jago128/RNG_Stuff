@@ -31,7 +31,7 @@ public class RNG_25Percent extends JDialog implements ActionListener {
 		textAreaStara.setEditable(false);
 		textAreaStara.setWrapStyleWord(true);
 		textAreaStara.setLineWrap(true);
-		textAreaStara.setText("Stara:\r\n(Underfell Outfit) Conch Destroyer Sting RNG\r\n(Outertale Outfit) Pull on hit RNG\r\nConch Fusion (Geno Variation) Sting RNG");
+		textAreaStara.setText("Stara:\n(Underfell Outfit) Conch Destroyer Sting RNG\n(Outertale Outfit) Pull on hit RNG\nConch Fusion (Geno Variation) Sting RNG");
 		textAreaStara.setFont(new Font("Determination Mono Web", Font.PLAIN, 18));
 		textAreaStara.setBounds(10, 11, 427, 138);
 		contentPanel.add(textAreaStara);

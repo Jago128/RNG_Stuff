@@ -33,7 +33,7 @@ public class RNG_5Percent extends JDialog implements ActionListener {
 		textAreaStara.setEditable(false);
 		textAreaStara.setWrapStyleWord(true);
 		textAreaStara.setLineWrap(true);
-		textAreaStara.setText("Stara:\r\nVajira Blast Crit RNG");
+		textAreaStara.setText("Stara:\nVajira Blast Crit RNG");
 		textAreaStara.setFont(new Font("Determination Mono Web", Font.PLAIN, 18));
 		textAreaStara.setBounds(10, 11, 425, 144);
 		contentPanel.add(textAreaStara);
@@ -71,7 +71,7 @@ public class RNG_5Percent extends JDialog implements ActionListener {
 
 		JTextArea textAreaChara = new JTextArea();
 		textAreaChara.setWrapStyleWord(true);
-		textAreaChara.setText("Chara:\r\n(Unavailable) Tempest Slash/Rising Slash/Myriad Slashes/Death Scythe Crit RNG");
+		textAreaChara.setText("Chara:\n(Unavailable) Tempest Slash/Rising Slash/Myriad Slashes/Death Scythe Crit RNG");
 		textAreaChara.setLineWrap(true);
 		textAreaChara.setFont(new Font("Determination Mono Web", Font.PLAIN, 18));
 		textAreaChara.setEditable(false);

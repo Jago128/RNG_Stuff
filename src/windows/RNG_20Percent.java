@@ -32,7 +32,7 @@ public class RNG_20Percent extends JDialog implements ActionListener {
 		textAreaStara.setEditable(false);
 		textAreaStara.setWrapStyleWord(true);
 		textAreaStara.setLineWrap(true);
-		textAreaStara.setText("Stara:\r\nConch Destroyer Crit RNG\r\nLunge Crit RNG");
+		textAreaStara.setText("Stara:\nConch Destroyer Crit RNG\nLunge Crit RNG");
 		textAreaStara.setFont(new Font("Determination Mono Web", Font.PLAIN, 18));
 		textAreaStara.setBounds(63, 11, 285, 135);
 		contentPanel.add(textAreaStara);
@@ -70,7 +70,7 @@ public class RNG_20Percent extends JDialog implements ActionListener {
 		
 		textAreaChara = new JTextArea();
 		textAreaChara.setWrapStyleWord(true);
-		textAreaChara.setText("Chara:\r\nFiery Beam Burn RNG\r\nFrost Snap Spread RNG\r\nCleave Crit RNG\r\n(Unavailable) Power Slash Crit RNG");
+		textAreaChara.setText("Chara:\nFiery Beam Burn RNG\nFrost Snap Spread RNG\nCleave Crit RNG\n(Unavailable) Power Slash Crit RNG");
 		textAreaChara.setLineWrap(true);
 		textAreaChara.setFont(new Font("Determination Mono Web", Font.PLAIN, 18));
 		textAreaChara.setEditable(false);

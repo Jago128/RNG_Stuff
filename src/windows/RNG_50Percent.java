@@ -32,7 +32,7 @@ public class RNG_50Percent extends JDialog implements ActionListener {
 		textAreaAll.setEditable(false);
 		textAreaAll.setWrapStyleWord(true);
 		textAreaAll.setLineWrap(true);
-		textAreaAll.setText("All:\r\nTechnical Damage Down RNG");
+		textAreaAll.setText("All:\nTechnical Damage Down RNG");
 		textAreaAll.setFont(new Font("Determination Mono Web", Font.PLAIN, 18));
 		textAreaAll.setBounds(10, 11, 254, 144);
 		contentPanel.add(textAreaAll);
@@ -70,7 +70,7 @@ public class RNG_50Percent extends JDialog implements ActionListener {
 		
 		textAreaChara = new JTextArea();
 		textAreaChara.setWrapStyleWord(true);
-		textAreaChara.setText("Chara:\r\nDual-Elemental Beam Burn RNG");
+		textAreaChara.setText("Chara:\nDual-Elemental Beam Burn RNG");
 		textAreaChara.setLineWrap(true);
 		textAreaChara.setFont(new Font("Determination Mono Web", Font.PLAIN, 18));
 		textAreaChara.setEditable(false);
