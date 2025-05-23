@@ -66,7 +66,7 @@ public class OtherRNG extends JDialog implements ActionListener {
 		textAreaRNGResults.setEditable(false);
 		textAreaRNGResults.setLineWrap(true);
 		textAreaRNGResults.setWrapStyleWord(true);
-		textAreaRNGResults.setFont(new Font("Determination Mono Web", Font.PLAIN, 11));
+		textAreaRNGResults.setFont(new Font("Determination Mono Web", Font.PLAIN, 18));
 		textAreaRNGResults.setBackground(UIManager.getColor("Button.background"));
 		textAreaRNGResults.setBounds(235, 10, 419, 243);
 		contentPanel.add(textAreaRNGResults);

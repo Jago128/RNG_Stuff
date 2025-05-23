@@ -58,7 +58,7 @@ public class PersonaDamagingSkillStatusRNG extends JDialog implements ActionList
 		textAreaRNGResults.setEditable(false);
 		textAreaRNGResults.setLineWrap(true);
 		textAreaRNGResults.setWrapStyleWord(true);
-		textAreaRNGResults.setFont(new Font("Determination Mono Web", Font.PLAIN, 11));
+		textAreaRNGResults.setFont(new Font("Determination Mono Web", Font.PLAIN, 18));
 		textAreaRNGResults.setBackground(UIManager.getColor("Button.background"));
 		textAreaRNGResults.setBounds(200, 6, 383, 197);
 		contentPanel.add(textAreaRNGResults);

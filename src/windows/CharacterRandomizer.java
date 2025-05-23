@@ -58,7 +58,7 @@ public class CharacterRandomizer extends JDialog implements ActionListener {
 		textAreaRNGResults.setEditable(false);
 		textAreaRNGResults.setLineWrap(true);
 		textAreaRNGResults.setWrapStyleWord(true);
-		textAreaRNGResults.setFont(new Font("Determination Mono Web", Font.PLAIN, 11));
+		textAreaRNGResults.setFont(new Font("Determination Mono Web", Font.PLAIN, 18));
 		textAreaRNGResults.setBackground(UIManager.getColor("Button.background"));
 		textAreaRNGResults.setBounds(256, 13, 349, 208);
 		contentPanel.add(textAreaRNGResults);
