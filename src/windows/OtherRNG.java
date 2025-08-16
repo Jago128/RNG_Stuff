@@ -51,7 +51,7 @@ public class OtherRNG extends JDialog implements ActionListener {
 		contentPanel.add(spinnerRollCount);
 
 		spinnerNum = new JSpinner();
-		spinnerNum.setModel(new SpinnerNumberModel(1, 1, 10, 1));
+		spinnerNum.setModel(new SpinnerNumberModel(1, 1, 100, 1));
 		spinnerNum.setFont(new Font("Determination Mono Web", Font.PLAIN, 18));
 		spinnerNum.setBounds(35, 82, 75, 37);
 		contentPanel.add(spinnerNum);
