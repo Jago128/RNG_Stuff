@@ -16,7 +16,7 @@ public class VoidTeaOverhealRNG extends JDialog implements ActionListener {
 
 	public VoidTeaOverhealRNG(JFrame parent) {
 		super(parent, true);
-		
+
 		setResizable(false);
 		setTitle("Void Tea Overheal RNG");
 		setBounds(100, 100, 700, 160);
@@ -30,13 +30,13 @@ public class VoidTeaOverhealRNG extends JDialog implements ActionListener {
 		btnRoll.setBounds(97, 66, 95, 30);
 		contentPanel.add(btnRoll);
 		btnRoll.addActionListener(this);
-		
+
 		lblResult = new JLabel("");
 		lblResult.setFont(new Font("Determination Mono Web", Font.PLAIN, 18));
 		lblResult.setHorizontalAlignment(SwingConstants.CENTER);
 		lblResult.setBounds(303, 11, 373, 102);
 		contentPanel.add(lblResult);
-		
+
 		JLabel lblChances = new JLabel("33% chance to overheal (+20 HP)");
 		lblChances.setHorizontalAlignment(SwingConstants.CENTER);
 		lblChances.setFont(new Font("Determination Mono Web", Font.PLAIN, 18));
@@ -46,14 +46,14 @@ public class VoidTeaOverhealRNG extends JDialog implements ActionListener {
 
 	@Override
 	public void actionPerformed(ActionEvent e) {
-		if (e.getSource()==btnRoll) {
+		if (e.getSource() == btnRoll) {
 			Random r = new Random();
 			int result;
-			result = r.nextInt(3)+1;
-			if (result==3) {
-				lblResult.setText("Overheal triggered! Exact value: "+result);
+			result = r.nextInt(3) + 1;
+			if (result == 3) {
+				lblResult.setText("Overheal triggered! Exact value: " + result);
 			} else {
-				lblResult.setText("No extra effects. Exact value: "+result);
+				lblResult.setText("No extra effects. Exact value: " + result);
 			}
 		}
 	}

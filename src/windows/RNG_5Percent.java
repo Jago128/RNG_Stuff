@@ -84,7 +84,7 @@ public class RNG_5Percent extends JDialog implements ActionListener {
 		chckbxTempestSlash.setFont(new Font("Determination Mono Web", Font.PLAIN, 18));
 		chckbxTempestSlash.setBounds(30, 231, 168, 36);
 		contentPanel.add(chckbxTempestSlash);
-		
+
 		chckbxMyriadSlashes = new JCheckBox("Myriad Slashes");
 		chckbxMyriadSlashes.setFont(new Font("Determination Mono Web", Font.PLAIN, 18));
 		chckbxMyriadSlashes.setEnabled(false);
@@ -94,21 +94,23 @@ public class RNG_5Percent extends JDialog implements ActionListener {
 
 	@Override
 	public void actionPerformed(ActionEvent e) {
-		if (e.getSource()==btnRoll) {
+		if (e.getSource() == btnRoll) {
 			Random r = new Random();
-			int result, count=(int)spinnerRollCount.getValue();
+			int result, count = (int) spinnerRollCount.getValue();
 			StringBuilder results = new StringBuilder("");
-			for (int i=0; i<count; i++) {
-				result = r.nextInt(20)+1;
-				if (result>=18) {
-					results.append("Roll ").append(i+1).append(" result: Effect triggered! Exact value: ").append(result).append("\n");
+			for (int i = 0; i < count; i++) {
+				result = r.nextInt(20) + 1;
+				if (result >= 18) {
+					results.append("Roll ").append(i + 1).append(" result: Effect triggered! Exact value: ")
+							.append(result).append("\n");
 				} else {
-					results.append("Roll ").append(i+1).append(" result: Nothing happened. Exact value: ").append(result).append("\n");
+					results.append("Roll ").append(i + 1).append(" result: Nothing happened. Exact value: ")
+							.append(result).append("\n");
 				}
 
-				if (chckbxTempestSlash.isSelected()&&!chckbxMyriadSlashes.isSelected()) {
+				if (chckbxTempestSlash.isSelected() && !chckbxMyriadSlashes.isSelected()) {
 					Random r1 = new Random();
-					int rampage = r1.nextInt(3)+1;
+					int rampage = r1.nextInt(3) + 1;
 					switch (rampage) {
 					case 1:
 						results.append("Tempest Slash hit thrice.").append("\n");
@@ -122,9 +124,9 @@ public class RNG_5Percent extends JDialog implements ActionListener {
 						results.append("Tempest Slash hit five times.").append("\n");
 						break;
 					}
-				} else if (chckbxMyriadSlashes.isSelected()&&!chckbxTempestSlash.isSelected()) {
+				} else if (chckbxMyriadSlashes.isSelected() && !chckbxTempestSlash.isSelected()) {
 					Random r1 = new Random();
-					int mSlashes = r1.nextInt(2)+1;
+					int mSlashes = r1.nextInt(2) + 1;
 					switch (mSlashes) {
 					case 1:
 						results.append("Myriad Slashes hit twice.").append("\n");

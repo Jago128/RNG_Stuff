@@ -17,8 +17,8 @@ public class ElementalBombStatusedRNG extends JDialog implements ActionListener 
 
 	public ElementalBombStatusedRNG(JDialog parent, int elementalBombTriggers) {
 		super(parent, true);
-		this.elementalBombTriggers=elementalBombTriggers;
-		
+		this.elementalBombTriggers = elementalBombTriggers;
+
 		setResizable(false);
 		setTitle("Elemental Bomb Stuff");
 		setBounds(100, 100, 700, 230);
@@ -31,7 +31,8 @@ public class ElementalBombStatusedRNG extends JDialog implements ActionListener 
 		textAreaChances.setLineWrap(true);
 		textAreaChances.setWrapStyleWord(true);
 		textAreaChances.setEditable(false);
-		textAreaChances.setText("Elemental Bomb status triggered!\nTrigger count: "+elementalBombTriggers+"\n50% chance to Burn\n50% chance to Freeze");
+		textAreaChances.setText("Elemental Bomb status triggered!\nTrigger count: " + elementalBombTriggers
+				+ "\n50% chance to Burn\n50% chance to Freeze");
 		textAreaChances.setBackground(UIManager.getColor("Button.background"));
 		textAreaChances.setFont(new Font("Determination Mono Web", Font.PLAIN, 18));
 		textAreaChances.setBounds(10, 11, 318, 80);
@@ -64,14 +65,16 @@ public class ElementalBombStatusedRNG extends JDialog implements ActionListener 
 			int result;
 			StringBuilder results = new StringBuilder("");
 			for (int i = 0; i < elementalBombTriggers; i++) {
-				result = r.nextInt(2)+1;
+				result = r.nextInt(2) + 1;
 				switch (result) {
 				case 1:
-					results.append("Roll ").append(i+1).append(" result: Burn triggered! Exact value: "+result).append("\n");
+					results.append("Roll ").append(i + 1).append(" result: Burn triggered! Exact value: " + result)
+							.append("\n");
 					break;
 
 				case 2:
-					results.append("Roll ").append(i+1).append(" result: Freeze triggered! Exact value: "+result).append("\n");
+					results.append("Roll ").append(i + 1).append(" result: Freeze triggered! Exact value: " + result)
+							.append("\n");
 					break;
 				}
 			}

@@ -19,7 +19,7 @@ public class SoakStatusRNG extends JDialog implements ActionListener {
 
 	public SoakStatusRNG(JFrame parent) {
 		super(parent, true);
-		effectCount=0;
+		effectCount = 0;
 
 		setResizable(false);
 		setTitle("Soak Status RNG");
@@ -69,8 +69,8 @@ public class SoakStatusRNG extends JDialog implements ActionListener {
 		JScrollPane scrollPaneResults = new JScrollPane(textAreaRNGResults);
 		scrollPaneResults.setBounds(231, 16, 377, 227);
 		contentPanel.add(scrollPaneResults);
-		
-		lblEffectCount = new JLabel("Effect count: "+effectCount);
+
+		lblEffectCount = new JLabel("Effect count: " + effectCount);
 		lblEffectCount.setHorizontalAlignment(SwingConstants.CENTER);
 		lblEffectCount.setFont(new Font("Determination Mono Web", Font.PLAIN, 18));
 		lblEffectCount.setBounds(10, 211, 415, 28);
@@ -80,23 +80,25 @@ public class SoakStatusRNG extends JDialog implements ActionListener {
 	public void actionPerformed(ActionEvent e) {
 		if (e.getSource() == btnRoll) {
 			Random r = new Random();
-			int result, count=(int)spinnerEnemyCount.getValue();
-			effectCount=0;
-			result = r.nextInt(5)+1;
+			int result, count = (int) spinnerEnemyCount.getValue();
+			effectCount = 0;
+			result = r.nextInt(5) + 1;
 			StringBuilder results = new StringBuilder("");
 			for (int i = 0; i < count; i++) {
-				result = r.nextInt(10)+1;
-				if (result<=2) { // 40% chance
-					results.append("Enemy ").append(i+1).append(" was soaked! Exact value: ").append(result).append("\n");
+				result = r.nextInt(10) + 1;
+				if (result <= 2) { // 40% chance
+					results.append("Enemy ").append(i + 1).append(" was soaked! Exact value: ").append(result)
+							.append("\n");
 					effectCount++;
 				} else {
-					results.append("The effect didn't trigger on enemy ").append(i+1).append(". Exact value: ").append(result).append("\n");
+					results.append("The effect didn't trigger on enemy ").append(i + 1).append(". Exact value: ")
+							.append(result).append("\n");
 				}
 			}
 			textAreaRNGResults.setText(results.toString());
-			if ((int)spinnerEnemyCount.getValue()>5) {
+			if ((int) spinnerEnemyCount.getValue() > 5) {
 				contentPanel.add(lblEffectCount);
-				lblEffectCount.setText("Effect count: "+effectCount);
+				lblEffectCount.setText("Effect count: " + effectCount);
 			}
 		}
 	}

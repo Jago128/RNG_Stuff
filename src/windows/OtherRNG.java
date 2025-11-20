@@ -17,7 +17,7 @@ public class OtherRNG extends JDialog implements ActionListener {
 
 	public OtherRNG(JFrame parent) {
 		super(parent, true);
-		
+
 		setResizable(false);
 		setTitle("Other RNG");
 		setBounds(100, 100, 680, 300);
@@ -37,13 +37,13 @@ public class OtherRNG extends JDialog implements ActionListener {
 		lblRollCount.setFont(new Font("Determination Mono Web", Font.PLAIN, 18));
 		lblRollCount.setBounds(10, 151, 129, 26);
 		contentPanel.add(lblRollCount);
-		
+
 		JLabel lblForAnyOther = new JLabel("For any other RNG:");
 		lblForAnyOther.setHorizontalAlignment(SwingConstants.CENTER);
 		lblForAnyOther.setFont(new Font("Determination Mono Web", Font.PLAIN, 18));
 		lblForAnyOther.setBounds(26, 10, 178, 37);
 		contentPanel.add(lblForAnyOther);
-		
+
 		spinnerRollCount = new JSpinner();
 		spinnerRollCount.setModel(new SpinnerNumberModel(1, 1, 100, 1));
 		spinnerRollCount.setFont(new Font("Determination Mono Web", Font.PLAIN, 18));
@@ -61,7 +61,7 @@ public class OtherRNG extends JDialog implements ActionListener {
 		btnRolling.setBounds(120, 117, 101, 37);
 		contentPanel.add(btnRolling);
 		btnRolling.addActionListener(this);
-		
+
 		textAreaRNGResults = new JTextArea();
 		textAreaRNGResults.setEditable(false);
 		textAreaRNGResults.setLineWrap(true);
@@ -80,11 +80,11 @@ public class OtherRNG extends JDialog implements ActionListener {
 	public void actionPerformed(ActionEvent e) {
 		if (e.getSource() == btnRolling) {
 			Random r = new Random();
-			int result, num=(int)spinnerNum.getValue(), count=(int)spinnerRollCount.getValue();
+			int result, num = (int) spinnerNum.getValue(), count = (int) spinnerRollCount.getValue();
 			StringBuilder results = new StringBuilder("");
-			for (int i=0; i<count; i++) {
-				result = r.nextInt(num)+1;
-				results.append("Roll ").append(i+1).append(" result: ").append(result).append("\n");
+			for (int i = 0; i < count; i++) {
+				result = r.nextInt(num) + 1;
+				results.append("Roll ").append(i + 1).append(" result: ").append(result).append("\n");
 			}
 			textAreaRNGResults.setText(results.toString());
 		}

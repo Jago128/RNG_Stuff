@@ -7,7 +7,7 @@ import java.util.Random;
 import javax.swing.*;
 import javax.swing.border.*;
 
-public class PersonaAlimentSkillRNG extends JDialog implements ActionListener{
+public class PersonaAlimentSkillRNG extends JDialog implements ActionListener {
 
 	private static final long serialVersionUID = 1L;
 	private final JPanel contentPanel = new JPanel();
@@ -20,8 +20,8 @@ public class PersonaAlimentSkillRNG extends JDialog implements ActionListener{
 
 	public PersonaAlimentSkillRNG(JFrame parent) {
 		super(parent, true);
-		effectCount=0;
-		
+		effectCount = 0;
+
 		setResizable(false);
 		setTitle("Persona Skill RNG");
 		setBounds(100, 100, 720, 240);
@@ -53,7 +53,7 @@ public class PersonaAlimentSkillRNG extends JDialog implements ActionListener{
 		btnRoll.setBounds(149, 29, 89, 28);
 		contentPanel.add(btnRoll);
 		btnRoll.addActionListener(this);
-		
+
 		JTextArea textAreaChoice = new JTextArea();
 		textAreaChoice.setText("Not Selected: Single Target\nSelected: All Targets\n");
 		textAreaChoice.setWrapStyleWord(true);
@@ -63,7 +63,7 @@ public class PersonaAlimentSkillRNG extends JDialog implements ActionListener{
 		textAreaChoice.setBackground(UIManager.getColor("Button.background"));
 		textAreaChoice.setBounds(20, 130, 274, 50);
 		contentPanel.add(textAreaChoice);
-		
+
 		textAreaRNGResults = new JTextArea();
 		textAreaRNGResults.setWrapStyleWord(true);
 		textAreaRNGResults.setLineWrap(true);
@@ -72,12 +72,12 @@ public class PersonaAlimentSkillRNG extends JDialog implements ActionListener{
 		textAreaRNGResults.setBackground(UIManager.getColor("Button.background"));
 		textAreaRNGResults.setBounds(304, 9, 386, 187);
 		contentPanel.add(textAreaRNGResults);
-		
+
 		JScrollPane scrollPaneResults = new JScrollPane(textAreaRNGResults);
 		scrollPaneResults.setBounds(304, 9, 386, 187);
 		contentPanel.add(scrollPaneResults);
-		
-		lblEffectCount = new JLabel("Effect count: "+effectCount);
+
+		lblEffectCount = new JLabel("Effect count: " + effectCount);
 		lblEffectCount.setHorizontalAlignment(SwingConstants.CENTER);
 		lblEffectCount.setFont(new Font("Determination Mono Web", Font.PLAIN, 18));
 		lblEffectCount.setBounds(12, 195, 336, 28);
@@ -85,36 +85,40 @@ public class PersonaAlimentSkillRNG extends JDialog implements ActionListener{
 
 	@Override
 	public void actionPerformed(ActionEvent e) {
-		if (e.getSource()==btnRoll) {
+		if (e.getSource() == btnRoll) {
 			Random r = new Random();
-			int result, count=(int)spinnerEnemyCount.getValue();
-			effectCount=0;
+			int result, count = (int) spinnerEnemyCount.getValue();
+			effectCount = 0;
 			StringBuilder results = new StringBuilder("");
 			if (!chckbxTargetting.isSelected()) {
 				for (int i = 0; i < count; i++) { // 70% chance
-					result = r.nextInt(10)+1;
-					if (result<=7) {
-						results.append("Enemy ").append(i+1).append(" was hit with a status! Exact value: ").append(result).append("\n");
+					result = r.nextInt(10) + 1;
+					if (result <= 7) {
+						results.append("Enemy ").append(i + 1).append(" was hit with a status! Exact value: ")
+								.append(result).append("\n");
 						effectCount++;
 					} else {
-						results.append("No status effect on enemy ").append(i+1).append(". Exact value: ").append(result).append("\n");
+						results.append("No status effect on enemy ").append(i + 1).append(". Exact value: ")
+								.append(result).append("\n");
 					}
 				}
 			} else {
 				for (int i = 0; i < count; i++) { // 50% chance
-					result = r.nextInt(2)+1;
-					if (result==2) {
-						results.append("Enemy ").append(i+1).append(" was hit with a status! Exact value: ").append(result).append("\n");
+					result = r.nextInt(2) + 1;
+					if (result == 2) {
+						results.append("Enemy ").append(i + 1).append(" was hit with a status! Exact value: ")
+								.append(result).append("\n");
 						effectCount++;
 					} else {
-						results.append("No status effect on enemy ").append(i+1).append(". Exact value: ").append(result).append("\n");
+						results.append("No status effect on enemy ").append(i + 1).append(". Exact value: ")
+								.append(result).append("\n");
 					}
 				}
 			}
 			textAreaRNGResults.setText(results.toString());
-			if ((int)spinnerEnemyCount.getValue()>5) {
+			if ((int) spinnerEnemyCount.getValue() > 5) {
 				contentPanel.add(lblEffectCount);
-				lblEffectCount.setText("Effect count: "+effectCount);
+				lblEffectCount.setText("Effect count: " + effectCount);
 			}
 		}
 	}

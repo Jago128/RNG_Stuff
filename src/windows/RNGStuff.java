@@ -10,7 +10,8 @@ public class RNGStuff extends JFrame implements ActionListener {
 
 	private static final long serialVersionUID = 1L;
 	private JPanel contentPane;
-	private JButton btnPersonaDMGSkillStatusRNG, btn10PercentRNG, btn15PercentRNG, btn20PercentRNG, btn25PercentRNG, btnVoidTeaOverhealRNG, btnSoakStatusRNG, btnJustitiaRNG, btnOtherRNG;
+	private JButton btnPersonaDMGSkillStatusRNG, btn10PercentRNG, btn15PercentRNG, btn20PercentRNG, btn25PercentRNG,
+			btnVoidTeaOverhealRNG, btnSoakStatusRNG, btnOtherRNG;
 	private JButton btnCharacterRandomizer;
 	private JButton btnPersonaAlimentSkillRNG;
 	private JButton btn5PercentRNG;
@@ -63,11 +64,6 @@ public class RNGStuff extends JFrame implements ActionListener {
 		lblTitle.setBounds(151, 10, 401, 41);
 		contentPane.add(lblTitle);
 
-		btnJustitiaRNG = new JButton("Justitia RNG");
-		btnJustitiaRNG.setFont(new Font("Determination Mono Web", Font.PLAIN, 20));
-		btnJustitiaRNG.setBounds(231, 209, 200, 64);
-		contentPane.add(btnJustitiaRNG);
-
 		btnVoidTeaOverhealRNG = new JButton("Void Tea Overheal RNG");
 		btnVoidTeaOverhealRNG.setFont(new Font("Determination Mono Web", Font.PLAIN, 16));
 		btnVoidTeaOverhealRNG.setBounds(441, 136, 214, 64);
@@ -75,24 +71,24 @@ public class RNGStuff extends JFrame implements ActionListener {
 
 		btnOtherRNG = new JButton("Other RNG");
 		btnOtherRNG.setFont(new Font("Determination Mono Web", Font.PLAIN, 20));
-		btnOtherRNG.setBounds(441, 281, 200, 64);
+		btnOtherRNG.setBounds(455, 281, 200, 64);
 		contentPane.add(btnOtherRNG);
 
 		btnCharacterRandomizer = new JButton("Character Randomizer");
 		btnCharacterRandomizer.setFont(new Font("Determination Mono Web", Font.PLAIN, 16));
-		btnCharacterRandomizer.setBounds(24, 282, 200, 64);
+		btnCharacterRandomizer.setBounds(231, 209, 200, 64);
 		contentPane.add(btnCharacterRandomizer);
 
 		btnPersonaAlimentSkillRNG = new JButton("Aliment Skill RNG");
 		btnPersonaAlimentSkillRNG.setFont(new Font("Determination Mono Web", Font.PLAIN, 16));
-		btnPersonaAlimentSkillRNG.setBounds(231, 283, 200, 64);
+		btnPersonaAlimentSkillRNG.setBounds(24, 282, 200, 64);
 		contentPane.add(btnPersonaAlimentSkillRNG);
 
 		btn5PercentRNG = new JButton("5% Stuff");
 		btn5PercentRNG.setFont(new Font("Determination Mono Web", Font.PLAIN, 20));
 		btn5PercentRNG.setBounds(24, 61, 200, 64);
 		contentPane.add(btn5PercentRNG);
-		
+
 		btnTechnicalDownRNG = new JButton("Technical Down RNG");
 		btnTechnicalDownRNG.setFont(new Font("Determination Mono Web", Font.PLAIN, 16));
 		btnTechnicalDownRNG.setBounds(441, 209, 200, 64);
@@ -107,7 +103,6 @@ public class RNGStuff extends JFrame implements ActionListener {
 		btnVoidTeaOverhealRNG.addActionListener(this);
 		btnSoakStatusRNG.addActionListener(this);
 		btnCharacterRandomizer.addActionListener(this);
-		btnJustitiaRNG.addActionListener(this);
 		btnOtherRNG.addActionListener(this);
 		btnPersonaDMGSkillStatusRNG.addActionListener(this);
 		btnPersonaAlimentSkillRNG.addActionListener(this);
@@ -115,43 +110,40 @@ public class RNGStuff extends JFrame implements ActionListener {
 
 	@Override
 	public void actionPerformed(ActionEvent e) {
-		if (e.getSource()==btn5PercentRNG) {
+		if (e.getSource() == btn5PercentRNG) {
 			RNG_5Percent dialog = new RNG_5Percent(this);
 			dialog.setVisible(true);
-		} else if (e.getSource()==btn10PercentRNG) {
+		} else if (e.getSource() == btn10PercentRNG) {
 			RNG_10Percent dialog = new RNG_10Percent(this);
 			dialog.setVisible(true);
-		} else if (e.getSource()==btn15PercentRNG) {
+		} else if (e.getSource() == btn15PercentRNG) {
 			RNG_15Percent dialog = new RNG_15Percent(this);
 			dialog.setVisible(true);
-		} else if (e.getSource()==btn20PercentRNG) {
+		} else if (e.getSource() == btn20PercentRNG) {
 			RNG_20Percent dialog = new RNG_20Percent(this);
 			dialog.setVisible(true);
-		} else if (e.getSource()==btn25PercentRNG) {
+		} else if (e.getSource() == btn25PercentRNG) {
 			RNG_25Percent dialog = new RNG_25Percent(this);
 			dialog.setVisible(true);
-		} else if (e.getSource()==btnTechnicalDownRNG) {
+		} else if (e.getSource() == btnTechnicalDownRNG) {
 			Rank1_2TechnicalDownRNG dialog = new Rank1_2TechnicalDownRNG(this);
 			dialog.setVisible(true);
-		} else if (e.getSource()==btnVoidTeaOverhealRNG) {
+		} else if (e.getSource() == btnVoidTeaOverhealRNG) {
 			VoidTeaOverhealRNG dialog = new VoidTeaOverhealRNG(this);
 			dialog.setVisible(true);
-		} else if (e.getSource()==btnSoakStatusRNG) {
+		} else if (e.getSource() == btnSoakStatusRNG) {
 			SoakStatusRNG dialog = new SoakStatusRNG(this);
 			dialog.setVisible(true);
-		} else if (e.getSource()==btnPersonaDMGSkillStatusRNG) {
+		} else if (e.getSource() == btnPersonaDMGSkillStatusRNG) {
 			PersonaDamagingSkillStatusRNG dialog = new PersonaDamagingSkillStatusRNG(this);
 			dialog.setVisible(true);
-		} else if (e.getSource()==btnPersonaAlimentSkillRNG) {
+		} else if (e.getSource() == btnPersonaAlimentSkillRNG) {
 			PersonaAlimentSkillRNG dialog = new PersonaAlimentSkillRNG(this);
 			dialog.setVisible(true);
-		} else if (e.getSource()==btnJustitiaRNG) {
-			JustitiaRNG dialog = new JustitiaRNG(this);
-			dialog.setVisible(true);
-		} else if (e.getSource()==btnOtherRNG) {
+		} else if (e.getSource() == btnOtherRNG) {
 			OtherRNG dialog = new OtherRNG(this);
 			dialog.setVisible(true);
-		} else if (e.getSource()==btnCharacterRandomizer) {
+		} else if (e.getSource() == btnCharacterRandomizer) {
 			CharacterRandomizer dialog = new CharacterRandomizer(this);
 			dialog.setVisible(true);
 		}

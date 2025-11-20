@@ -17,7 +17,7 @@ public class CharacterRandomizer extends JDialog implements ActionListener {
 
 	public CharacterRandomizer(JFrame parent) {
 		super(parent, true);
-		
+
 		setResizable(false);
 		setTitle("Character Randomizer");
 		setBounds(100, 100, 630, 270);
@@ -70,27 +70,31 @@ public class CharacterRandomizer extends JDialog implements ActionListener {
 
 	@Override
 	public void actionPerformed(ActionEvent e) {
-		if (e.getSource()==btnRolling) {
+		if (e.getSource() == btnRolling) {
 			Random r = new Random();
-			int result, count=(int)spinnerRollCount.getValue();
+			int result, count = (int) spinnerRollCount.getValue();
 			StringBuilder results = new StringBuilder("");
-			for (int i=0; i<count; i++) {
-				result = r.nextInt(4)+1;
+			for (int i = 0; i < count; i++) {
+				result = r.nextInt(4) + 1;
 				switch (result) {
 				case 1:
-					results.append("Roll ").append(i+1).append(" result: ").append("Starfish. Exact value: "+result).append("\n");
+					results.append("Roll ").append(i + 1).append(" result: ").append("Starfish. Exact value: " + result)
+							.append("\n");
 					break;
-					
+
 				case 2:
-					results.append("Roll ").append(i+1).append(" result: ").append("Stara. Exact value: "+result).append("\n");
+					results.append("Roll ").append(i + 1).append(" result: ").append("Stara. Exact value: " + result)
+							.append("\n");
 					break;
-					
+
 				case 3:
-					results.append("Roll ").append(i+1).append(" result: ").append("Chara. Exact value:"+result).append("\n");
+					results.append("Roll ").append(i + 1).append(" result: ").append("Chara. Exact value:" + result)
+							.append("\n");
 					break;
-					
+
 				case 4:
-					results.append("Roll ").append(i+1).append(" result: ").append("Starfira. Exact value:"+result).append("\n");
+					results.append("Roll ").append(i + 1).append(" result: ").append("Starfira. Exact value:" + result)
+							.append("\n");
 					break;
 				}
 			}

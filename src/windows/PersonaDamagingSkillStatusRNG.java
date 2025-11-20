@@ -7,7 +7,7 @@ import java.util.Random;
 import javax.swing.*;
 import javax.swing.border.*;
 
-public class PersonaDamagingSkillStatusRNG extends JDialog implements ActionListener{
+public class PersonaDamagingSkillStatusRNG extends JDialog implements ActionListener {
 
 	private static final long serialVersionUID = 1L;
 	private final JPanel contentPanel = new JPanel();
@@ -20,7 +20,7 @@ public class PersonaDamagingSkillStatusRNG extends JDialog implements ActionList
 
 	public PersonaDamagingSkillStatusRNG(JFrame parent) {
 		super(parent, true);
-		effectCount=0;
+		effectCount = 0;
 
 		setResizable(false);
 		setTitle("Persona Skill RNG");
@@ -66,8 +66,8 @@ public class PersonaDamagingSkillStatusRNG extends JDialog implements ActionList
 		JScrollPane scrollPaneResults = new JScrollPane(textAreaRNGResults);
 		scrollPaneResults.setBounds(200, 6, 383, 197);
 		contentPanel.add(scrollPaneResults);
-		
-		lblEffectCount = new JLabel("Effect count: "+effectCount);
+
+		lblEffectCount = new JLabel("Effect count: " + effectCount);
 		lblEffectCount.setHorizontalAlignment(SwingConstants.CENTER);
 		lblEffectCount.setFont(new Font("Determination Mono Web", Font.PLAIN, 18));
 		lblEffectCount.setBounds(12, 195, 336, 28);
@@ -75,36 +75,40 @@ public class PersonaDamagingSkillStatusRNG extends JDialog implements ActionList
 
 	@Override
 	public void actionPerformed(ActionEvent e) {
-		if (e.getSource()==btnRoll) {
+		if (e.getSource() == btnRoll) {
 			Random r = new Random();
-			int result, count=(int)spinnerEnemyCount.getValue();
-			effectCount=0;
+			int result, count = (int) spinnerEnemyCount.getValue();
+			effectCount = 0;
 			StringBuilder results = new StringBuilder("");
 			if (chckbxChimera.isSelected()) {
 				for (int i = 0; i < count; i++) { // 12% chance
-					result = r.nextInt(25)+1;
-					if (result>=23) {
-						results.append("Enemy ").append(i+1).append(" was hit with a status! Exact value: ").append(result).append("\n");
+					result = r.nextInt(25) + 1;
+					if (result >= 23) {
+						results.append("Enemy ").append(i + 1).append(" was hit with a status! Exact value: ")
+								.append(result).append("\n");
 						effectCount++;
 					} else {
-						results.append("No status effect on enemy ").append(i+1).append(". Exact value: ").append(result).append("\n");
+						results.append("No status effect on enemy ").append(i + 1).append(". Exact value: ")
+								.append(result).append("\n");
 					}
 				}
 			} else {
 				for (int i = 0; i < count; i++) { // 8% chance
-					result = r.nextInt(25)+1;
-					if (result>=24) {
-						results.append("Enemy ").append(i+1).append(" was hit with a status! Exact value: ").append(result).append("\n");
+					result = r.nextInt(25) + 1;
+					if (result >= 24) {
+						results.append("Enemy ").append(i + 1).append(" was hit with a status! Exact value: ")
+								.append(result).append("\n");
 						effectCount++;
 					} else {
-						results.append("No status effect on enemy ").append(i+1).append(". Exact value: ").append(result).append("\n");
+						results.append("No status effect on enemy ").append(i + 1).append(". Exact value: ")
+								.append(result).append("\n");
 					}
 				}
 			}
 			textAreaRNGResults.setText(results.toString());
-			if ((int)spinnerEnemyCount.getValue()>5) {
+			if ((int) spinnerEnemyCount.getValue() > 5) {
 				contentPanel.add(lblEffectCount);
-				lblEffectCount.setText("Effect count: "+effectCount);
+				lblEffectCount.setText("Effect count: " + effectCount);
 			}
 		}
 	}
