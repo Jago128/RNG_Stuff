@@ -23,7 +23,7 @@ public class PersonaAlimentSkillRNG extends JDialog implements ActionListener {
 		effectCount = 0;
 
 		setResizable(false);
-		setTitle("Persona Skill RNG");
+		setTitle("Persona Aliment Skill/Hibernate RNG");
 		setBounds(100, 100, 720, 240);
 		getContentPane().setLayout(new BorderLayout());
 		contentPanel.setBorder(new EmptyBorder(5, 5, 5, 5));

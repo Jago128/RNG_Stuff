@@ -22,7 +22,7 @@ public class RNG_10Percent extends JDialog implements ActionListener {
 
 		setResizable(false);
 		setTitle("10% Chance Stuff");
-		setBounds(100, 100, 790, 371);
+		setBounds(100, 100, 790, 370);
 		getContentPane().setLayout(new BorderLayout());
 		contentPanel.setBorder(new EmptyBorder(5, 5, 5, 5));
 		getContentPane().add(contentPanel, BorderLayout.CENTER);
@@ -41,12 +41,12 @@ public class RNG_10Percent extends JDialog implements ActionListener {
 		JTextArea textAreaStara = new JTextArea();
 		textAreaStara.setWrapStyleWord(true);
 		textAreaStara.setText(
-				"Stara:\nConch Slasher/Fusion Crit RNG\nFireball Burn RNG\nFire Breath Burn RNG (End of attack)\nThunderbolt/Chain Lightning/Thundercloud Paralysis RNG\n(Unavailable) Rampage Crit RNG");
+				"Stara:\r\nConch Slasher/Fusion Crit RNG\r\nFireball Burn RNG\r\nFiery Breath Burn RNG (End of attack)\r\nThunderbolt/Chain Lightning/Thundercloud Paralysis RNG\r\nRampage Crit RNG");
 		textAreaStara.setLineWrap(true);
 		textAreaStara.setFont(new Font("Determination Mono Web", Font.PLAIN, 16));
 		textAreaStara.setEditable(false);
 		textAreaStara.setBackground(UIManager.getColor("Button.background"));
-		textAreaStara.setBounds(210, 11, 297, 130);
+		textAreaStara.setBounds(195, 11, 314, 130);
 		contentPanel.add(textAreaStara);
 
 		JTextArea textAreaChara = new JTextArea();
@@ -57,7 +57,7 @@ public class RNG_10Percent extends JDialog implements ActionListener {
 		textAreaChara.setFont(new Font("Determination Mono Web", Font.PLAIN, 16));
 		textAreaChara.setEditable(false);
 		textAreaChara.setBackground(UIManager.getColor("Button.background"));
-		textAreaChara.setBounds(506, 11, 236, 72);
+		textAreaChara.setBounds(517, 11, 236, 72);
 		contentPanel.add(textAreaChara);
 
 		spinnerRollCount = new JSpinner();
@@ -84,7 +84,6 @@ public class RNG_10Percent extends JDialog implements ActionListener {
 		contentPanel.add(chckbxElementalBomb);
 
 		chckbxRampage = new JCheckBox("Rampage");
-		chckbxRampage.setEnabled(false);
 		chckbxRampage.setFont(new Font("Determination Mono Web", Font.PLAIN, 18));
 		chckbxRampage.setBounds(32, 271, 168, 36);
 		contentPanel.add(chckbxRampage);

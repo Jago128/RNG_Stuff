@@ -34,8 +34,19 @@ public class RNG_25Percent extends JDialog implements ActionListener {
 		textAreaStara.setText(
 				"Stara:\n(Underfell Outfit) Conch Destroyer Sting RNG\n(Outertale Outfit) Pull on hit RNG\nConch Fusion (Geno Variation) Sting RNG");
 		textAreaStara.setFont(new Font("Determination Mono Web", Font.PLAIN, 18));
-		textAreaStara.setBounds(20, 10, 427, 91);
+		textAreaStara.setBounds(10, 11, 427, 91);
 		contentPanel.add(textAreaStara);
+
+		JTextArea textAreaVoidTea = new JTextArea();
+		textAreaVoidTea.setWrapStyleWord(true);
+		textAreaVoidTea.setText(
+				"Other:\r\nVoid Tea increased healing");
+		textAreaVoidTea.setLineWrap(true);
+		textAreaVoidTea.setFont(new Font("Determination Mono Web", Font.PLAIN, 18));
+		textAreaVoidTea.setEditable(false);
+		textAreaVoidTea.setBackground(UIManager.getColor("Button.background"));
+		textAreaVoidTea.setBounds(451, 11, 281, 42);
+		contentPanel.add(textAreaVoidTea);
 
 		spinnerRollCount = new JSpinner();
 		spinnerRollCount.setFont(new Font("Determination Mono Web", Font.PLAIN, 18));

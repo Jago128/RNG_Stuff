@@ -49,6 +49,27 @@ public class RNG_5Percent extends JDialog implements ActionListener {
 		lblRollCount.setFont(new Font("Determination Mono Web", Font.PLAIN, 18));
 		lblRollCount.setBounds(20, 165, 117, 20);
 		contentPanel.add(lblRollCount);
+		
+		JTextArea textAreaChara = new JTextArea();
+		textAreaChara.setWrapStyleWord(true);
+		textAreaChara.setText("Chara:\r\nTempest Slash Crit RNG\r\n(Unavailable) Rising Slash/Myriad Slashes/Death Scythe Crit RNG");
+		textAreaChara.setLineWrap(true);
+		textAreaChara.setFont(new Font("Determination Mono Web", Font.PLAIN, 18));
+		textAreaChara.setEditable(false);
+		textAreaChara.setBackground(UIManager.getColor("Button.background"));
+		textAreaChara.setBounds(367, 11, 409, 88);
+		contentPanel.add(textAreaChara);
+
+		chckbxTempestSlash = new JCheckBox("Tempest Slash");
+		chckbxTempestSlash.setFont(new Font("Determination Mono Web", Font.PLAIN, 18));
+		chckbxTempestSlash.setBounds(30, 231, 168, 36);
+		contentPanel.add(chckbxTempestSlash);
+
+		chckbxMyriadSlashes = new JCheckBox("Myriad Slashes");
+		chckbxMyriadSlashes.setFont(new Font("Determination Mono Web", Font.PLAIN, 18));
+		chckbxMyriadSlashes.setEnabled(false);
+		chckbxMyriadSlashes.setBounds(30, 269, 168, 36);
+		contentPanel.add(chckbxMyriadSlashes);
 
 		btnRoll = new JButton("Roll");
 		btnRoll.setFont(new Font("Determination Mono Web", Font.PLAIN, 18));
@@ -68,28 +89,6 @@ public class RNG_5Percent extends JDialog implements ActionListener {
 		JScrollPane scrollPaneResults = new JScrollPane(textAreaRNGResults);
 		scrollPaneResults.setBounds(265, 179, 511, 144);
 		contentPanel.add(scrollPaneResults);
-
-		JTextArea textAreaChara = new JTextArea();
-		textAreaChara.setWrapStyleWord(true);
-		textAreaChara.setText("Chara:\n(Unavailable) Tempest Slash/Rising Slash/Myriad Slashes/Death Scythe Crit RNG");
-		textAreaChara.setLineWrap(true);
-		textAreaChara.setFont(new Font("Determination Mono Web", Font.PLAIN, 18));
-		textAreaChara.setEditable(false);
-		textAreaChara.setBackground(UIManager.getColor("Button.background"));
-		textAreaChara.setBounds(367, 11, 409, 88);
-		contentPanel.add(textAreaChara);
-
-		chckbxTempestSlash = new JCheckBox("Tempest Slash");
-		chckbxTempestSlash.setEnabled(false);
-		chckbxTempestSlash.setFont(new Font("Determination Mono Web", Font.PLAIN, 18));
-		chckbxTempestSlash.setBounds(30, 231, 168, 36);
-		contentPanel.add(chckbxTempestSlash);
-
-		chckbxMyriadSlashes = new JCheckBox("Myriad Slashes");
-		chckbxMyriadSlashes.setFont(new Font("Determination Mono Web", Font.PLAIN, 18));
-		chckbxMyriadSlashes.setEnabled(false);
-		chckbxMyriadSlashes.setBounds(30, 269, 168, 36);
-		contentPanel.add(chckbxMyriadSlashes);
 	}
 
 	@Override

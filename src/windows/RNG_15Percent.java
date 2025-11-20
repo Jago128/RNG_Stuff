@@ -39,12 +39,12 @@ public class RNG_15Percent extends JDialog implements ActionListener {
 
 		JTextArea textAreaChara = new JTextArea();
 		textAreaChara.setWrapStyleWord(true);
-		textAreaChara.setText("Chara:\nDual-Elemental Beam Burn RNG");
+		textAreaChara.setText("Chara:\r\nDual-Elemental Beam Burn RNG\r\nFiery Blast Burn RNG");
 		textAreaChara.setLineWrap(true);
 		textAreaChara.setFont(new Font("Determination Mono Web", Font.PLAIN, 18));
 		textAreaChara.setEditable(false);
 		textAreaChara.setBackground(UIManager.getColor("Button.background"));
-		textAreaChara.setBounds(445, 12, 272, 48);
+		textAreaChara.setBounds(445, 12, 272, 71);
 		contentPanel.add(textAreaChara);
 
 		spinnerRollCount = new JSpinner();
