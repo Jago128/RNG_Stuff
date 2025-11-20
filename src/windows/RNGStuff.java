@@ -7,14 +7,12 @@ import javax.swing.border.*;
 import java.awt.*;
 
 public class RNGStuff extends JFrame implements ActionListener {
-
 	private static final long serialVersionUID = 1L;
+	
 	private JPanel contentPane;
-	private JButton btnPersonaDMGSkillStatusRNG, btn10PercentRNG, btn15PercentRNG, btn20PercentRNG, btn25PercentRNG, btnSoakStatusRNG, btnOtherRNG;
-	private JButton btnCharacterRandomizer;
-	private JButton btnPersonaAlimentSkillRNG;
-	private JButton btn5PercentRNG;
-	private JButton btnTechnicalDownRNG;
+	private JButton btnPersonaDMGSkillStatusRNG, btn10PercentRNG, btn15PercentRNG, btn20PercentRNG, btn25PercentRNG,
+			btnSoakStatusRNG, btnOtherRNG, btnCharacterRandomizer, btnPersonaAlimentSkillRNG, btn5PercentRNG,
+			btnTechnicalDownRNG;
 
 	public RNGStuff() {
 		setResizable(false);

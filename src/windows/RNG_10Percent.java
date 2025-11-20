@@ -8,8 +8,8 @@ import javax.swing.*;
 import javax.swing.border.*;
 
 public class RNG_10Percent extends JDialog implements ActionListener {
-
 	private static final long serialVersionUID = 1L;
+	
 	private final JPanel contentPanel = new JPanel();
 	private JTextArea textAreaRNGResults;
 	private JButton btnRoll;

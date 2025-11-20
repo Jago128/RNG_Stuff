@@ -8,8 +8,8 @@ import javax.swing.*;
 import javax.swing.border.*;
 
 public class Rank1_2TechnicalDownRNG extends JDialog implements ActionListener {
-
 	private static final long serialVersionUID = 1L;
+	
 	private final JPanel contentPanel = new JPanel();
 	private JTextArea textAreaRNGResults;
 	private JSpinner spinnerRollCount;

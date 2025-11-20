@@ -8,8 +8,8 @@ import javax.swing.*;
 import javax.swing.border.*;
 
 public class SoakStatusRNG extends JDialog implements ActionListener {
-
 	private static final long serialVersionUID = 1L;
+	
 	private final JPanel contentPanel = new JPanel();
 	private JButton btnRoll;
 	private JSpinner spinnerEnemyCount;
