@@ -9,12 +9,11 @@ import javax.swing.border.*;
 
 public class RNG_10Percent extends JDialog implements ActionListener {
 	private static final long serialVersionUID = 1L;
-	
+
 	private final JPanel contentPanel = new JPanel();
 	private JTextArea textAreaRNGResults;
 	private JButton btnRoll;
 	private JSpinner spinnerRollCount;
-	private JCheckBox chckbxElementalBomb;
 	private JCheckBox chckbxRampage;
 
 	public RNG_10Percent(JFrame parent) {
@@ -78,14 +77,9 @@ public class RNG_10Percent extends JDialog implements ActionListener {
 		contentPanel.add(btnRoll);
 		btnRoll.addActionListener(this);
 
-		chckbxElementalBomb = new JCheckBox("Elemental Bomb");
-		chckbxElementalBomb.setFont(new Font("Determination Mono Web", Font.PLAIN, 18));
-		chckbxElementalBomb.setBounds(32, 230, 168, 36);
-		contentPanel.add(chckbxElementalBomb);
-
 		chckbxRampage = new JCheckBox("Rampage");
 		chckbxRampage.setFont(new Font("Determination Mono Web", Font.PLAIN, 18));
-		chckbxRampage.setBounds(32, 271, 168, 36);
+		chckbxRampage.setBounds(32, 230, 168, 36);
 		contentPanel.add(chckbxRampage);
 
 		textAreaRNGResults = new JTextArea();
@@ -106,16 +100,14 @@ public class RNG_10Percent extends JDialog implements ActionListener {
 	public void actionPerformed(ActionEvent e) {
 		if (e.getSource() == btnRoll) {
 			Random r = new Random();
-			int result, count = (int) spinnerRollCount.getValue(), elementalBombTriggers = 0;
+			int result, count = (int) spinnerRollCount.getValue();
 			StringBuilder results = new StringBuilder("");
 			for (int i = 0; i < count; i++) {
 				result = r.nextInt(10) + 1;
 				if (result == 10) {
 					results.append("Roll ").append(i + 1)
 							.append(" result: Effect triggered/Crit! Exact value: " + result).append("\n");
-					if (chckbxElementalBomb.isSelected() && !chckbxRampage.isSelected()) {
-						elementalBombTriggers++;
-					} else if (chckbxRampage.isSelected() && !chckbxElementalBomb.isSelected()) {
+					if (chckbxRampage.isSelected()) {
 						Random r1 = new Random();
 						int rampage = r1.nextInt(3) + 1;
 						switch (rampage) {
@@ -137,12 +129,7 @@ public class RNG_10Percent extends JDialog implements ActionListener {
 							.append("\n");
 				}
 			}
-			if (elementalBombTriggers > 0) {
-				ElementalBombStatusedRNG dialog = new ElementalBombStatusedRNG(this, elementalBombTriggers);
-				dialog.setVisible(true);
-			} else {
-				textAreaRNGResults.setText(results.toString());
-			}
+			textAreaRNGResults.setText(results.toString());
 		}
 	}
 }
