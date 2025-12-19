@@ -18,7 +18,7 @@ public class RNGStuff extends JFrame implements ActionListener {
 		setResizable(false);
 		setTitle("RNG Stuff");
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		setBounds(100, 100, 690, 390);
+		setBounds(100, 100, 700, 390);
 		contentPane = new JPanel();
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 
