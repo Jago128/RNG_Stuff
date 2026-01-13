@@ -88,32 +88,32 @@ public class CharacterRandomizer extends JDialog implements ActionListener {
 					break;
 
 				case 3:
-					results.append("Roll ").append(i + 1).append(" result: ").append("Chara. Exact value:" + result)
+					results.append("Roll ").append(i + 1).append(" result: ").append("Chara. Exact value: " + result)
 							.append("\n");
 					break;
 
 				case 4:
-					results.append("Roll ").append(i + 1).append(" result: ").append("Starfira. Exact value:" + result)
+					results.append("Roll ").append(i + 1).append(" result: ").append("Starfira. Exact value: " + result)
 							.append("\n");
 					break;
 					
 				case 5:
-					results.append("Roll ").append(i + 1).append(" result: ").append("Creator!Jago. Exact value:" + result)
+					results.append("Roll ").append(i + 1).append(" result: ").append("Creator!Jago. Exact value: " + result)
 					.append("\n");
 					break;
 					
 				case 6:
-					results.append("Roll ").append(i + 1).append(" result: ").append("Kurage. Exact value:" + result)
+					results.append("Roll ").append(i + 1).append(" result: ").append("Kurage. Exact value: " + result)
 					.append("\n");
 					break;
 					
 				case 7:
-					results.append("Roll ").append(i + 1).append(" result: ").append("Cyclone. Exact value:" + result)
+					results.append("Roll ").append(i + 1).append(" result: ").append("Cyclone. Exact value: " + result)
 					.append("\n");
 					break;
 					
 				case 8:
-					results.append("Roll ").append(i + 1).append(" result: ").append("Kira. Exact value:" + result)
+					results.append("Roll ").append(i + 1).append(" result: ").append("Kira. Exact value: " + result)
 					.append("\n");
 					break;
 				}
