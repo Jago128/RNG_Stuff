@@ -7,7 +7,7 @@ import java.util.Random;
 import javax.swing.*;
 import javax.swing.border.*;
 
-public class CharacterRandomizer extends JDialog implements ActionListener {
+public class TrioChoiceRandomizer extends JDialog implements ActionListener {
 	private static final long serialVersionUID = 1L;
 	
 	private final JPanel contentPanel = new JPanel();
@@ -15,12 +15,12 @@ public class CharacterRandomizer extends JDialog implements ActionListener {
 	private JButton btnRolling;
 	private JTextArea textAreaRNGResults;
 
-	public CharacterRandomizer(JFrame parent) {
+	public TrioChoiceRandomizer(JFrame parent) {
 		super(parent, true);
 
 		setResizable(false);
 		setTitle("Character Randomizer");
-		setBounds(100, 100, 700, 350);
+		setBounds(100, 100, 700, 250);
 		getContentPane().setLayout(new BorderLayout());
 		contentPanel.setBorder(new EmptyBorder(5, 5, 5, 5));
 		getContentPane().add(contentPanel, BorderLayout.CENTER);
@@ -29,29 +29,29 @@ public class CharacterRandomizer extends JDialog implements ActionListener {
 		JLabel lblRollCount = new JLabel("Roll count:");
 		lblRollCount.setHorizontalAlignment(SwingConstants.CENTER);
 		lblRollCount.setFont(new Font("Determination Mono Web", Font.PLAIN, 18));
-		lblRollCount.setBounds(31, 202, 141, 28);
+		lblRollCount.setBounds(20, 120, 141, 28);
 		contentPanel.add(lblRollCount);
 
 		spinnerRollCount = new JSpinner();
 		spinnerRollCount.setModel(new SpinnerNumberModel(1, 1, 15, 1));
 		spinnerRollCount.setFont(new Font("Determination Mono Web", Font.PLAIN, 18));
-		spinnerRollCount.setBounds(56, 240, 90, 37);
+		spinnerRollCount.setBounds(45, 158, 90, 37);
 		contentPanel.add(spinnerRollCount);
 
 		btnRolling = new JButton("Rolls");
 		btnRolling.setFont(new Font("Determination Mono Web", Font.PLAIN, 18));
-		btnRolling.setBounds(156, 225, 90, 35);
+		btnRolling.setBounds(145, 143, 90, 35);
 		contentPanel.add(btnRolling);
 		btnRolling.addActionListener(this);
 
 		JTextArea textAreaChoices = new JTextArea();
 		textAreaChoices.setBackground(UIManager.getColor("Button.background"));
 		textAreaChoices.setFont(new Font("Determination Mono Web", Font.PLAIN, 18));
-		textAreaChoices.setText("Available choices:\r\nStarfish\r\nStara\r\nChara\r\nKurage\r\nCyclone\r\nKira\r\nRay\r\nHadel");
+		textAreaChoices.setText("Available choices:\r\nOceanic Trio\r\nCalming Storms Trio\r\nSunny Duo");
 		textAreaChoices.setEditable(false);
 		textAreaChoices.setWrapStyleWord(true);
 		textAreaChoices.setLineWrap(true);
-		textAreaChoices.setBounds(36, 11, 178, 181);
+		textAreaChoices.setBounds(36, 11, 178, 99);
 		contentPanel.add(textAreaChoices);
 
 		textAreaRNGResults = new JTextArea();
@@ -60,11 +60,11 @@ public class CharacterRandomizer extends JDialog implements ActionListener {
 		textAreaRNGResults.setWrapStyleWord(true);
 		textAreaRNGResults.setFont(new Font("Determination Mono Web", Font.PLAIN, 18));
 		textAreaRNGResults.setBackground(UIManager.getColor("Button.background"));
-		textAreaRNGResults.setBounds(256, 13, 420, 290);
+		textAreaRNGResults.setBounds(256, 11, 420, 199);
 		contentPanel.add(textAreaRNGResults);
 
 		JScrollPane scrollPaneResults = new JScrollPane(textAreaRNGResults);
-		scrollPaneResults.setBounds(256, 13, 420, 290);
+		scrollPaneResults.setBounds(256, 11, 420, 199);
 		contentPanel.add(scrollPaneResults);
 	}
 
@@ -75,46 +75,21 @@ public class CharacterRandomizer extends JDialog implements ActionListener {
 			int result, count = (int) spinnerRollCount.getValue();
 			StringBuilder results = new StringBuilder("");
 			for (int i = 0; i < count; i++) {
-				result = r.nextInt(8)+1;
+				result = r.nextInt(3)+1;
 				switch (result) {
 				case 1:
-					results.append("Roll ").append(i + 1).append(" result: ").append("Starfish. Exact value: " + result)
+					results.append("Roll ").append(i + 1).append(" result: ").append("Oceanic Trio. Exact value: " + result)
 							.append("\n");
 					break;
 
 				case 2:
-					results.append("Roll ").append(i + 1).append(" result: ").append("Stara. Exact value: " + result)
+					results.append("Roll ").append(i + 1).append(" result: ").append("Calming Storms Trio. Exact value: " + result)
 							.append("\n");
 					break;
 
 				case 3:
-					results.append("Roll ").append(i + 1).append(" result: ").append("Chara. Exact value: " + result)
+					results.append("Roll ").append(i + 1).append(" result: ").append("Sunny Duo. Exact value: " + result)
 							.append("\n");
-					break;
-					
-				case 4:
-					results.append("Roll ").append(i + 1).append(" result: ").append("Kurage. Exact value: " + result)
-					.append("\n");
-					break;
-					
-				case 5:
-					results.append("Roll ").append(i + 1).append(" result: ").append("Cyclone. Exact value: " + result)
-					.append("\n");
-					break;
-					
-				case 6:
-					results.append("Roll ").append(i + 1).append(" result: ").append("Kira. Exact value: " + result)
-					.append("\n");
-					break;
-					
-				case 7:
-					results.append("Roll ").append(i + 1).append(" result: ").append("Ray. Exact value: " + result)
-							.append("\n");
-					break;
-					
-				case 8:
-					results.append("Roll ").append(i + 1).append(" result: ").append("Hadel. Exact value: " + result)
-					.append("\n");
 					break;
 				}
 			}
