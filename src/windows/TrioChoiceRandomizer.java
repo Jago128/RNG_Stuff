@@ -19,7 +19,7 @@ public class TrioChoiceRandomizer extends JDialog implements ActionListener {
 		super(parent, true);
 
 		setResizable(false);
-		setTitle("Character Randomizer");
+		setTitle("Trio Choice Randomizer");
 		setBounds(100, 100, 700, 250);
 		getContentPane().setLayout(new BorderLayout());
 		contentPanel.setBorder(new EmptyBorder(5, 5, 5, 5));
