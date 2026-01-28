@@ -47,7 +47,7 @@ public class RNGStuff extends JFrame implements ActionListener {
 
 		btnSoakStatusRNG = new JButton("Soak Status RNG");
 		btnSoakStatusRNG.setFont(new Font("Determination Mono Web", Font.PLAIN, 20));
-		btnSoakStatusRNG.setBounds(314, 102, 181, 31);
+		btnSoakStatusRNG.setBounds(314, 102, 193, 31);
 		contentPane.add(btnSoakStatusRNG);
 
 		btnPersonaDMGSkillStatusRNG = new JButton("Damaging Skill Status RNG");
