@@ -1,14 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.*?>
-<?import java.util.*?>
-<?import javafx.scene.*?>
-<?import javafx.scene.control.*?>
-<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
 
-<AnchorPane id="AnchorPane" prefHeight="200" prefWidth="320" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.FivePercentWindowController">
-    <children>
-    </children>
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.FivePercentWindowController">
+   <children>
+      <TextArea layoutX="21.0" layoutY="14.0" prefHeight="138.0" prefWidth="351.0" text="General: Crusader Enchant On-Hit Heal RNG&#10;&#10;Stara: Vajira Blast/Heat Wave Crit RNG&#10;&#10;Chara: Tempest Slash/Myriad Slashes Crit RNG&#10;(3 to 5 hits, 2 to 3 hits)&#10;Rising Slash/Death Scythe Crit RNG&#10;">
+         <font>
+            <Font name="Determination Mono Web Regular" size="14.0" />
+         </font>
+      </TextArea>
+   </children>
 </AnchorPane>
-
-

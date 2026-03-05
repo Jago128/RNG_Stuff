@@ -1,14 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.*?>
-<?import java.util.*?>
-<?import javafx.scene.*?>
-<?import javafx.scene.control.*?>
-<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
 
-<AnchorPane id="AnchorPane" prefHeight="200" prefWidth="320" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.FifteenPercentWindowController">
-    <children>
-    </children>
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.FifteenPercentWindowController">
+   <children>
+      <TextArea layoutX="14.0" layoutY="14.0" prefHeight="177.0" prefWidth="354.0" text="General: Unholy Enchant ATK Debuff RNG&#10;&#10;Stara:&#10;Fiery Shockwave/Sword Burn RNG&#10;UF Outfit Conch Slasher Crit Sting RNG&#10;&#10;Chara: Fire Blast Burn RNG&#10;&#10;Combination Attacks:&#10;Dual-Elememtal Beam Burn RNG (Starfish &amp; Chara)">
+         <font>
+            <Font name="Determination Mono Web Regular" size="14.0" />
+         </font>
+      </TextArea>
+   </children>
 </AnchorPane>
-
-
