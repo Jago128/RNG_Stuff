@@ -1,16 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.control.ScrollPane?>
 <?import javafx.scene.control.TextArea?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.TwentyPercentWindowController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="381.0" prefWidth="558.0" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.TwentyPercentWindowController">
    <children>
-      <TextArea layoutX="21.0" layoutY="14.0" prefHeight="153.0" prefWidth="370.0" text="Stara:&#10;Conch Destroyer Crit RNG (Same for Cyclone)&#10;Lunge Crit RNG&#10;&#10;Chara:&#10;Fiery Beam Burn RNG&#10;Cleave/Power Slash Crit RNG&#10;Frostbite Spread RNG">
+      <TextArea layoutX="222.0" layoutY="14.0" prefHeight="154.0" prefWidth="320.0" text="Stara:&#10;Conch Destroyer Crit RNG (Same for Cyclone)&#10;Lunge Crit RNG&#10;&#10;Chara:&#10;Fiery Beam Burn RNG&#10;Cleave/Power Slash Crit RNG&#10;Frostbite Spread RNG" wrapText="true">
          <font>
             <Font name="Determination Mono Web Regular" size="14.0" />
          </font>
       </TextArea>
+      <ScrollPane fitToHeight="true" fitToWidth="true" layoutX="11.0" layoutY="178.0" prefHeight="190.0" prefWidth="529.0">
+         <content>
+            <TextArea editable="false" prefHeight="369.0" prefWidth="377.0" promptText="Results go here!" wrapText="true">
+               <font>
+                  <Font name="Determination Mono Web Regular" size="14.0" />
+               </font>
+            </TextArea>
+         </content>
+      </ScrollPane>
    </children>
 </AnchorPane>

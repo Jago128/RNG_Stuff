@@ -1,14 +1,26 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.*?>
-<?import java.util.*?>
-<?import javafx.scene.*?>
-<?import javafx.scene.control.*?>
-<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
 
-<AnchorPane id="AnchorPane" prefHeight="200" prefWidth="320" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.MuseRandomizerWindowController">
-    <children>
-    </children>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="541.0" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.MuseRandomizerWindowController">
+   <children>
+      <ScrollPane fitToHeight="true" fitToWidth="true" layoutX="260.0" layoutY="15.0" prefHeight="370.0" prefWidth="261.0">
+         <content>
+            <TextArea editable="false" prefHeight="201.0" prefWidth="242.0" promptText="Results go here!" wrapText="true">
+               <font>
+                  <Font name="Determination Mono Web Regular" size="14.0" />
+               </font>
+            </TextArea>
+         </content>
+      </ScrollPane>
+      <TextArea layoutX="145.0" layoutY="16.0" prefHeight="226.0" prefWidth="103.0" text="Starfish&#10;Stara&#10;Chara&#10;Kurage&#10;Cyclone&#10;Kira&#10;Ray&#10;Hadel&#10;&#10;Optional:&#10;Creator!Jago&#10;Starfira&#10;Julie" wrapText="true">
+         <font>
+            <Font name="Determination Mono Web Regular" size="14.0" />
+         </font>
+      </TextArea>
+   </children>
 </AnchorPane>
-
-

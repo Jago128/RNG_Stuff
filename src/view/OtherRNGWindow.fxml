@@ -1,14 +1,39 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.*?>
-<?import java.util.*?>
-<?import javafx.scene.*?>
-<?import javafx.scene.control.*?>
-<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.Spinner?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
 
-<AnchorPane id="AnchorPane" prefHeight="200" prefWidth="320" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.OtherRNGWindowController">
-    <children>
-    </children>
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="331.0" prefWidth="469.0" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.OtherRNGWindowController">
+   <children>
+      <Label alignment="CENTER" layoutX="185.0" layoutY="15.0" prefHeight="26.0" prefWidth="122.0" text="Other RNG:">
+         <font>
+            <Font name="Determination Mono Web Regular" size="18.0" />
+         </font>
+      </Label>
+      <Label alignment="CENTER" layoutX="32.0" layoutY="28.0" prefHeight="26.0" prefWidth="122.0" text="Number:">
+         <font>
+            <Font name="Determination Mono Web Regular" size="16.0" />
+         </font>
+      </Label>
+      <Spinner fx:id="spinnerNumber" editable="true" layoutX="41.0" layoutY="55.0" prefHeight="58.0" prefWidth="104.0" />
+      <Label alignment="CENTER" layoutX="323.0" layoutY="28.0" prefHeight="26.0" prefWidth="122.0" text="Roll count:">
+         <font>
+            <Font name="Determination Mono Web Regular" size="16.0" />
+         </font>
+      </Label>
+      <Spinner fx:id="spinnerCount" editable="true" layoutX="332.0" layoutY="55.0" prefHeight="58.0" prefWidth="104.0" />
+      <ScrollPane fitToHeight="true" fitToWidth="true" layoutX="15.0" layoutY="125.0" prefHeight="190.0" prefWidth="440.0">
+         <content>
+            <TextArea editable="false" prefHeight="242.0" prefWidth="460.0" promptText="Results go here!" wrapText="true">
+               <font>
+                  <Font name="Determination Mono Web Regular" size="14.0" />
+               </font>
+            </TextArea>
+         </content>
+      </ScrollPane>
+   </children>
 </AnchorPane>
-
-

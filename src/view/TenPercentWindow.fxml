@@ -1,15 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.control.ScrollPane?>
 <?import javafx.scene.control.TextArea?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.TenPercentWindowController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="583.0" prefWidth="606.0" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.TenPercentWindowController">
    <children>
-      <TextArea layoutX="14.0" layoutY="14.0" prefHeight="324.0" prefWidth="406.0" text="Starfish:&#10;Ice Beam Freeze RNG&#10;Temmie Armor DMG Heal (Kurage has this too)&#10;&#10;Stara:&#10;Conch Slasher Crit RNG&#10;Fireball/Fiery Breath Burn RNG&#10;Thunderbolt/Chain Lightning/Thundercloud Paralyze RNG&#10;Rampage Crit RNG (1 to 3 hits)&#10;&#10;Chara:&#10;Fireball/Fiery Slashes Burn RNG&#10;Power Slash Crit RNG&#10;Frost Snap Infliction RNG&#10;&#10;Creator!Jago:&#10;Fireball/Dragon Breath Burn RNG&#10;Thunderbolt/Chain Lightning/Thunder Paralyze RNG&#10;Elemental Slash Fire/Paralyze RNG">
+      <TextArea layoutX="270.0" layoutY="14.0" prefHeight="352.0" prefWidth="319.0" text="Starfish:&#10;Ice Beam Freeze RNG&#10;Temmie Armor DMG Heal (Kurage has this too)&#10;&#10;Stara:&#10;Conch Slasher Crit RNG&#10;Fireball/Fiery Breath Burn RNG&#10;Thunderbolt/Chain Lightning/Thundercloud Paralyze RNG&#10;Rampage Crit RNG (1 to 3 hits)&#10;&#10;Chara:&#10;Fireball/Fiery Slashes Burn RNG&#10;Power Slash Crit RNG&#10;Frost Snap Infliction RNG&#10;&#10;Creator!Jago:&#10;Fireball/Dragon Breath Burn RNG&#10;Thunderbolt/Chain Lightning/Thunder Paralyze RNG&#10;Elemental Slash Fire/Paralyze RNG" wrapText="true">
          <font>
             <Font name="Determination Mono Web Regular" size="14.0" />
          </font>
       </TextArea>
+      <ScrollPane fitToHeight="true" fitToWidth="true" layoutX="10.0" layoutY="376.0" prefHeight="194.0" prefWidth="583.0">
+         <content>
+            <TextArea editable="false" prefHeight="190.0" prefWidth="565.0" promptText="Results go here!" wrapText="true">
+               <font>
+                  <Font name="Determination Mono Web Regular" size="14.0" />
+               </font>
+            </TextArea>
+         </content>
+      </ScrollPane>
    </children>
 </AnchorPane>

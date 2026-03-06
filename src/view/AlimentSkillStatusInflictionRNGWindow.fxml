@@ -1,21 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.control.ScrollPane?>
 <?import javafx.scene.control.TextArea?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="766.0" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.AlimentSkillStatusInflictionRNGWindowController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="486.0" prefWidth="639.0" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.AlimentSkillStatusInflictionRNGWindowController">
    <children>
-      <TextArea layoutX="20.0" layoutY="14.0" prefHeight="218.0" prefWidth="402.0" text="Starfish: Dazzler (Dizzy Single Target, 70%)&#10;Nocturnal Flash (Dizzy AoE, 50%)&#10;&#10;Kurage: Taunt (Rage Single Target, 70%)&#10;Stagnant Air (Increases all status infliction chances by 10%)&#10;&#10;Chara: Ominous Words (Despair Single Target, 70%)&#10;Abysmal Surge (Despair AoE, 50%)&#10;&#10;Kira: Hibernate (Sleep Single Target/AoE, 70%/50%)&#10;Evil Touch (Fear Single Target, 70%)&#10;" wrapText="true">
+      <TextArea layoutX="222.0" layoutY="14.0" prefHeight="218.0" prefWidth="402.0" text="Starfish: Dazzler (Dizzy Single Target, 70%)&#10;Nocturnal Flash (Dizzy AoE, 50%)&#10;&#10;Kurage: Taunt (Rage Single Target, 70%)&#10;Stagnant Air (Increases all status infliction chances by 10%)&#10;&#10;Chara: Ominous Words (Despair Single Target, 70%)&#10;Abysmal Surge (Despair AoE, 50%)&#10;&#10;Kira: Hibernate (Sleep Single Target/AoE, 70%/50%)&#10;Evil Touch (Fear Single Target, 70%)&#10;" wrapText="true">
          <font>
             <Font name="Determination Mono Web Regular" size="14.0" />
          </font>
       </TextArea>
-      <TextArea layoutX="433.0" layoutY="14.0" prefHeight="200.0" prefWidth="323.0" text="Dizzy: Reduced accuracy&#10;Rage: 2x attack, 0.5x DEF and Speed, locked to basic attacks&#10;&#10;" wrapText="true">
-         <font>
-            <Font name="Determination Mono Web Regular" size="14.0" />
-         </font>
-      </TextArea>
+      <ScrollPane fitToHeight="true" fitToWidth="true" layoutX="7.0" layoutY="245.0" prefHeight="218.0" prefWidth="598.0">
+         <content>
+            <TextArea editable="false" prefHeight="369.0" prefWidth="377.0" promptText="Results go here!" wrapText="true">
+               <font>
+                  <Font name="Determination Mono Web Regular" size="14.0" />
+               </font>
+            </TextArea>
+         </content>
+      </ScrollPane>
    </children>
 </AnchorPane>
