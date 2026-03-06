@@ -1,6 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
 
-
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.AttackSkillStatusInflictionRNGWindowController" />
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.AttackSkillStatusInflictionRNGWindowController">
+   <children>
+      <Label alignment="CENTER" layoutX="116.0" layoutY="20.0" prefHeight="50.0" prefWidth="391.0" text="Attacking Skill Status Infliction RNG">
+         <font>
+            <Font name="Determination Mono Web Regular" size="18.0" />
+         </font>
+      </Label>
+      <TextArea layoutX="20.0" layoutY="70.0" prefHeight="75.0" prefWidth="255.0" text="Normal: 8% chance&#10;Stara and Cyclone: 12% chance&#10;Chara: Death Scythe (50% chance)&#10;">
+         <font>
+            <Font name="Determination Mono Web Regular" size="14.0" />
+         </font>
+      </TextArea>
+   </children>
+</AnchorPane>
