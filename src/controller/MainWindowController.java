@@ -51,7 +51,7 @@ public class MainWindowController implements Initializable {
 			Parent root = loader.load();
 			Scene scene = new Scene(root);
 			Stage stage = new Stage();
-			stage.setTitle("Ventana Configuracion Usuario");
+			stage.setTitle("Other RNG Window");
 			stage.setScene(scene);
 			stage.initModality(Modality.WINDOW_MODAL);
 			stage.initOwner(btnOther.getScene().getWindow());
@@ -68,7 +68,7 @@ public class MainWindowController implements Initializable {
 			Parent root = loader.load();
 			Scene scene = new Scene(root);
 			Stage stage = new Stage();
-			stage.setTitle("Ventana Configuracion Usuario");
+			stage.setTitle("5% Percent Window");
 			stage.setScene(scene);
 			stage.initModality(Modality.WINDOW_MODAL);
 			stage.initOwner(btnOther.getScene().getWindow());
@@ -85,7 +85,7 @@ public class MainWindowController implements Initializable {
 			Parent root = loader.load();
 			Scene scene = new Scene(root);
 			Stage stage = new Stage();
-			stage.setTitle("Ventana Configuracion Usuario");
+			stage.setTitle("10% Percent Window");
 			stage.setScene(scene);
 			stage.initModality(Modality.WINDOW_MODAL);
 			stage.initOwner(btnOther.getScene().getWindow());
@@ -102,7 +102,7 @@ public class MainWindowController implements Initializable {
 			Parent root = loader.load();
 			Scene scene = new Scene(root);
 			Stage stage = new Stage();
-			stage.setTitle("Ventana Configuracion Usuario");
+			stage.setTitle("15% Percent Window");
 			stage.setScene(scene);
 			stage.initModality(Modality.WINDOW_MODAL);
 			stage.initOwner(btnOther.getScene().getWindow());
@@ -119,7 +119,7 @@ public class MainWindowController implements Initializable {
 			Parent root = loader.load();
 			Scene scene = new Scene(root);
 			Stage stage = new Stage();
-			stage.setTitle("Ventana Configuracion Usuario");
+			stage.setTitle("20% Percent Window");
 			stage.setScene(scene);
 			stage.initModality(Modality.WINDOW_MODAL);
 			stage.initOwner(btnOther.getScene().getWindow());
@@ -136,7 +136,7 @@ public class MainWindowController implements Initializable {
 			Parent root = loader.load();
 			Scene scene = new Scene(root);
 			Stage stage = new Stage();
-			stage.setTitle("Ventana Configuracion Usuario");
+			stage.setTitle("25% Percent Window");
 			stage.setScene(scene);
 			stage.initModality(Modality.WINDOW_MODAL);
 			stage.initOwner(btnOther.getScene().getWindow());
@@ -153,7 +153,7 @@ public class MainWindowController implements Initializable {
 			Parent root = loader.load();
 			Scene scene = new Scene(root);
 			Stage stage = new Stage();
-			stage.setTitle("Ventana Configuracion Usuario");
+			stage.setTitle("Aliment Skill Status Infliction RNG Window");
 			stage.setScene(scene);
 			stage.initModality(Modality.WINDOW_MODAL);
 			stage.initOwner(btnOther.getScene().getWindow());
@@ -170,7 +170,7 @@ public class MainWindowController implements Initializable {
 			Parent root = loader.load();
 			Scene scene = new Scene(root);
 			Stage stage = new Stage();
-			stage.setTitle("Ventana Configuracion Usuario");
+			stage.setTitle("Attack Skill Status Infliction RNG Window");
 			stage.setScene(scene);
 			stage.initModality(Modality.WINDOW_MODAL);
 			stage.initOwner(btnOther.getScene().getWindow());
@@ -187,7 +187,7 @@ public class MainWindowController implements Initializable {
 			Parent root = loader.load();
 			Scene scene = new Scene(root);
 			Stage stage = new Stage();
-			stage.setTitle("Ventana Configuracion Usuario");
+			stage.setTitle("Soak Infliction RNG Window");
 			stage.setScene(scene);
 			stage.initModality(Modality.WINDOW_MODAL);
 			stage.initOwner(btnOther.getScene().getWindow());
@@ -204,7 +204,7 @@ public class MainWindowController implements Initializable {
 			Parent root = loader.load();
 			Scene scene = new Scene(root);
 			Stage stage = new Stage();
-			stage.setTitle("Ventana Configuracion Usuario");
+			stage.setTitle("Team Choice Randomizer Window");
 			stage.setScene(scene);
 			stage.initModality(Modality.WINDOW_MODAL);
 			stage.initOwner(btnOther.getScene().getWindow());
@@ -221,7 +221,7 @@ public class MainWindowController implements Initializable {
 			Parent root = loader.load();
 			Scene scene = new Scene(root);
 			Stage stage = new Stage();
-			stage.setTitle("Ventana Configuracion Usuario");
+			stage.setTitle("Muse Randomizer Window");
 			stage.setScene(scene);
 			stage.initModality(Modality.WINDOW_MODAL);
 			stage.initOwner(btnOther.getScene().getWindow());
