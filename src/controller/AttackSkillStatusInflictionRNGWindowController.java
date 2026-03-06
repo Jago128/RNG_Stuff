@@ -25,5 +25,7 @@ public class AttackSkillStatusInflictionRNGWindowController implements Initializ
 	
 	@Override
 	public void initialize(URL url, ResourceBundle rb) {
+		SpinnerValueFactory<Integer> countValueFactory = new SpinnerValueFactory.IntegerSpinnerValueFactory(1, 100, 1, 1);
+        spinnerCount.setValueFactory(countValueFactory);
 	}
 }
