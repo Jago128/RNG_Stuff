@@ -37,7 +37,7 @@
             <Font name="Determination Mono Web Regular" size="14.0" />
          </font>
       </RadioButton>
-      <Button fx:id="btnRoll" layoutX="43.0" layoutY="206.0" mnemonicParsing="false" prefHeight="51.0" prefWidth="122.0" text="Roll!">
+      <Button fx:id="btnRoll" layoutX="45.0" layoutY="206.0" mnemonicParsing="false" onAction="#roll" prefHeight="26.0" prefWidth="110.0" text="Roll!">
          <font>
             <Font name="Determination Mono Web Regular" size="16.0" />
          </font>

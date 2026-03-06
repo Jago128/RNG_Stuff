@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.RadioButton?>
 <?import javafx.scene.control.ScrollPane?>
@@ -8,45 +9,50 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="441.0" prefWidth="528.0" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.AttackSkillStatusInflictionRNGWindowController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="435.0" prefWidth="522.0" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.AttackSkillStatusInflictionRNGWindowController">
    <children>
       <Label alignment="CENTER" layoutX="101.0" layoutY="14.0" prefHeight="34.0" prefWidth="370.0" text="Attacking Skill Status Infliction RNG">
          <font>
             <Font name="Determination Mono Web Regular" size="18.0" />
          </font>
       </Label>
-      <TextArea layoutX="169.0" layoutY="52.0" prefHeight="106.0" prefWidth="346.0" text="Normal: 8% chance&#10;Stara: 12% chance&#10;Chara: Death Scythe Fear Infliction chance&#10;(50% chance)&#10;Creator!Jago: Jellyfish Sting paralyze chance&#10;(60% chance)" wrapText="true">
+      <TextArea layoutX="169.0" layoutY="52.0" prefHeight="110.0" prefWidth="341.0" text="Normal: 8% chance&#10;Stara: 12% chance&#10;Chara: Death Scythe Fear Infliction chance&#10;(50% chance)&#10;Creator!Jago: Jellyfish Sting paralyze chance (60% chance)" wrapText="true">
          <font>
             <Font name="Determination Mono Web Regular" size="14.0" />
          </font>
       </TextArea>
-      <Label alignment="CENTER" layoutX="25.0" layoutY="49.0" prefHeight="26.0" prefWidth="122.0" text="Roll count:">
+      <Label alignment="CENTER" layoutX="25.0" layoutY="44.0" prefHeight="26.0" prefWidth="122.0" text="Roll count:">
          <font>
             <Font name="Determination Mono Web Regular" size="16.0" />
          </font>
       </Label>
-      <Spinner fx:id="spinnerCount" editable="true" layoutX="34.0" layoutY="76.0" prefHeight="58.0" prefWidth="104.0" />
-      <RadioButton fx:id="rbNormal" layoutX="27.0" layoutY="181.0" mnemonicParsing="false" prefHeight="19.0" prefWidth="87.0" text="Normal">
+      <Spinner fx:id="spinnerCount" editable="true" layoutX="34.0" layoutY="71.0" prefHeight="58.0" prefWidth="104.0" />
+      <RadioButton fx:id="rbNormal" layoutX="42.0" layoutY="171.0" mnemonicParsing="false" prefHeight="19.0" prefWidth="87.0" text="Normal">
          <font>
             <Font name="Determination Mono Web Regular" size="14.0" />
          </font>
       </RadioButton>
-      <RadioButton fx:id="rbStara" layoutX="126.0" layoutY="181.0" mnemonicParsing="false" prefHeight="19.0" prefWidth="71.0" text="Stara">
+      <RadioButton fx:id="rbStara" layoutX="141.0" layoutY="171.0" mnemonicParsing="false" prefHeight="19.0" prefWidth="71.0" text="Stara">
          <font>
             <Font name="Determination Mono Web Regular" size="14.0" />
          </font>
       </RadioButton>
-      <RadioButton fx:id="rbDeathScythe" disable="true" layoutX="219.0" layoutY="181.0" mnemonicParsing="false" prefHeight="19.0" prefWidth="122.0" text="Death Scythe">
+      <RadioButton fx:id="rbDeathScythe" disable="true" layoutX="225.0" layoutY="171.0" mnemonicParsing="false" prefHeight="19.0" prefWidth="122.0" text="Death Scythe">
          <font>
             <Font name="Determination Mono Web Regular" size="14.0" />
          </font>
       </RadioButton>
-      <RadioButton fx:id="rbJellyfishSting" layoutX="357.0" layoutY="181.0" mnemonicParsing="false" prefHeight="19.0" prefWidth="145.0" text="Jellyfish Sting">
+      <RadioButton fx:id="rbJellyfishSting" layoutX="358.0" layoutY="171.0" mnemonicParsing="false" prefHeight="19.0" prefWidth="145.0" text="Jellyfish Sting">
          <font>
             <Font name="Determination Mono Web Regular" size="14.0" />
          </font>
       </RadioButton>
-      <ScrollPane fitToHeight="true" fitToWidth="true" layoutX="18.0" layoutY="218.0" prefHeight="202.0" prefWidth="496.0">
+      <Button fx:id="btnRoll" layoutX="31.0" layoutY="135.0" mnemonicParsing="false" onAction="#roll" prefHeight="26.0" prefWidth="110.0" text="Roll!">
+         <font>
+            <Font name="Determination Mono Web Regular" size="16.0" />
+         </font>
+      </Button>
+      <ScrollPane fitToHeight="true" fitToWidth="true" layoutX="16.0" layoutY="203.0" prefHeight="202.0" prefWidth="496.0">
          <content>
             <TextArea fx:id="textAreaResults" editable="false" prefHeight="369.0" prefWidth="377.0" promptText="Results go here!" wrapText="true">
                <font>

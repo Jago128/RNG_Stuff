@@ -27,6 +27,11 @@
          </font>
       </Label>
       <Spinner fx:id="spinnerCount" editable="true" layoutX="332.0" layoutY="55.0" prefHeight="58.0" prefWidth="104.0" />
+      <Button fx:id="btnRoll" layoutX="191.0" layoutY="70.0" mnemonicParsing="false" onAction="#roll" prefHeight="26.0" prefWidth="110.0" text="Roll!">
+         <font>
+            <Font name="Determination Mono Web Regular" size="16.0" />
+         </font>
+      </Button>
       <ScrollPane fitToHeight="true" fitToWidth="true" layoutX="15.0" layoutY="125.0" prefHeight="190.0" prefWidth="440.0">
          <content>
             <TextArea fx:id="textAreaResults" editable="false" prefHeight="242.0" prefWidth="460.0" promptText="Results go here!" wrapText="true">
@@ -36,10 +41,5 @@
             </TextArea>
          </content>
       </ScrollPane>
-      <Button fx:id="btnRoll" layoutX="185.0" layoutY="54.0" mnemonicParsing="false" prefHeight="51.0" prefWidth="122.0" text="Roll!">
-         <font>
-            <Font name="Determination Mono Web Regular" size="16.0" />
-         </font>
-      </Button>
    </children>
 </AnchorPane>
