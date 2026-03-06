@@ -47,7 +47,7 @@
             <Font name="Determination Mono Web Regular" size="16.0" />
          </font>
       </Button>
-      <Button fx:id="btnAlimentSkillInfliction" alignment="CENTER" layoutX="21.0" layoutY="153.0" mnemonicParsing="false" onAction="#alimentSkillInfliction" prefHeight="50.0" prefWidth="314.0" text="Aliment Skill Status Infliction RNG">
+      <Button fx:id="btnAlimentSkillInfliction" alignment="CENTER" layoutX="21.0" layoutY="153.0" mnemonicParsing="false" onAction="#alimentSkillStatusInfliction" prefHeight="50.0" prefWidth="314.0" text="Aliment Skill Status Infliction RNG">
          <font>
             <Font name="Determination Mono Web Regular" size="16.0" />
          </font>
@@ -62,7 +62,7 @@
             <Font name="Determination Mono Web Regular" size="16.0" />
          </font>
       </Button>
-      <Button fx:id="btnMuseRandomizer" alignment="CENTER" layoutX="478.0" layoutY="218.0" mnemonicParsing="false" onAction="#MuseRandomizer" prefHeight="50.0" prefWidth="156.0" text="Muse Randomizer">
+      <Button fx:id="btnMuseRandomizer" alignment="CENTER" layoutX="478.0" layoutY="218.0" mnemonicParsing="false" onAction="#museRandomizer" prefHeight="50.0" prefWidth="156.0" text="Muse Randomizer">
          <font>
             <Font name="Determination Mono Web Regular" size="16.0" />
          </font>
