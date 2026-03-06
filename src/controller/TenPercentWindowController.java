@@ -10,9 +10,6 @@ import javafx.scene.control.*;
 public class TenPercentWindowController implements Initializable {
 	
 	@FXML
-	private Spinner<Integer> spinnerNumber;
-	
-	@FXML
 	private Spinner<Integer> spinnerCount;
 	
 	@FXML

@@ -11,6 +11,7 @@ import javafx.scene.control.*;
 import javafx.stage.*;
 
 public class MainWindowController implements Initializable {
+
 	@FXML
 	private Button btnOther;
 
@@ -149,7 +150,8 @@ public class MainWindowController implements Initializable {
 	@FXML
 	private void alimentSkillStatusInfliction(ActionEvent event) {
 		try {
-			FXMLLoader loader = new FXMLLoader(getClass().getResource("/view/AlimentSkillStatusInflictionRNGWindow.fxml"));
+			FXMLLoader loader = new FXMLLoader(
+					getClass().getResource("/view/AlimentSkillStatusInflictionRNGWindow.fxml"));
 			Parent root = loader.load();
 			Scene scene = new Scene(root);
 			Stage stage = new Stage();
@@ -166,7 +168,8 @@ public class MainWindowController implements Initializable {
 	@FXML
 	private void attackSkillStatusInfliction(ActionEvent event) {
 		try {
-			FXMLLoader loader = new FXMLLoader(getClass().getResource("/view/AttackSkillStatusInflictionRNGWindow.fxml"));
+			FXMLLoader loader = new FXMLLoader(
+					getClass().getResource("/view/AttackSkillStatusInflictionRNGWindow.fxml"));
 			Parent root = loader.load();
 			Scene scene = new Scene(root);
 			Stage stage = new Stage();

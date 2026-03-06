@@ -8,9 +8,6 @@ import javafx.fxml.*;
 import javafx.scene.control.*;
 
 public class SoakInflictionRNGWindowController implements Initializable {
-
-	@FXML
-	private Spinner<Integer> spinnerNumber;
 	
 	@FXML
 	private Spinner<Integer> spinnerCount;
