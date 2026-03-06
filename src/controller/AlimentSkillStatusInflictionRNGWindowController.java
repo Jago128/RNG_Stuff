@@ -1,8 +1,13 @@
 package controller;
 
-public class AlimentSkillStatusInflictionRNGWindowController {
+import java.net.URL;
+import java.util.ResourceBundle;
 
-	public AlimentSkillStatusInflictionRNGWindowController() {
-		
+import javafx.fxml.Initializable;
+
+public class AlimentSkillStatusInflictionRNGWindowController implements Initializable {
+	
+	@Override
+	public void initialize(URL url, ResourceBundle rb) {
 	}
 }

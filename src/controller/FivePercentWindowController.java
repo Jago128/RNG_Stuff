@@ -1,8 +1,13 @@
 package controller;
 
-public class FivePercentWindowController {
+import java.net.URL;
+import java.util.ResourceBundle;
 
-	public FivePercentWindowController() {
-		
+import javafx.fxml.Initializable;
+
+public class FivePercentWindowController implements Initializable {
+
+	@Override
+	public void initialize(URL url, ResourceBundle rb) {
 	}
 }

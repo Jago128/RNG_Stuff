@@ -1,9 +1,13 @@
 package controller;
 
-public class TwentyFivePercentWindowController {
+import java.net.URL;
+import java.util.ResourceBundle;
 
-	public TwentyFivePercentWindowController() {
-		// TODO Auto-generated constructor stub
+import javafx.fxml.Initializable;
+
+public class TwentyFivePercentWindowController implements Initializable {
+
+	@Override
+	public void initialize(URL url, ResourceBundle rb) {
 	}
-
 }

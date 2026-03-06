@@ -5,64 +5,64 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="298.0" prefWidth="673.0" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.MainWindowController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="285.0" prefWidth="673.0" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.MainWindowController">
    <children>
-      <Label alignment="CENTER" layoutX="148.0" layoutY="19.0" prefHeight="50.0" prefWidth="390.0" text="Jago's RP/Parody RNG Shenanigans">
+      <Label alignment="CENTER" layoutX="83.0" layoutY="19.0" prefHeight="50.0" prefWidth="390.0" text="Jago's RP/Parody RNG Shenanigans">
          <font>
             <Font name="Determination Mono Web Regular" size="22.0" />
          </font>
       </Label>
-      <Button fx:id="btn5Percent" alignment="CENTER" layoutX="34.0" layoutY="85.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="114.0" text="5% Stuff">
+      <Button fx:id="btnOther" alignment="CENTER" layoutX="499.0" layoutY="19.0" mnemonicParsing="false" onAction="#otherRNG" prefHeight="50.0" prefWidth="137.0" text="Other RNG">
          <font>
             <Font name="Determination Mono Web Regular" size="16.0" />
          </font>
       </Button>
-      <Button fx:id="btn10Percent" alignment="CENTER" layoutX="164.0" layoutY="85.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="114.0" text="10% Stuff">
+      <Button fx:id="btn5Percent" alignment="CENTER" layoutX="34.0" layoutY="85.0" mnemonicParsing="false" onAction="#fivePercent" prefHeight="50.0" prefWidth="114.0" text="5% Stuff">
          <font>
             <Font name="Determination Mono Web Regular" size="16.0" />
          </font>
       </Button>
-      <Button fx:id="btn15Percent" alignment="CENTER" layoutX="292.0" layoutY="85.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="114.0" text="15% Stuff">
+      <Button fx:id="btn10Percent" alignment="CENTER" layoutX="164.0" layoutY="85.0" mnemonicParsing="false" onAction="#tenPercent" prefHeight="50.0" prefWidth="114.0" text="10% Stuff">
          <font>
             <Font name="Determination Mono Web Regular" size="16.0" />
          </font>
       </Button>
-      <Button fx:id="btn25Percent" alignment="CENTER" layoutX="532.0" layoutY="85.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="114.0" text="25% Stuff">
+      <Button fx:id="btn15Percent" alignment="CENTER" layoutX="292.0" layoutY="85.0" mnemonicParsing="false" onAction="#fifteenPercent" prefHeight="50.0" prefWidth="114.0" text="15% Stuff">
          <font>
             <Font name="Determination Mono Web Regular" size="16.0" />
          </font>
       </Button>
-      <Button fx:id="btn20Percent" alignment="CENTER" layoutX="418.0" layoutY="85.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="103.0" text="20% Stuff">
+      <Button fx:id="btn20Percent" alignment="CENTER" layoutX="418.0" layoutY="85.0" mnemonicParsing="false" onAction="#twentyPercent" prefHeight="50.0" prefWidth="103.0" text="20% Stuff">
          <font>
             <Font name="Determination Mono Web Regular" size="16.0" />
          </font>
       </Button>
-      <Button fx:id="btnSoakInfliction" alignment="CENTER" layoutX="20.0" layoutY="151.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="193.0" text="Soak Infliction RNG">
+      <Button fx:id="btn25Percent" alignment="CENTER" layoutX="532.0" layoutY="85.0" mnemonicParsing="false" onAction="#twentyFivePercent" prefHeight="50.0" prefWidth="114.0" text="25% Stuff">
          <font>
             <Font name="Determination Mono Web Regular" size="16.0" />
          </font>
       </Button>
-      <Button fx:id="btnAttackSkillStatusInfliction" alignment="CENTER" layoutX="227.0" layoutY="152.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="304.0" text="Attack Skill Status Infliction RNG">
+      <Button fx:id="btnAttackSkillStatusInfliction" alignment="CENTER" layoutX="345.0" layoutY="153.0" mnemonicParsing="false" onAction="#attackSkillStatusInfliction" prefHeight="50.0" prefWidth="304.0" text="Attack Skill Status Infliction RNG">
          <font>
             <Font name="Determination Mono Web Regular" size="16.0" />
          </font>
       </Button>
-      <Button fx:id="btnAlimentSkillInfliction" alignment="CENTER" layoutX="13.0" layoutY="218.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="254.0" text="Aliment Skill Infliction RNG">
+      <Button fx:id="btnAlimentSkillInfliction" alignment="CENTER" layoutX="21.0" layoutY="153.0" mnemonicParsing="false" onAction="#alimentSkillInfliction" prefHeight="50.0" prefWidth="314.0" text="Aliment Skill Status Infliction RNG">
          <font>
             <Font name="Determination Mono Web Regular" size="16.0" />
          </font>
       </Button>
-      <Button fx:id="btnTeamChoiceRandomizer" alignment="CENTER" layoutX="281.0" layoutY="218.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="206.0" text="Team Choice Randomizer">
+      <Button fx:id="btnSoakInfliction" alignment="CENTER" layoutX="34.0" layoutY="218.0" mnemonicParsing="false" onAction="#soakInfliction" prefHeight="50.0" prefWidth="193.0" text="Soak Infliction RNG">
          <font>
             <Font name="Determination Mono Web Regular" size="16.0" />
          </font>
       </Button>
-      <Button fx:id="btnOther" alignment="CENTER" layoutX="539.0" layoutY="151.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="114.0" text="Other RNG">
+      <Button fx:id="btnTeamChoiceRandomizer" alignment="CENTER" layoutX="251.0" layoutY="218.0" mnemonicParsing="false" onAction="#teamChoiceRandomizer" prefHeight="50.0" prefWidth="206.0" text="Team Choice Randomizer">
          <font>
             <Font name="Determination Mono Web Regular" size="16.0" />
          </font>
       </Button>
-      <Button fx:id="btnMuseRandomizer" alignment="CENTER" layoutX="497.0" layoutY="218.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="156.0" text="Muse Randomizer">
+      <Button fx:id="btnMuseRandomizer" alignment="CENTER" layoutX="478.0" layoutY="218.0" mnemonicParsing="false" onAction="#MuseRandomizer" prefHeight="50.0" prefWidth="156.0" text="Muse Randomizer">
          <font>
             <Font name="Determination Mono Web Regular" size="16.0" />
          </font>

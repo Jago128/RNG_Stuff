@@ -1,9 +1,13 @@
 package controller;
 
-public class OtherRNGWindowController {
+import java.net.URL;
+import java.util.ResourceBundle;
 
-	public OtherRNGWindowController() {
-		// TODO Auto-generated constructor stub
+import javafx.fxml.Initializable;
+
+public class OtherRNGWindowController implements Initializable {
+
+	@Override
+	public void initialize(URL url, ResourceBundle rb) {
 	}
-
 }

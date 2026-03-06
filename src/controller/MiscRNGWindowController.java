@@ -1,8 +1,13 @@
 package controller;
 
-public class MiscRNGWindowController {
+import java.net.URL;
+import java.util.ResourceBundle;
 
-	public MiscRNGWindowController() {
+import javafx.fxml.Initializable;
 
+public class MiscRNGWindowController implements Initializable {
+
+	@Override
+	public void initialize(URL url, ResourceBundle rb) {
 	}
 }

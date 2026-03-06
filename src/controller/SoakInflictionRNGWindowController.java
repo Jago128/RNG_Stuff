@@ -1,9 +1,13 @@
 package controller;
 
-public class SoakInflictionRNGWindowController {
+import java.net.URL;
+import java.util.ResourceBundle;
 
-	public SoakInflictionRNGWindowController() {
-		// TODO Auto-generated constructor stub
+import javafx.fxml.Initializable;
+
+public class SoakInflictionRNGWindowController implements Initializable {
+
+	@Override
+	public void initialize(URL url, ResourceBundle rb) {
 	}
-
 }

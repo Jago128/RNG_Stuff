@@ -1,9 +1,13 @@
 package controller;
 
-public class MuseRandomizerWindowController {
+import java.net.URL;
+import java.util.ResourceBundle;
 
-	public MuseRandomizerWindowController() {
-		// TODO Auto-generated constructor stub
+import javafx.fxml.Initializable;
+
+public class MuseRandomizerWindowController implements Initializable {
+
+	@Override
+	public void initialize(URL url, ResourceBundle rb) {
 	}
-
 }

@@ -1,9 +1,13 @@
 package controller;
 
-public class TeamChoiceRandomizerWindowController {
+import java.net.URL;
+import java.util.ResourceBundle;
 
-	public TeamChoiceRandomizerWindowController() {
-		// TODO Auto-generated constructor stub
+import javafx.fxml.Initializable;
+
+public class TeamChoiceRandomizerWindowController implements Initializable {
+
+	@Override
+	public void initialize(URL url, ResourceBundle rb) {
 	}
-
 }
