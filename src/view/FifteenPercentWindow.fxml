@@ -1,25 +1,38 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.control.Label?>
 <?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.Spinner?>
 <?import javafx.scene.control.TextArea?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="426.0" prefWidth="569.0" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.FifteenPercentWindowController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="429.0" prefWidth="569.0" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.FifteenPercentWindowController">
    <children>
-      <TextArea layoutX="195.0" layoutY="14.0" prefHeight="208.0" prefWidth="354.0" text="General: Unholy Enchant ATK Debuff RNG&#10;&#10;Stara:&#10;Fiery Shockwave/Sword Burn RNG&#10;UF Outfit Conch Slasher Crit Sting RNG&#10;&#10;Starfira: Conch Fusion Crit Chance&#10;&#10;Chara: Fire Blast Burn RNG&#10;&#10;Combination Attacks:&#10;Dual-Elememtal Beam Burn RNG (Starfish &amp; Chara)">
+      <TextArea layoutX="198.0" layoutY="14.0" prefHeight="208.0" prefWidth="354.0" text="General: Unholy Enchant ATK Debuff RNG&#10;&#10;Stara:&#10;Fiery Shockwave/Sword Burn RNG&#10;UF Outfit Conch Slasher Crit Sting RNG&#10;&#10;Starfira: Conch Fusion Crit Chance&#10;&#10;Chara: Fire Blast Burn RNG&#10;&#10;Combination Attacks:&#10;Dual-Elememtal Beam Burn RNG (Starfish &amp; Chara)">
          <font>
             <Font name="Determination Mono Web Regular" size="14.0" />
          </font>
       </TextArea>
-      <ScrollPane fitToHeight="true" fitToWidth="true" layoutX="14.0" layoutY="235.0" prefHeight="180.0" prefWidth="536.0">
+      <ScrollPane fitToHeight="true" fitToWidth="true" layoutX="17.0" layoutY="230.0" prefHeight="180.0" prefWidth="536.0">
          <content>
-            <TextArea editable="false" prefHeight="369.0" prefWidth="377.0" promptText="Results go here!" wrapText="true">
+            <TextArea fx:id="textAreaResults" editable="false" prefHeight="369.0" prefWidth="377.0" promptText="Results go here!" wrapText="true">
                <font>
                   <Font name="Determination Mono Web Regular" size="14.0" />
                </font>
             </TextArea>
          </content>
       </ScrollPane>
+      <Label alignment="CENTER" layoutX="39.0" layoutY="80.0" prefHeight="26.0" prefWidth="122.0" text="Roll count:">
+         <font>
+            <Font name="Determination Mono Web Regular" size="16.0" />
+         </font>
+      </Label>
+      <Spinner fx:id="spinnerCount" editable="true" layoutX="48.0" layoutY="107.0" prefHeight="58.0" prefWidth="104.0" />
+      <Label alignment="CENTER" layoutX="51.0" layoutY="38.0" prefHeight="34.0" prefWidth="98.0" text="15% Stuff">
+         <font>
+            <Font name="Determination Mono Web Regular" size="18.0" />
+         </font>
+      </Label>
    </children>
 </AnchorPane>

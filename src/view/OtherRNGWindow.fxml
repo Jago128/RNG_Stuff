@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.ScrollPane?>
 <?import javafx.scene.control.Spinner?>
@@ -28,12 +29,17 @@
       <Spinner fx:id="spinnerCount" editable="true" layoutX="332.0" layoutY="55.0" prefHeight="58.0" prefWidth="104.0" />
       <ScrollPane fitToHeight="true" fitToWidth="true" layoutX="15.0" layoutY="125.0" prefHeight="190.0" prefWidth="440.0">
          <content>
-            <TextArea editable="false" prefHeight="242.0" prefWidth="460.0" promptText="Results go here!" wrapText="true">
+            <TextArea fx:id="textAreaResults" editable="false" prefHeight="242.0" prefWidth="460.0" promptText="Results go here!" wrapText="true">
                <font>
                   <Font name="Determination Mono Web Regular" size="14.0" />
                </font>
             </TextArea>
          </content>
       </ScrollPane>
+      <Button fx:id="btnRoll" layoutX="185.0" layoutY="54.0" mnemonicParsing="false" prefHeight="51.0" prefWidth="122.0" text="Roll!">
+         <font>
+            <Font name="Determination Mono Web Regular" size="16.0" />
+         </font>
+      </Button>
    </children>
 </AnchorPane>

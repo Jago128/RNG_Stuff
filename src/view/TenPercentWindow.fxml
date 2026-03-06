@@ -1,25 +1,44 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Label?>
 <?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.Spinner?>
 <?import javafx.scene.control.TextArea?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="583.0" prefWidth="606.0" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.TenPercentWindowController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="583.0" prefWidth="464.0" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.TenPercentWindowController">
    <children>
-      <TextArea layoutX="270.0" layoutY="14.0" prefHeight="352.0" prefWidth="319.0" text="Starfish:&#10;Ice Beam Freeze RNG&#10;Temmie Armor DMG Heal (Kurage has this too)&#10;&#10;Stara:&#10;Conch Slasher Crit RNG&#10;Fireball/Fiery Breath Burn RNG&#10;Thunderbolt/Chain Lightning/Thundercloud Paralyze RNG&#10;Rampage Crit RNG (1 to 3 hits)&#10;&#10;Chara:&#10;Fireball/Fiery Slashes Burn RNG&#10;Power Slash Crit RNG&#10;Frost Snap Infliction RNG&#10;&#10;Creator!Jago:&#10;Fireball/Dragon Breath Burn RNG&#10;Thunderbolt/Chain Lightning/Thunder Paralyze RNG&#10;Elemental Slash Fire/Paralyze RNG" wrapText="true">
+      <TextArea layoutX="163.0" layoutY="8.0" prefHeight="360.0" prefWidth="278.0" text="Starfish:&#10;Ice Beam Freeze RNG&#10;Temmie Armor DMG Heal (Kurage has this too)&#10;&#10;Stara:&#10;Conch Slasher Crit RNG&#10;Fireball/Fiery Breath Burn RNG&#10;Thunderbolt/Chain Lightning/Thundercloud Paralyze RNG&#10;Rampage Crit RNG (1 to 3 hits)&#10;&#10;Chara:&#10;Fireball/Fiery Slashes Burn RNG&#10;Power Slash Crit RNG&#10;Frost Snap Infliction RNG&#10;&#10;Creator!Jago:&#10;Fireball/Dragon Breath Burn RNG&#10;Thunderbolt/Chain Lightning/Thunder Paralyze RNG&#10;Elemental Slash Fire/Paralyze RNG" wrapText="true">
          <font>
             <Font name="Determination Mono Web Regular" size="14.0" />
          </font>
       </TextArea>
-      <ScrollPane fitToHeight="true" fitToWidth="true" layoutX="10.0" layoutY="376.0" prefHeight="194.0" prefWidth="583.0">
+      <ScrollPane fitToHeight="true" fitToWidth="true" layoutX="10.0" layoutY="376.0" prefHeight="194.0" prefWidth="431.0">
          <content>
-            <TextArea editable="false" prefHeight="190.0" prefWidth="565.0" promptText="Results go here!" wrapText="true">
+            <TextArea fx:id="textAreaResults" editable="false" prefHeight="190.0" prefWidth="565.0" promptText="Results go here!" wrapText="true">
                <font>
                   <Font name="Determination Mono Web Regular" size="14.0" />
                </font>
             </TextArea>
          </content>
       </ScrollPane>
+      <Label alignment="CENTER" layoutX="39.0" layoutY="9.0" prefHeight="34.0" prefWidth="98.0" text="10% Stuff">
+         <font>
+            <Font name="Determination Mono Web Regular" size="18.0" />
+         </font>
+      </Label>
+      <CheckBox fx:id="cbRampage" layoutX="46.0" layoutY="201.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="84.0" text="Rampage">
+         <font>
+            <Font name="Determination Mono Web Regular" size="14.0" />
+         </font>
+      </CheckBox>
+      <Label alignment="CENTER" layoutX="27.0" layoutY="104.0" prefHeight="26.0" prefWidth="122.0" text="Roll count:">
+         <font>
+            <Font name="Determination Mono Web Regular" size="16.0" />
+         </font>
+      </Label>
+      <Spinner fx:id="spinnerCount" editable="true" layoutX="36.0" layoutY="130.0" prefHeight="58.0" prefWidth="104.0" />
    </children>
 </AnchorPane>

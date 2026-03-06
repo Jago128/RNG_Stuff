@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.control.Label?>
 <?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.Spinner?>
 <?import javafx.scene.control.TextArea?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
@@ -14,12 +16,23 @@
       </TextArea>
       <ScrollPane fitToHeight="true" fitToWidth="true" layoutX="19.0" layoutY="174.0" prefHeight="190.0" prefWidth="534.0">
          <content>
-            <TextArea editable="false" prefHeight="369.0" prefWidth="377.0" promptText="Results go here!" wrapText="true">
+            <TextArea fx:id="textAreaResults" editable="false" prefHeight="369.0" prefWidth="377.0" promptText="Results go here!" wrapText="true">
                <font>
                   <Font name="Determination Mono Web Regular" size="14.0" />
                </font>
             </TextArea>
          </content>
       </ScrollPane>
+      <Label alignment="CENTER" layoutX="26.0" layoutY="63.0" prefHeight="26.0" prefWidth="122.0" text="Roll count:">
+         <font>
+            <Font name="Determination Mono Web Regular" size="16.0" />
+         </font>
+      </Label>
+      <Spinner fx:id="spinnerCount" editable="true" layoutX="35.0" layoutY="89.0" prefHeight="58.0" prefWidth="104.0" />
+      <Label alignment="CENTER" layoutX="38.0" layoutY="14.0" prefHeight="34.0" prefWidth="98.0" text="25% Stuff">
+         <font>
+            <Font name="Determination Mono Web Regular" size="18.0" />
+         </font>
+      </Label>
    </children>
 </AnchorPane>

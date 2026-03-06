@@ -1,26 +1,64 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Label?>
 <?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.Spinner?>
 <?import javafx.scene.control.TextArea?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="541.0" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.MuseRandomizerWindowController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="511.0" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.MuseRandomizerWindowController">
    <children>
-      <ScrollPane fitToHeight="true" fitToWidth="true" layoutX="260.0" layoutY="15.0" prefHeight="370.0" prefWidth="261.0">
+      <ScrollPane fitToHeight="true" fitToWidth="true" layoutX="20.0" layoutY="173.0" prefHeight="212.0" prefWidth="479.0">
          <content>
-            <TextArea editable="false" prefHeight="201.0" prefWidth="242.0" promptText="Results go here!" wrapText="true">
+            <TextArea fx:id="textAreaResults" editable="false" prefHeight="310.0" prefWidth="260.0" promptText="Results go here!" wrapText="true">
                <font>
                   <Font name="Determination Mono Web Regular" size="14.0" />
                </font>
             </TextArea>
          </content>
       </ScrollPane>
-      <TextArea layoutX="145.0" layoutY="16.0" prefHeight="226.0" prefWidth="103.0" text="Starfish&#10;Stara&#10;Chara&#10;Kurage&#10;Cyclone&#10;Kira&#10;Ray&#10;Hadel&#10;&#10;Optional:&#10;Creator!Jago&#10;Starfira&#10;Julie" wrapText="true">
+      <TextArea layoutX="271.0" layoutY="14.0" prefHeight="140.0" prefWidth="103.0" text="Starfish&#10;Stara&#10;Chara&#10;Kurage&#10;Cyclone&#10;Kira&#10;Ray&#10;Hadel" wrapText="true">
          <font>
             <Font name="Determination Mono Web Regular" size="14.0" />
          </font>
       </TextArea>
+      <Label alignment="CENTER" layoutX="20.0" layoutY="48.0" prefHeight="26.0" prefWidth="122.0" text="Roll count:">
+         <font>
+            <Font name="Determination Mono Web Regular" size="16.0" />
+         </font>
+      </Label>
+      <Spinner fx:id="spinnerCount" editable="true" layoutX="29.0" layoutY="74.0" prefHeight="58.0" prefWidth="104.0" />
+      <TextArea layoutX="387.0" layoutY="14.0" prefHeight="140.0" prefWidth="111.0" text="Optional:&#10;Creator!Jago&#10;Starfira&#10;Julie" wrapText="true">
+         <font>
+            <Font name="Determination Mono Web Regular" size="14.0" />
+         </font>
+      </TextArea>
+      <Label alignment="CENTER" layoutX="52.0" layoutY="14.0" prefHeight="34.0" prefWidth="180.0" text="Muse Randomizer">
+         <font>
+            <Font name="Determination Mono Web Regular" size="18.0" />
+         </font>
+      </Label>
+      <CheckBox fx:id="cbOptional" layoutX="29.0" layoutY="139.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="164.0" text="Optional Characters">
+         <font>
+            <Font name="Determination Mono Web Regular" size="14.0" />
+         </font>
+      </CheckBox>
+      <CheckBox fx:id="cbCreatorJago" disable="true" layoutX="147.0" layoutY="50.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="122.0" text="Creator!Jago">
+         <font>
+            <Font name="Determination Mono Web Regular" size="14.0" />
+         </font>
+      </CheckBox>
+      <CheckBox fx:id="cbStarfira" disable="true" layoutX="161.0" layoutY="81.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="91.0" text="Starfira">
+         <font>
+            <Font name="Determination Mono Web Regular" size="14.0" />
+         </font>
+      </CheckBox>
+      <CheckBox fx:id="cbJulie" disable="true" layoutX="161.0" layoutY="112.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="74.0" text="Julie">
+         <font>
+            <Font name="Determination Mono Web Regular" size="14.0" />
+         </font>
+      </CheckBox>
    </children>
 </AnchorPane>
