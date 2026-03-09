@@ -17,7 +17,7 @@
             <Font name="Determination Mono Web Regular" size="18.0" />
          </font>
       </Label>
-      <TextArea layoutX="199.0" layoutY="43.0" prefHeight="218.0" prefWidth="402.0" text="Starfish: Dazzler (Dizzy Single Target, 70%)&#10;Nocturnal Flash (Dizzy AoE, 50%)&#10;&#10;Kurage: Taunt (Rage Single Target, 70%)&#10;Stagnant Air (Increases all status infliction chances by 10%)&#10;&#10;Chara: Ominous Words (Despair Single Target, 70%)&#10;Abysmal Surge (Despair AoE, 50%)&#10;&#10;Kira: Hibernate (Sleep Single Target/AoE, 70%/50%)&#10;Evil Touch (Fear Single Target, 70%)&#10;" wrapText="true">
+      <TextArea editable="false" layoutX="199.0" layoutY="43.0" prefHeight="218.0" prefWidth="402.0" text="Starfish: Dazzler (Dizzy Single Target, 70%)&#10;Nocturnal Flash (Dizzy AoE, 50%)&#10;&#10;Kurage: Taunt (Rage Single Target, 70%)&#10;Stagnant Air (Increases all status infliction chances by 10%)&#10;&#10;Chara: Ominous Words (Despair Single Target, 70%)&#10;Abysmal Surge (Despair AoE, 50%)&#10;&#10;Kira: Hibernate (Sleep Single Target/AoE, 70%/50%)&#10;Evil Touch (Fear Single Target, 70%)&#10;" wrapText="true">
          <font>
             <Font name="Determination Mono Web Regular" size="14.0" />
          </font>

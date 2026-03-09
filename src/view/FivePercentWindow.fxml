@@ -17,7 +17,7 @@
             <Font name="Determination Mono Web Regular" size="18.0" />
          </font>
       </Label>
-      <TextArea layoutX="190.0" layoutY="11.0" prefHeight="138.0" prefWidth="346.0" text="General: Crusader Enchant On-Hit Heal RNG&#10;&#10;Stara: Vajira Blast/Heat Wave Crit RNG&#10;&#10;Chara: Tempest Slash/Myriad Slashes Crit RNG&#10;(3 to 5 hits, 2 to 3 hits)&#10;Rising Slash/Death Scythe Crit RNG&#10;" wrapText="true">
+      <TextArea editable="false" layoutX="190.0" layoutY="11.0" prefHeight="138.0" prefWidth="346.0" text="General: Crusader Enchant On-Hit Heal RNG&#10;&#10;Stara: Vajira Blast/Heat Wave Crit RNG&#10;&#10;Chara: Tempest Slash/Myriad Slashes Crit RNG&#10;(3 to 5 hits, 2 to 3 hits)&#10;Rising Slash/Death Scythe Crit RNG&#10;" wrapText="true">
          <font>
             <Font name="Determination Mono Web Regular" size="14.0" />
          </font>

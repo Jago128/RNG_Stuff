@@ -17,7 +17,7 @@
             <Font name="Determination Mono Web Regular" size="18.0" />
          </font>
       </Label>
-      <TextArea layoutX="169.0" layoutY="52.0" prefHeight="110.0" prefWidth="341.0" text="Normal: 8% chance&#10;Stara: 12% chance&#10;Chara: Death Scythe Fear Infliction chance&#10;(50% chance)&#10;Creator!Jago: Jellyfish Sting paralyze chance (60% chance)" wrapText="true">
+      <TextArea editable="false" layoutX="169.0" layoutY="52.0" prefHeight="110.0" prefWidth="341.0" text="Normal: 8% chance&#10;Stara: 12% chance&#10;Chara: Death Scythe Fear Infliction chance&#10;(50% chance)&#10;Creator!Jago: Jellyfish Sting paralyze chance (60% chance)" wrapText="true">
          <font>
             <Font name="Determination Mono Web Regular" size="14.0" />
          </font>

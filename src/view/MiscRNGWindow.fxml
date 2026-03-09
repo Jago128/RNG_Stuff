@@ -16,7 +16,7 @@
             <Font name="Determination Mono Web Regular" size="18.0" />
          </font>
       </Label>
-      <TextArea layoutX="178.0" layoutY="10.0" prefHeight="122.0" prefWidth="280.0" text="General: Elemetal Status Scroll Choice RNG&#10;(1/3 chance for Burn, Freeze, or Shock)&#10;&#10;Chara: Frostbite spread chance at 5 potency (1/6 chance)" wrapText="true">
+      <TextArea editable="false" layoutX="178.0" layoutY="10.0" prefHeight="122.0" prefWidth="280.0" text="General: Elemetal Status Scroll Choice RNG&#10;(1/3 chance for Burn, Freeze, or Shock)&#10;&#10;Chara: Frostbite spread chance at 5 potency (1/6 chance)" wrapText="true">
          <font>
             <Font name="Determination Mono Web Regular" size="14.0" />
          </font>

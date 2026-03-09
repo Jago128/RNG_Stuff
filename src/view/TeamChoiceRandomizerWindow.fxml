@@ -16,7 +16,7 @@
             <Font name="Determination Mono Web Regular" size="18.0" />
          </font>
       </Label>
-      <TextArea layoutX="177.0" layoutY="45.0" prefHeight="110.0" prefWidth="170.0" text="Oceanic Trio&#10;Calming Storms Trio&#10;Sunny Duo&#10;&#10;Optional:&#10;Jago Sillies" wrapText="true">
+      <TextArea editable="false" layoutX="177.0" layoutY="45.0" prefHeight="110.0" prefWidth="170.0" text="Oceanic Trio&#10;Calming Storms Trio&#10;Sunny Duo&#10;&#10;Optional:&#10;Jago Sillies" wrapText="true">
          <font>
             <Font name="Determination Mono Web Regular" size="14.0" />
          </font>
