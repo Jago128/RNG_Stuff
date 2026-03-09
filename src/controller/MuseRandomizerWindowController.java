@@ -39,13 +39,13 @@ public class MuseRandomizerWindowController implements Initializable {
 			cbStarfira.setDisable(false);
 			cbJulie.setDisable(false);
 		} else {
-			cbCreatorJago.setDisable(false);
+			cbCreatorJago.setDisable(true);
 			cbCreatorJago.setSelected(false);
 
-			cbStarfira.setDisable(false);
+			cbStarfira.setDisable(true);
 			cbStarfira.setSelected(false);
 
-			cbJulie.setDisable(false);
+			cbJulie.setDisable(true);
 			cbJulie.setSelected(false);
 		}
 	}
