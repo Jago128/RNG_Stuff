@@ -27,7 +27,7 @@
          </font>
       </Label>
       <Spinner fx:id="spinnerCount" editable="true" layoutX="49.0" layoutY="76.0" prefHeight="58.0" prefWidth="104.0" />
-      <RadioButton fx:id="rbElementalScrollChoice" layoutX="222.0" layoutY="142.0" mnemonicParsing="false" prefHeight="19.0" prefWidth="192.0" text="Elemental Scroll Choice">
+      <RadioButton fx:id="rbElementalScrollChoice" layoutX="222.0" layoutY="142.0" mnemonicParsing="false" prefHeight="19.0" prefWidth="192.0" selected="true" text="Elemental Scroll Choice">
          <font>
             <Font name="Determination Mono Web Regular" size="14.0" />
          </font>
