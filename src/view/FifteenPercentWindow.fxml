@@ -15,17 +15,17 @@
             <Font name="Determination Mono Web Regular" size="18.0" />
          </font>
       </Label>
-      <TextArea editable="false" layoutX="198.0" layoutY="14.0" prefHeight="208.0" prefWidth="354.0" text="General: Unholy Enchant ATK Debuff RNG&#10;&#10;Stara:&#10;Sword Burn RNG&#10;UF Outfit Conch Slasher Crit Sting RNG&#10;&#10;Starfira: Conch Fusion Crit Chance&#10;&#10;Chara: Fire Blast Burn RNG&#10;&#10;Combination Attacks:&#10;Dual-Elememtal Beam Burn RNG (Starfish &amp; Chara)">
-         <font>
-            <Font name="Determination Mono Web Regular" size="14.0" />
-         </font>
-      </TextArea>
       <Label alignment="CENTER" layoutX="38.0" layoutY="56.0" prefHeight="26.0" prefWidth="122.0" text="Roll count:">
          <font>
             <Font name="Determination Mono Web Regular" size="16.0" />
          </font>
       </Label>
       <Spinner fx:id="spinnerCount" editable="true" layoutX="47.0" layoutY="83.0" prefHeight="58.0" prefWidth="104.0" />
+      <TextArea editable="false" layoutX="198.0" layoutY="14.0" prefHeight="208.0" prefWidth="354.0" text="General: Unholy Enchant ATK Debuff RNG&#10;&#10;Stara:&#10;Sword Burn RNG&#10;UF Outfit Conch Slasher Crit Sting RNG&#10;&#10;Starfira: Conch Fusion Crit Chance&#10;&#10;Chara: Fire Blast Burn RNG&#10;&#10;Combination Attacks:&#10;Dual-Elememtal Beam Burn RNG (Starfish &amp; Chara)">
+         <font>
+            <Font name="Determination Mono Web Regular" size="14.0" />
+         </font>
+      </TextArea>
       <Button fx:id="btnRoll" layoutX="44.0" layoutY="165.0" mnemonicParsing="false" onAction="#roll" prefHeight="26.0" prefWidth="110.0" text="Roll!">
          <font>
             <Font name="Determination Mono Web Regular" size="16.0" />

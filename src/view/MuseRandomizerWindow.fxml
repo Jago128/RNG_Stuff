@@ -16,6 +16,12 @@
             <Font name="Determination Mono Web Regular" size="18.0" />
          </font>
       </Label>
+      <Label alignment="CENTER" layoutX="20.0" layoutY="48.0" prefHeight="26.0" prefWidth="122.0" text="Roll count:">
+         <font>
+            <Font name="Determination Mono Web Regular" size="16.0" />
+         </font>
+      </Label>
+      <Spinner fx:id="spinnerCount" editable="true" layoutX="29.0" layoutY="74.0" prefHeight="58.0" prefWidth="104.0" />
       <TextArea editable="false" layoutX="272.0" layoutY="14.0" prefHeight="140.0" prefWidth="103.0" text="Starfish&#10;Stara&#10;Chara&#10;Kurage&#10;Cyclone&#10;Kira&#10;Ray&#10;Hadel" wrapText="true">
          <font>
             <Font name="Determination Mono Web Regular" size="14.0" />
@@ -26,12 +32,6 @@
             <Font name="Determination Mono Web Regular" size="14.0" />
          </font>
       </TextArea>
-      <Label alignment="CENTER" layoutX="20.0" layoutY="48.0" prefHeight="26.0" prefWidth="122.0" text="Roll count:">
-         <font>
-            <Font name="Determination Mono Web Regular" size="16.0" />
-         </font>
-      </Label>
-      <Spinner fx:id="spinnerCount" editable="true" layoutX="29.0" layoutY="74.0" prefHeight="58.0" prefWidth="104.0" />
       <CheckBox fx:id="cbOptional" layoutX="14.0" layoutY="157.0" mnemonicParsing="false" onAction="#optionalStatus" prefHeight="26.0" prefWidth="164.0" text="Optional Characters">
          <font>
             <Font name="Determination Mono Web Regular" size="14.0" />

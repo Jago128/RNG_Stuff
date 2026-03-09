@@ -16,17 +16,17 @@
             <Font name="Determination Mono Web Regular" size="18.0" />
          </font>
       </Label>
-      <TextArea editable="false" layoutX="178.0" layoutY="10.0" prefHeight="122.0" prefWidth="280.0" text="General: Elemetal Status Scroll Choice RNG&#10;(1/3 chance for Burn, Freeze, or Shock)&#10;&#10;Chara: Frostbite spread chance at 5 potency (1/6 chance)" wrapText="true">
-         <font>
-            <Font name="Determination Mono Web Regular" size="14.0" />
-         </font>
-      </TextArea>
       <Label alignment="CENTER" layoutX="39.0" layoutY="47.0" prefHeight="26.0" prefWidth="122.0" text="Roll count:">
          <font>
             <Font name="Determination Mono Web Regular" size="16.0" />
          </font>
       </Label>
       <Spinner fx:id="spinnerCount" editable="true" layoutX="49.0" layoutY="76.0" prefHeight="58.0" prefWidth="104.0" />
+      <TextArea editable="false" layoutX="178.0" layoutY="10.0" prefHeight="122.0" prefWidth="280.0" text="General: Elemetal Status Scroll Choice RNG&#10;(1/3 chance for Burn, Freeze, or Shock)&#10;&#10;Chara: Frostbite spread chance at 5 potency (1/6 chance)" wrapText="true">
+         <font>
+            <Font name="Determination Mono Web Regular" size="14.0" />
+         </font>
+      </TextArea>
       <RadioButton fx:id="rbElementalScrollChoice" layoutX="222.0" layoutY="142.0" mnemonicParsing="false" prefHeight="19.0" prefWidth="192.0" selected="true" text="Elemental Scroll Choice">
          <font>
             <Font name="Determination Mono Web Regular" size="14.0" />

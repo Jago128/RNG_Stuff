@@ -17,17 +17,17 @@
             <Font name="Determination Mono Web Regular" size="18.0" />
          </font>
       </Label>
-      <TextArea editable="false" layoutX="199.0" layoutY="43.0" prefHeight="218.0" prefWidth="402.0" text="Starfish: Dazzler (Dizzy Single Target, 70%)&#10;Nocturnal Flash (Dizzy AoE, 50%)&#10;&#10;Kurage: Taunt (Rage Single Target, 70%)&#10;Stagnant Air (Increases all status infliction chances by 10%)&#10;&#10;Chara: Ominous Words (Despair Single Target, 70%)&#10;Abysmal Surge (Despair AoE, 50%)&#10;&#10;Kira: Hibernate (Sleep Single Target/AoE, 70%/50%)&#10;Evil Touch (Fear Single Target, 70%)&#10;" wrapText="true">
-         <font>
-            <Font name="Determination Mono Web Regular" size="14.0" />
-         </font>
-      </TextArea>
       <Label alignment="CENTER" layoutX="32.0" layoutY="14.0" prefHeight="26.0" prefWidth="122.0" text="Roll count:">
          <font>
             <Font name="Determination Mono Web Regular" size="16.0" />
          </font>
       </Label>
       <Spinner fx:id="spinnerCount" editable="true" layoutX="41.0" layoutY="41.0" prefHeight="58.0" prefWidth="104.0" />
+      <TextArea editable="false" layoutX="199.0" layoutY="43.0" prefHeight="218.0" prefWidth="402.0" text="Starfish: Dazzler (Dizzy Single Target, 70%)&#10;Nocturnal Flash (Dizzy AoE, 50%)&#10;&#10;Kurage: Taunt (Rage Single Target, 70%)&#10;Stagnant Air (Increases all status infliction chances by 10%)&#10;&#10;Chara: Ominous Words (Despair Single Target, 70%)&#10;Abysmal Surge (Despair AoE, 50%)&#10;&#10;Kira: Hibernate (Sleep Single Target/AoE, 70%/50%)&#10;Evil Touch (Fear Single Target, 70%)&#10;" wrapText="true">
+         <font>
+            <Font name="Determination Mono Web Regular" size="14.0" />
+         </font>
+      </TextArea>
       <RadioButton fx:id="rbSingleTarget" layoutX="37.0" layoutY="115.0" mnemonicParsing="false" prefHeight="19.0" prefWidth="130.0" selected="true" text="Single Target">
          <font>
             <Font name="Determination Mono Web Regular" size="14.0" />
@@ -38,6 +38,11 @@
             <Font name="Determination Mono Web Regular" size="14.0" />
          </font>
       </RadioButton>
+      <CheckBox fx:id="cbStagnantAir" layoutX="35.0" layoutY="172.0" mnemonicParsing="false" onAction="#stagnantAir" prefHeight="26.0" prefWidth="122.0" text="Stagnant Air">
+         <font>
+            <Font name="Determination Mono Web Regular" size="14.0" />
+         </font>
+      </CheckBox>
       <Button fx:id="btnRoll" layoutX="41.0" layoutY="207.0" mnemonicParsing="false" onAction="#roll" prefHeight="26.0" prefWidth="110.0" text="Roll!">
          <font>
             <Font name="Determination Mono Web Regular" size="16.0" />
@@ -52,10 +57,5 @@
             </TextArea>
          </content>
       </ScrollPane>
-      <CheckBox fx:id="cbStagnantAir" layoutX="35.0" layoutY="172.0" mnemonicParsing="false" onAction="#stagnantAir" prefHeight="26.0" prefWidth="122.0" text="Stagnant Air">
-         <font>
-            <Font name="Determination Mono Web Regular" size="14.0" />
-         </font>
-      </CheckBox>
    </children>
 </AnchorPane>

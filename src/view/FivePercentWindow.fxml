@@ -17,17 +17,17 @@
             <Font name="Determination Mono Web Regular" size="18.0" />
          </font>
       </Label>
-      <TextArea editable="false" layoutX="190.0" layoutY="11.0" prefHeight="138.0" prefWidth="346.0" text="General: Crusader Enchant On-Hit Heal RNG&#10;&#10;Stara: Vajira Blast/Heat Wave Crit RNG&#10;&#10;Chara: Tempest Slash/Myriad Slashes Crit RNG&#10;(3 to 5 hits, 2 to 3 hits)&#10;Rising Slash/Death Scythe Crit RNG&#10;" wrapText="true">
-         <font>
-            <Font name="Determination Mono Web Regular" size="14.0" />
-         </font>
-      </TextArea>
       <Label alignment="CENTER" layoutX="34.0" layoutY="48.0" prefHeight="26.0" prefWidth="122.0" text="Roll count:">
          <font>
             <Font name="Determination Mono Web Regular" size="16.0" />
          </font>
       </Label>
       <Spinner fx:id="spinnerCount" editable="true" layoutX="43.0" layoutY="74.0" prefHeight="58.0" prefWidth="104.0" />
+      <TextArea editable="false" layoutX="190.0" layoutY="11.0" prefHeight="138.0" prefWidth="346.0" text="General: Crusader Enchant On-Hit Heal RNG&#10;&#10;Stara: Vajira Blast/Heat Wave Crit RNG&#10;&#10;Chara: Tempest Slash/Myriad Slashes Crit RNG&#10;(3 to 5 hits, 2 to 3 hits)&#10;Rising Slash/Death Scythe Crit RNG&#10;" wrapText="true">
+         <font>
+            <Font name="Determination Mono Web Regular" size="14.0" />
+         </font>
+      </TextArea>
       <CheckBox fx:id="cbMultiHitPhys" layoutX="287.0" layoutY="153.0" mnemonicParsing="false" onAction="#multiHits" prefHeight="26.0" prefWidth="136.0" text="Multi-Hit Phys">
          <font>
             <Font name="Determination Mono Web Regular" size="14.0" />

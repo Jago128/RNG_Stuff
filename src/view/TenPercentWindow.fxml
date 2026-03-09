@@ -16,17 +16,17 @@
             <Font name="Determination Mono Web Regular" size="18.0" />
          </font>
       </Label>
-      <TextArea editable="false" layoutX="154.0" layoutY="8.0" prefHeight="350.0" prefWidth="299.0" text="Starfish:&#10;Ice Beam Freeze RNG&#10;Temmie Armor DMG Heal&#10;(Kurage has this too)&#10;&#10;Stara:&#10;Conch Slasher Crit RNG&#10;Fireball/Fiery Breath Burn RNG&#10;Thunderbolt/Chain Lightning Paralyze RNG&#10;Rampage Crit RNG (1 to 3 hits)&#10;&#10;Chara:&#10;Fireball/Fiery Slashes Burn RNG&#10;Power Slash Crit RNG&#10;Frost Snap Infliction RNG&#10;&#10;Creator!Jago:&#10;Fireball/Dragon Breath Burn RNG&#10;Thunderbolt/Chain Lightning/Thunder Paralyze RNG&#10;Elemental Slash Fire/Paralyze RNG" wrapText="true">
-         <font>
-            <Font name="Determination Mono Web Regular" size="14.0" />
-         </font>
-      </TextArea>
       <Label alignment="CENTER" layoutX="27.0" layoutY="86.0" prefHeight="26.0" prefWidth="122.0" text="Roll count:">
          <font>
             <Font name="Determination Mono Web Regular" size="16.0" />
          </font>
       </Label>
       <Spinner fx:id="spinnerCount" editable="true" layoutX="36.0" layoutY="112.0" prefHeight="58.0" prefWidth="104.0" />
+      <TextArea editable="false" layoutX="154.0" layoutY="8.0" prefHeight="350.0" prefWidth="299.0" text="Starfish:&#10;Ice Beam Freeze RNG&#10;Temmie Armor DMG Heal&#10;(Kurage has this too)&#10;&#10;Stara:&#10;Conch Slasher Crit RNG&#10;Fireball/Fiery Breath Burn RNG&#10;Thunderbolt/Chain Lightning Paralyze RNG&#10;Rampage Crit RNG (1 to 3 hits)&#10;&#10;Chara:&#10;Fireball/Fiery Slashes Burn RNG&#10;Power Slash Crit RNG&#10;Frost Snap Infliction RNG&#10;&#10;Creator!Jago:&#10;Fireball/Dragon Breath Burn RNG&#10;Thunderbolt/Chain Lightning/Thunder Paralyze RNG&#10;Elemental Slash Fire/Paralyze RNG" wrapText="true">
+         <font>
+            <Font name="Determination Mono Web Regular" size="14.0" />
+         </font>
+      </TextArea>
       <CheckBox fx:id="cbRampage" layoutX="46.0" layoutY="183.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="84.0" text="Rampage">
          <font>
             <Font name="Determination Mono Web Regular" size="14.0" />
