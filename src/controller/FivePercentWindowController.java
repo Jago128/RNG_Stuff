@@ -58,7 +58,7 @@ public class FivePercentWindowController implements Initializable {
 		for (int i = 0; i < count; i++) {
 			result = r.nextInt(20) + 1;
 			if (result <= 2) {
-				results.append("Roll ").append(i + 1).append(" result: Effect triggered! Exact value: ").append(result)
+				results.append("Roll ").append(i + 1).append(" result: Effect triggered/Crit! Exact value: ").append(result)
 						.append("\n");
 			} else {
 				results.append("Roll ").append(i + 1).append(" result: Nothing happened. Exact value: ").append(result)

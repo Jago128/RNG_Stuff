@@ -1,6 +1,7 @@
 package controller;
 
 import java.net.URL;
+import java.util.Random;
 import java.util.ResourceBundle;
 
 import javafx.event.ActionEvent;
@@ -20,7 +21,20 @@ public class TwentyPercentWindowController implements Initializable {
 	
 	@FXML
 	private void roll(ActionEvent event) {
-		
+		Random r = new Random();
+		int result, count = spinnerCount.getValue();
+		StringBuilder results = new StringBuilder("");
+		for (int i = 0; i < count; i++) {
+			result = r.nextInt(5) + 1;
+			if (result == 5) {
+				results.append("Roll ").append(i + 1)
+						.append(" result: Effect triggered/Crit! Exact value: " + result).append("\n");
+			} else {
+				results.append("Roll ").append(i + 1).append(" result: Nothing happened. Exact value: " + result)
+						.append("\n");
+			}
+		}
+		textAreaResults.setText(results.toString());
 	}
 	
 	@Override
