@@ -21,9 +21,9 @@ public class FifteenPercentWindowController implements Initializable {
 	@FXML
 	private void roll(ActionEvent event) {
 		Random r = new Random();
-		int result, count = (int) spinnerCount.getValue();
+		int result, count = spinnerCount.getValue();
 		StringBuilder results = new StringBuilder("");
-		for (int i = 0; i < count; i++) { // 3/20
+		for (int i = 0; i < count; i++) {
 			result = r.nextInt(20) + 1;
 			if (result <= 3) {
 				results.append("Roll ").append(i + 1).append(" result: Effect triggered/Crit! Exact value: ").append(result)
