@@ -15,7 +15,7 @@
             <Font name="Determination Mono Web Regular" size="18.0" />
          </font>
       </Label>
-      <TextArea layoutX="198.0" layoutY="14.0" prefHeight="208.0" prefWidth="354.0" text="General: Unholy Enchant ATK Debuff RNG&#10;&#10;Stara:&#10;Fiery Shockwave/Sword Burn RNG&#10;UF Outfit Conch Slasher Crit Sting RNG&#10;&#10;Starfira: Conch Fusion Crit Chance&#10;&#10;Chara: Fire Blast Burn RNG&#10;&#10;Combination Attacks:&#10;Dual-Elememtal Beam Burn RNG (Starfish &amp; Chara)">
+      <TextArea layoutX="198.0" layoutY="14.0" prefHeight="208.0" prefWidth="354.0" text="General: Unholy Enchant ATK Debuff RNG&#10;&#10;Stara:&#10;Sword Burn RNG&#10;UF Outfit Conch Slasher Crit Sting RNG&#10;&#10;Starfira: Conch Fusion Crit Chance&#10;&#10;Chara: Fire Blast Burn RNG&#10;&#10;Combination Attacks:&#10;Dual-Elememtal Beam Burn RNG (Starfish &amp; Chara)">
          <font>
             <Font name="Determination Mono Web Regular" size="14.0" />
          </font>

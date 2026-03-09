@@ -16,7 +16,7 @@
             <Font name="Determination Mono Web Regular" size="18.0" />
          </font>
       </Label>
-      <TextArea layoutX="163.0" layoutY="8.0" prefHeight="360.0" prefWidth="278.0" text="Starfish:&#10;Ice Beam Freeze RNG&#10;Temmie Armor DMG Heal (Kurage has this too)&#10;&#10;Stara:&#10;Conch Slasher Crit RNG&#10;Fireball/Fiery Breath Burn RNG&#10;Thunderbolt/Chain Lightning/Thundercloud Paralyze RNG&#10;Rampage Crit RNG (1 to 3 hits)&#10;&#10;Chara:&#10;Fireball/Fiery Slashes Burn RNG&#10;Power Slash Crit RNG&#10;Frost Snap Infliction RNG&#10;&#10;Creator!Jago:&#10;Fireball/Dragon Breath Burn RNG&#10;Thunderbolt/Chain Lightning/Thunder Paralyze RNG&#10;Elemental Slash Fire/Paralyze RNG" wrapText="true">
+      <TextArea layoutX="163.0" layoutY="8.0" prefHeight="360.0" prefWidth="278.0" text="Starfish:&#10;Ice Beam Freeze RNG&#10;Temmie Armor DMG Heal (Kurage has this too)&#10;&#10;Stara:&#10;Conch Slasher Crit RNG&#10;Fireball/Fiery Breath Burn RNG&#10;Thunderbolt/Chain Lightning Paralyze RNG&#10;Rampage Crit RNG (1 to 3 hits)&#10;&#10;Chara:&#10;Fireball/Fiery Slashes Burn RNG&#10;Power Slash Crit RNG&#10;Frost Snap Infliction RNG&#10;&#10;Creator!Jago:&#10;Fireball/Dragon Breath Burn RNG&#10;Thunderbolt/Chain Lightning/Thunder Paralyze RNG&#10;Elemental Slash Fire/Paralyze RNG" wrapText="true">
          <font>
             <Font name="Determination Mono Web Regular" size="14.0" />
          </font>
