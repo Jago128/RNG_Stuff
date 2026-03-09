@@ -1,8 +1,7 @@
 package controller;
 
 import java.net.URL;
-import java.util.Random;
-import java.util.ResourceBundle;
+import java.util.*;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.*;
@@ -48,7 +47,7 @@ public class AttackSkillStatusInflictionRNGWindowController implements Initializ
 			stAirForAttack = false;
 		}
 	}
-	
+
 	@FXML
 	private void numberCheck(ActionEvent event) {
 		if (rbDeathScythe.isSelected() || rbJellyfishSting.isSelected()) {
@@ -96,7 +95,6 @@ public class AttackSkillStatusInflictionRNGWindowController implements Initializ
 					}
 				}
 			}
-
 		} else if (rbStara.isSelected()) {
 			if (!stAirForAttack) {
 				for (int i = 0; i < count; i++) { // 12% chance (3/25)
@@ -127,33 +125,19 @@ public class AttackSkillStatusInflictionRNGWindowController implements Initializ
 					}
 				}
 			}
-
 		} else if (rbDeathScythe.isSelected()) {
-			for (int i = 0; i < count; i++) { // 50% chance
-				result = r.nextInt(10) + 1;
-				if (result <= 5 + stagnantAir) {
-					results.append("The enemy was inflicted with fear! Exact value: ").append(result).append("\n");
-					if (count > 5) {
-						effectCount++;
-					}
-				} else {
-					results.append("No status effect on the enemy. Exact value: ").append(result)
-							.append("\n");
-				}
+			result = r.nextInt(10) + 1;
+			if (result <= 5 + stagnantAir) {
+				results.append("The enemy was inflicted with fear! Exact value: ").append(result).append("\n");
+			} else {
+				results.append("No status effect on the enemy. Exact value: ").append(result).append("\n");
 			}
 		} else if (rbJellyfishSting.isSelected()) {
-			for (int i = 0; i < count; i++) { // 60% chance
-				result = r.nextInt(10) + 1;
-				if (result <= 6) {
-					results.append("The enemy was paralyzed! Exact value: ")
-							.append(result).append("\n");
-					if (count > 5) {
-						effectCount++;
-					}
-				} else {
-					results.append("No status effect on the enemy. Exact value: ").append(result)
-							.append("\n");
-				}
+			result = r.nextInt(10) + 1;
+			if (result <= 6) {
+				results.append("The enemy was paralyzed! Exact value: ").append(result).append("\n");
+			} else {
+				results.append("No status effect on the enemy. Exact value: ").append(result).append("\n");
 			}
 		}
 
