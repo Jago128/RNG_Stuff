@@ -37,7 +37,7 @@ public class FivePercentWindowController implements Initializable {
 
 			rbTempestSlash.setDisable(false);
 			rbTempestSlash.setSelected(true);
-			
+
 			rbMyriadSlashes.setDisable(false);
 		} else {
 			spinnerCount.setDisable(false);
