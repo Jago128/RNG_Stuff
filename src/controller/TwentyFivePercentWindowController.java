@@ -25,7 +25,7 @@ public class TwentyFivePercentWindowController implements Initializable {
 		StringBuilder results = new StringBuilder("");
 		for (int i = 0; i < count; i++) {
 			result = r.nextInt(4) + 1;
-			if (result == 4) {
+			if (result == 1) {
 				results.append("Roll ").append(i + 1).append(" result: Effect triggered/Crit! Exact value: " + result)
 						.append("\n");
 			} else {
