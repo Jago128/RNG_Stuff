@@ -10,7 +10,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="428.0" prefWidth="543.0" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.FivePercentWindowController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="438.0" prefWidth="543.0" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.FivePercentWindowController">
    <children>
       <Label alignment="CENTER" layoutX="46.0" layoutY="14.0" prefHeight="34.0" prefWidth="98.0" text="5% Stuff">
          <font>
@@ -23,32 +23,32 @@
          </font>
       </Label>
       <Spinner fx:id="spinnerCount" editable="true" layoutX="43.0" layoutY="74.0" prefHeight="58.0" prefWidth="104.0" />
-      <TextArea editable="false" layoutX="190.0" layoutY="11.0" prefHeight="138.0" prefWidth="346.0" text="General: Crusader Enchant On-Hit Heal RNG&#10;&#10;Stara: Vajira Blast/Heat Wave Crit RNG&#10;&#10;Chara: Tempest Slash/Myriad Slashes Crit RNG&#10;(3 to 5 hits, 2 to 3 hits)&#10;Rising Slash/Death Scythe Crit RNG&#10;" wrapText="true">
+      <TextArea editable="false" layoutX="190.0" layoutY="11.0" prefHeight="152.0" prefWidth="346.0" text="General: Crusader Enchant On-Hit Heal RNG&#10;&#10;Stara: Vajira Blast/Heat Wave Crit RNG&#10;&#10;Chara: Tempest Slash/Myriad Slashes Crit RNG&#10;(3 to 5 hits, 2 to 3 hits)&#10;Rising Slash/Death Scythe Crit RNG&#10;Angelic Light Despair infliction chance&#10;" wrapText="true">
          <font>
             <Font name="Determination Mono Web Regular" size="14.0" />
          </font>
       </TextArea>
-      <CheckBox fx:id="cbMultiHitPhys" layoutX="287.0" layoutY="153.0" mnemonicParsing="false" onAction="#multiHits" prefHeight="26.0" prefWidth="136.0" text="Multi-Hit Phys">
+      <CheckBox fx:id="cbMultiHitPhys" layoutX="287.0" layoutY="165.0" mnemonicParsing="false" onAction="#multiHits" prefHeight="26.0" prefWidth="136.0" text="Multi-Hit Phys">
          <font>
             <Font name="Determination Mono Web Regular" size="14.0" />
          </font>
       </CheckBox>
-      <RadioButton fx:id="rbTempestSlash" disable="true" layoutX="205.0" layoutY="183.0" mnemonicParsing="false" prefHeight="19.0" prefWidth="122.0" text="Tempest Slash">
+      <RadioButton fx:id="rbTempestSlash" disable="true" layoutX="205.0" layoutY="195.0" mnemonicParsing="false" prefHeight="19.0" prefWidth="122.0" text="Tempest Slash">
          <font>
             <Font name="Determination Mono Web Regular" size="14.0" />
          </font>
       </RadioButton>
-      <RadioButton fx:id="rbMyriadSlashes" disable="true" layoutX="355.0" layoutY="183.0" mnemonicParsing="false" prefHeight="19.0" prefWidth="136.0" text="Myriad Slashes">
+      <RadioButton fx:id="rbMyriadSlashes" disable="true" layoutX="355.0" layoutY="195.0" mnemonicParsing="false" prefHeight="19.0" prefWidth="136.0" text="Myriad Slashes">
          <font>
             <Font name="Determination Mono Web Regular" size="14.0" />
          </font>
       </RadioButton>
-      <Button fx:id="btnRoll" layoutX="39.0" layoutY="153.0" mnemonicParsing="false" onAction="#roll" prefHeight="26.0" prefWidth="110.0" text="Roll!">
+      <Button fx:id="btnRoll" layoutX="39.0" layoutY="165.0" mnemonicParsing="false" onAction="#roll" prefHeight="26.0" prefWidth="110.0" text="Roll!">
          <font>
             <Font name="Determination Mono Web Regular" size="16.0" />
          </font>
       </Button>
-      <ScrollPane fitToHeight="true" fitToWidth="true" layoutX="14.0" layoutY="210.0" prefHeight="206.0" prefWidth="518.0">
+      <ScrollPane fitToHeight="true" fitToWidth="true" layoutX="14.0" layoutY="222.0" prefHeight="206.0" prefWidth="518.0">
          <content>
             <TextArea fx:id="textAreaResults" editable="false" prefHeight="369.0" prefWidth="377.0" promptText="Results go here!" wrapText="true">
                <font>
