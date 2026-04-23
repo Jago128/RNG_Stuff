@@ -8,7 +8,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="381.0" prefWidth="566.0" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.TwentyFivePercentWindowController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="411.0" prefWidth="566.0" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.TwentyFivePercentWindowController">
    <children>
       <Label alignment="CENTER" layoutX="38.0" layoutY="14.0" prefHeight="34.0" prefWidth="98.0" text="25% Stuff">
          <font>
@@ -21,7 +21,7 @@
          </font>
       </Label>
       <Spinner fx:id="spinnerCount" editable="true" layoutX="35.0" layoutY="74.0" prefHeight="58.0" prefWidth="104.0" />
-      <TextArea editable="false" layoutX="170.0" layoutY="12.0" prefHeight="142.0" prefWidth="382.0" text="General: Stunning Scroll Stun RNG&#10;Void Tea Bonus healing RNG&#10;&#10;Stara:&#10;UF Outfit Conch Destroyer Crit Sting RNG&#10;Outertale Outfit Gravity effect trigger&#10;&#10;Starfira: Storm of the Oceans Crit Sting RNG" wrapText="true">
+      <TextArea editable="false" layoutX="170.0" layoutY="12.0" prefHeight="182.0" prefWidth="382.0" text="General: Stunning Scroll Stun RNG&#10;Void Tea Bonus healing RNG&#10;&#10;Stara:&#10;UF Outfit Conch Destroyer Crit Sting RNG&#10;Outertale Outfit Gravity effect trigger&#10;&#10;Starfira: Storm of the Oceans Crit Sting RNG&#10;&#10;Coral: Wrath of The Oceanic Trio Crit RNG" wrapText="true">
          <font>
             <Font name="Determination Mono Web Regular" size="14.0" />
          </font>
@@ -31,7 +31,7 @@
             <Font name="Determination Mono Web Regular" size="16.0" />
          </font>
       </Button>
-      <ScrollPane fitToHeight="true" fitToWidth="true" layoutX="14.0" layoutY="178.0" prefHeight="190.0" prefWidth="534.0">
+      <ScrollPane fitToHeight="true" fitToWidth="true" layoutX="16.0" layoutY="206.0" prefHeight="190.0" prefWidth="534.0">
          <content>
             <TextArea fx:id="textAreaResults" editable="false" prefHeight="369.0" prefWidth="377.0" promptText="Results go here!" wrapText="true">
                <font>

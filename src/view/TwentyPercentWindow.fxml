@@ -8,7 +8,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="381.0" prefWidth="517.0" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.TwentyPercentWindowController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="398.0" prefWidth="519.0" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.TwentyPercentWindowController">
    <children>
       <Label alignment="CENTER" layoutX="41.0" layoutY="14.0" prefHeight="34.0" prefWidth="98.0" text="20% Stuff">
          <font>
@@ -21,7 +21,7 @@
          </font>
       </Label>
       <Spinner fx:id="spinnerCount" editable="true" layoutX="38.0" layoutY="74.0" prefHeight="58.0" prefWidth="104.0" />
-      <TextArea editable="false" layoutX="180.0" layoutY="14.0" prefHeight="154.0" prefWidth="323.0" text="Stara:&#10;Conch Destroyer Crit RNG (Same for Cyclone)&#10;Lunge Crit RNG&#10;&#10;Chara:&#10;Fiery Beam Burn RNG&#10;Cleave/Power Slash Crit RNG&#10;Frostbite Spread RNG" wrapText="true">
+      <TextArea editable="false" layoutX="180.0" layoutY="7.0" prefHeight="182.0" prefWidth="330.0" text="Stara:&#10;Conch Destroyer Crit RNG (Same for Cyclone)&#10;Lunge Crit RNG&#10;&#10;Chara:&#10;Fiery Beam Burn RNG&#10;Cleave/Power Slash Crit RNG&#10;Frostbite Spread RNG&#10;&#10;Coral: The Oceanic Trio's Will Crit RNG" wrapText="true">
          <font>
             <Font name="Determination Mono Web Regular" size="14.0" />
          </font>
@@ -31,7 +31,7 @@
             <Font name="Determination Mono Web Regular" size="16.0" />
          </font>
       </Button>
-      <ScrollPane fitToHeight="true" fitToWidth="true" layoutX="11.0" layoutY="178.0" prefHeight="190.0" prefWidth="492.0">
+      <ScrollPane fitToHeight="true" fitToWidth="true" layoutX="15.0" layoutY="197.0" prefHeight="190.0" prefWidth="490.0">
          <content>
             <TextArea fx:id="textAreaResults" editable="false" prefHeight="369.0" prefWidth="377.0" promptText="Results go here!" wrapText="true">
                <font>
