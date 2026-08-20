@@ -77,7 +77,7 @@ public class MuseRandomizerWindowController implements Initializable {
 		int result, count = spinnerCount.getValue();
 		StringBuilder results = new StringBuilder("");
 		for (int i = 0; i < count; i++) {
-			result = r.nextInt(8 + creatorJago + starfira + julie) + 1;
+			result = r.nextInt(9 + creatorJago + starfira + julie) + 1;
 			switch (result) {
 			case 1:
 				results.append("Roll ").append(i + 1).append(" result: ").append("Starfish. Exact value: ")
@@ -118,8 +118,13 @@ public class MuseRandomizerWindowController implements Initializable {
 				results.append("Roll ").append(i + 1).append(" result: ").append("Hadel. Exact value: ").append(result)
 						.append("\n");
 				break;
-
+				
 			case 9:
+				results.append("Roll ").append(i + 1).append(" result: ").append("Eight. Exact value: ").append(result)
+				.append("\n");
+				break;
+
+			case 10:
 				if (cbCreatorJago.isSelected() && !cbStarfira.isSelected() && !cbJulie.isSelected()) {
 					results.append("Roll ").append(i + 1).append(" result: ").append("Creator!Jago. Exact value: ")
 							.append(result).append("\n");
@@ -135,7 +140,7 @@ public class MuseRandomizerWindowController implements Initializable {
 				}
 				break;
 
-			case 10:
+			case 11:
 				if (cbCreatorJago.isSelected() && cbStarfira.isSelected() && !cbJulie.isSelected()) {
 					results.append("Roll ").append(i + 1).append(" result: ").append("Starfira. Exact value: ")
 							.append(result).append("\n");
@@ -146,7 +151,7 @@ public class MuseRandomizerWindowController implements Initializable {
 				}
 				break;
 
-			case 11:
+			case 12:
 				if (cbCreatorJago.isSelected() && cbStarfira.isSelected() && cbJulie.isSelected()) {
 					results.append("Roll ").append(i + 1).append(" result: ").append("Julie. Exact value: ")
 							.append(result).append("\n");
