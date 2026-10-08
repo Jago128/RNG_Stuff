@@ -22,7 +22,7 @@
          </font>
       </Label>
       <Spinner fx:id="spinnerCount" editable="true" layoutX="30.0" layoutY="112.0" prefHeight="58.0" prefWidth="104.0" />
-      <TextArea editable="false" layoutX="151.0" layoutY="8.0" prefHeight="358.0" prefWidth="374.0" text="Starfish:&#10;Ice Beam Freeze RNG&#10;Temmie Armor DMG Heal&#10;(Kurage has this too)&#10;Oceanic Waves Soak infliction chance&#10;&#10;Stara:&#10;Conch Slasher Crit RNG&#10;Fireball/Fiery Breath Burn RNG&#10;Thunderbolt/Chain Lightning Paralyze RNG&#10;Rampage Crit RNG (1 to 3 hits)&#10;Scorcher of Forests Burn infliction chance&#10;&#10;Chara:&#10;Fireball/Fiery Slashes Burn RNG&#10;Power Slash Crit RNG&#10;&#10;Creator!Jago:&#10;Fireball/Dragon Breath Burn RNG&#10;Thunderbolt/Chain Lightning/Thunder Paralyze RNG&#10;Elemental Slash Fire/Paralyze RNG" wrapText="true">
+      <TextArea editable="false" layoutX="151.0" layoutY="8.0" prefHeight="358.0" prefWidth="374.0" text="Starfish:&#10;Ice Beam Freeze RNG&#10;Temmie Armor DMG Heal&#10;(Kurage has this too)&#10;Oceanic Waves Soak infliction chance&#10;&#10;Stara:&#10;Conch Slasher Crit RNG&#10;Fireball/Fiery Breath Burn RNG&#10;Thunderbolt/Chain Lightning Paralyze RNG&#10;Rampage Crit RNG (1 to 3 hits)&#10;Scorcher of Forests Burn infliction chance&#10;&#10;Chara:&#10;Fireball Burn RNG&#10;Power Slash Crit RNG&#10;&#10;Creator!Jago:&#10;Fireball/Dragon Breath Burn RNG&#10;Thunderbolt/Chain Lightning/Thunder Paralyze RNG&#10;Elemental Slash Fire/Paralyze RNG" wrapText="true">
          <font>
             <Font name="Determination Mono Web Regular" size="14.0" />
          </font>

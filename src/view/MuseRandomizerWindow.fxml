@@ -27,7 +27,7 @@
             <Font name="Determination Mono Web Regular" size="14.0" />
          </font>
       </TextArea>
-      <TextArea editable="false" layoutX="387.0" layoutY="14.0" prefHeight="159.0" prefWidth="111.0" text="Optional:&#10;Creator!Jago&#10;Starfira&#10;Julie" wrapText="true">
+      <TextArea editable="false" layoutX="387.0" layoutY="3.0" prefHeight="170.0" prefWidth="111.0" text="Optional:&#10;Creator!Jago&#10;Starfira&#10;Julie" wrapText="true">
          <font>
             <Font name="Determination Mono Web Regular" size="14.0" />
          </font>

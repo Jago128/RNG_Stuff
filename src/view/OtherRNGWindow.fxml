@@ -15,18 +15,18 @@
             <Font name="Determination Mono Web Regular" size="18.0" />
          </font>
       </Label>
-      <Label alignment="CENTER" layoutX="32.0" layoutY="28.0" prefHeight="26.0" prefWidth="122.0" text="Number:">
+      <Label alignment="CENTER" layoutX="32.0" layoutY="19.0" prefHeight="26.0" prefWidth="122.0" text="Number:">
          <font>
             <Font name="Determination Mono Web Regular" size="16.0" />
          </font>
       </Label>
-      <Spinner fx:id="spinnerNumber" editable="true" layoutX="41.0" layoutY="55.0" prefHeight="58.0" prefWidth="104.0" />
-      <Label alignment="CENTER" layoutX="323.0" layoutY="28.0" prefHeight="26.0" prefWidth="122.0" text="Roll count:">
+      <Spinner fx:id="spinnerNumber" editable="true" layoutX="41.0" layoutY="46.0" prefHeight="58.0" prefWidth="104.0" />
+      <Label alignment="CENTER" layoutX="323.0" layoutY="20.0" prefHeight="26.0" prefWidth="122.0" text="Roll count:">
          <font>
             <Font name="Determination Mono Web Regular" size="16.0" />
          </font>
       </Label>
-      <Spinner fx:id="spinnerCount" editable="true" layoutX="332.0" layoutY="55.0" prefHeight="58.0" prefWidth="104.0" />
+      <Spinner fx:id="spinnerCount" editable="true" layoutX="332.0" layoutY="47.0" prefHeight="58.0" prefWidth="104.0" />
       <Button fx:id="btnRoll" layoutX="191.0" layoutY="70.0" mnemonicParsing="false" onAction="#roll" prefHeight="26.0" prefWidth="110.0" text="Roll!">
          <font>
             <Font name="Determination Mono Web Regular" size="16.0" />
