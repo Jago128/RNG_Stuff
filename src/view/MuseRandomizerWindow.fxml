@@ -9,7 +9,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="449.0" prefWidth="511.0" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.MuseRandomizerWindowController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="424.0" prefWidth="665.0" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.MuseRandomizerWindowController">
    <children>
       <Label alignment="CENTER" layoutX="57.0" layoutY="14.0" prefHeight="34.0" prefWidth="180.0" text="Muse Randomizer">
          <font>
@@ -22,32 +22,32 @@
          </font>
       </Label>
       <Spinner fx:id="spinnerCount" editable="true" layoutX="26.0" layoutY="94.0" prefHeight="58.0" prefWidth="104.0" />
-      <TextArea editable="false" layoutX="272.0" layoutY="4.0" prefHeight="169.0" prefWidth="103.0" text="Starfish&#10;Stara&#10;Chara&#10;Kurage&#10;Cyclone&#10;Kira&#10;Ray&#10;Hadel&#10;Eight" wrapText="true">
+      <TextArea editable="false" layoutX="285.0" layoutY="80.0" prefHeight="58.0" prefWidth="103.0" text="Kurage&#10;Cyclone&#10;Kira" wrapText="true">
          <font>
             <Font name="Determination Mono Web Regular" size="14.0" />
          </font>
       </TextArea>
-      <TextArea editable="false" layoutX="387.0" layoutY="3.0" prefHeight="170.0" prefWidth="111.0" text="Optional:&#10;Creator!Jago&#10;Starfira&#10;Julie" wrapText="true">
+      <TextArea editable="false" layoutX="520.0" layoutY="6.0" prefHeight="110.0" prefWidth="122.0" text="Optionals:&#10;Creator!Jago&#10;Starfira&#10;Coral&#10;Julie&#10;Deep Seas Trio" wrapText="true">
          <font>
             <Font name="Determination Mono Web Regular" size="14.0" />
          </font>
       </TextArea>
-      <CheckBox fx:id="cbOptional" layoutX="15.0" layoutY="190.0" mnemonicParsing="false" onAction="#optionalStatus" prefHeight="26.0" prefWidth="164.0" text="Optional Characters">
+      <CheckBox fx:id="cbOptional" layoutX="404.0" layoutY="163.0" mnemonicParsing="false" onAction="#optionalStatus" prefHeight="26.0" prefWidth="103.0" text="Optionals">
          <font>
             <Font name="Determination Mono Web Regular" size="14.0" />
          </font>
       </CheckBox>
-      <CheckBox fx:id="cbCreatorJago" disable="true" layoutX="188.0" layoutY="190.0" mnemonicParsing="false" onAction="#optionals" prefHeight="26.0" prefWidth="122.0" text="Creator!Jago">
+      <CheckBox fx:id="cbCreatorJago" disable="true" layoutX="26.0" layoutY="163.0" mnemonicParsing="false" onAction="#optionals" prefHeight="26.0" prefWidth="122.0" text="Creator!Jago">
          <font>
             <Font name="Determination Mono Web Regular" size="14.0" />
          </font>
       </CheckBox>
-      <CheckBox fx:id="cbStarfira" disable="true" layoutX="312.0" layoutY="190.0" mnemonicParsing="false" onAction="#optionals" prefHeight="26.0" prefWidth="91.0" text="Starfira">
+      <CheckBox fx:id="cbStarfira" disable="true" layoutX="152.0" layoutY="163.0" mnemonicParsing="false" onAction="#optionals" prefHeight="26.0" prefWidth="91.0" text="Starfira">
          <font>
             <Font name="Determination Mono Web Regular" size="14.0" />
          </font>
       </CheckBox>
-      <CheckBox fx:id="cbJulie" disable="true" layoutX="419.0" layoutY="190.0" mnemonicParsing="false" onAction="#optionals" prefHeight="26.0" prefWidth="74.0" text="Julie">
+      <CheckBox fx:id="cbJulie" disable="true" layoutX="318.0" layoutY="163.0" mnemonicParsing="false" onAction="#optionals" prefHeight="26.0" prefWidth="74.0" text="Julie">
          <font>
             <Font name="Determination Mono Web Regular" size="14.0" />
          </font>
@@ -57,7 +57,7 @@
             <Font name="Determination Mono Web Regular" size="16.0" />
          </font>
       </Button>
-      <ScrollPane fitToHeight="true" fitToWidth="true" layoutX="17.0" layoutY="223.0" prefHeight="212.0" prefWidth="479.0">
+      <ScrollPane fitToHeight="true" fitToWidth="true" layoutX="21.0" layoutY="196.0" prefHeight="212.0" prefWidth="634.0">
          <content>
             <TextArea fx:id="textAreaResults" editable="false" prefHeight="310.0" prefWidth="260.0" promptText="Results go here!" wrapText="true">
                <font>
@@ -66,5 +66,30 @@
             </TextArea>
          </content>
       </ScrollPane>
+      <TextArea editable="false" layoutX="285.0" layoutY="9.0" prefHeight="58.0" prefWidth="103.0" text="Starfish&#10;Stara&#10;Chara" wrapText="true">
+         <font>
+            <Font name="Determination Mono Web Regular" size="14.0" />
+         </font>
+      </TextArea>
+      <TextArea editable="false" layoutX="404.0" layoutY="9.0" prefHeight="58.0" prefWidth="103.0" text="Ray&#10;Hadel&#10;Eight" wrapText="true">
+         <font>
+            <Font name="Determination Mono Web Regular" size="14.0" />
+         </font>
+      </TextArea>
+      <TextArea editable="false" layoutX="404.0" layoutY="83.0" prefHeight="52.0" prefWidth="103.0" text="Frisk&#10;Asriel" wrapText="true">
+         <font>
+            <Font name="Determination Mono Web Regular" size="14.0" />
+         </font>
+      </TextArea>
+      <CheckBox fx:id="cbCoral" disable="true" layoutX="245.0" layoutY="163.0" mnemonicParsing="false" onAction="#optionals" prefHeight="26.0" prefWidth="74.0" text="Coral">
+         <font>
+            <Font name="Determination Mono Web Regular" size="14.0" />
+         </font>
+      </CheckBox>
+      <TextArea editable="false" layoutX="529.0" layoutY="126.0" prefHeight="52.0" prefWidth="103.0" text="Voidra&#10;Azura" wrapText="true">
+         <font>
+            <Font name="Determination Mono Web Regular" size="14.0" />
+         </font>
+      </TextArea>
    </children>
 </AnchorPane>

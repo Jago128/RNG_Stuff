@@ -28,15 +28,19 @@ public class MuseRandomizerWindowController implements Initializable {
 	private CheckBox cbStarfira;
 
 	@FXML
+	private CheckBox cbCoral;
+
+	@FXML
 	private CheckBox cbJulie;
 
-	private int creatorJago = 0, starfira = 0, julie = 0;
+	private int creatorJago = 0, starfira = 0, coral = 0, julie = 0;
 
 	@FXML
 	private void optionalStatus(ActionEvent event) {
 		if (cbOptional.isSelected()) {
 			cbCreatorJago.setDisable(false);
 			cbStarfira.setDisable(false);
+			cbCoral.setDisable(false);
 			cbJulie.setDisable(false);
 		} else {
 			cbCreatorJago.setDisable(true);
@@ -47,6 +51,9 @@ public class MuseRandomizerWindowController implements Initializable {
 
 			cbJulie.setDisable(true);
 			cbJulie.setSelected(false);
+
+			cbCoral.setDisable(true);
+			cbCoral.setSelected(false);
 		}
 	}
 
@@ -64,6 +71,12 @@ public class MuseRandomizerWindowController implements Initializable {
 			starfira = 0;
 		}
 
+		if (cbCoral.isSelected()) {
+			coral = 1;
+		} else {
+			coral = 0;
+		}
+
 		if (cbJulie.isSelected()) {
 			julie = 1;
 		} else {
@@ -77,7 +90,7 @@ public class MuseRandomizerWindowController implements Initializable {
 		int result, count = spinnerCount.getValue();
 		StringBuilder results = new StringBuilder("");
 		for (int i = 0; i < count; i++) {
-			result = r.nextInt(9 + creatorJago + starfira + julie) + 1;
+			result = r.nextInt(11 + creatorJago + starfira + coral + julie) + 1;
 			switch (result) {
 			case 1:
 				results.append("Roll ").append(i + 1).append(" result: ").append("Starfish. Exact value: ")
@@ -118,44 +131,64 @@ public class MuseRandomizerWindowController implements Initializable {
 				results.append("Roll ").append(i + 1).append(" result: ").append("Hadel. Exact value: ").append(result)
 						.append("\n");
 				break;
-				
+
 			case 9:
 				results.append("Roll ").append(i + 1).append(" result: ").append("Eight. Exact value: ").append(result)
-				.append("\n");
+						.append("\n");
 				break;
 
 			case 10:
-				if (cbCreatorJago.isSelected() && !cbStarfira.isSelected() && !cbJulie.isSelected()) {
-					results.append("Roll ").append(i + 1).append(" result: ").append("Creator!Jago. Exact value: ")
-							.append(result).append("\n");
-				}
-
-				if (!cbCreatorJago.isSelected() && cbStarfira.isSelected() && !cbJulie.isSelected()) {
-					results.append("Roll ").append(i + 1).append(" result: ").append("Starfira. Exact value: ")
-							.append(result).append("\n");
-				}
-				if (!cbCreatorJago.isSelected() && !cbStarfira.isSelected() && cbJulie.isSelected()) {
-					results.append("Roll ").append(i + 1).append(" result: ").append("Julie. Exact value: ")
-							.append(result).append("\n");
-				}
+				results.append("Roll ").append(i + 1).append(" result: ").append("Frisk. Exact value: ").append(result)
+						.append("\n");
 				break;
 
 			case 11:
-				if (cbCreatorJago.isSelected() && cbStarfira.isSelected() && !cbJulie.isSelected()) {
-					results.append("Roll ").append(i + 1).append(" result: ").append("Starfira. Exact value: ")
-							.append(result).append("\n");
-				}
-				if (cbCreatorJago.isSelected() && !cbStarfira.isSelected() && cbJulie.isSelected()) {
-					results.append("Roll ").append(i + 1).append(" result: ").append("Julie. Exact value: ")
-							.append(result).append("\n");
-				}
+				results.append("Roll ").append(i + 1).append(" result: ").append("Asriel. Exact value: ").append(result)
+						.append("\n");
 				break;
 
 			case 12:
-				if (cbCreatorJago.isSelected() && cbStarfira.isSelected() && cbJulie.isSelected()) {
-					results.append("Roll ").append(i + 1).append(" result: ").append("Julie. Exact value: ")
-							.append(result).append("\n");
+				if (cbCreatorJago.isSelected()) {
+					results.append("Roll ").append(i + 1).append(" result: ").append("Creator!Jago. Exact value: ")
+					.append(result).append("\n");
+				} else if (!cbCreatorJago.isSelected() && cbStarfira.isSelected()) {
+					results.append("Roll ").append(i + 1).append(" result: ").append("Starfira. Exact value: ")
+					.append(result).append("\n");
+				} else if (!cbCreatorJago.isSelected() && !cbStarfira.isSelected() && cbCoral.isSelected()) {
+					results.append("Roll ").append(i + 1).append(" result: ").append("Coral. Exact value: ").append(result)
+					.append("\n");
+				} else if (!cbCreatorJago.isSelected() && !cbStarfira.isSelected() && !cbCoral.isSelected() && cbJulie.isSelected()) {
+					results.append("Roll ").append(i + 1).append(" result: ").append("Julie. Exact value: ").append(result)
+					.append("\n");
 				}
+				break;
+
+			case 13:				
+				if (cbStarfira.isSelected()) {
+					results.append("Roll ").append(i + 1).append(" result: ").append("Starfira. Exact value: ")
+					.append(result).append("\n");
+				} else if (!cbStarfira.isSelected() && cbCoral.isSelected()) {
+					results.append("Roll ").append(i + 1).append(" result: ").append("Coral. Exact value: ").append(result)
+					.append("\n");
+				} else if (!cbStarfira.isSelected() && !cbCoral.isSelected() && cbJulie.isSelected()) {
+					results.append("Roll ").append(i + 1).append(" result: ").append("Julie. Exact value: ").append(result)
+					.append("\n");
+				}
+				break;
+
+			case 14:
+				if (cbCoral.isSelected()) {
+					results.append("Roll ").append(i + 1).append(" result: ").append("Coral. Exact value: ").append(result)
+					.append("\n");
+				} else if (!cbCoral.isSelected() && cbJulie.isSelected()) {
+					results.append("Roll ").append(i + 1).append(" result: ").append("Julie. Exact value: ").append(result)
+					.append("\n");
+				}
+				break;
+
+			case 15:
+				results.append("Roll ").append(i + 1).append(" result: ").append("Julie. Exact value: ").append(result)
+						.append("\n");
 				break;
 			}
 		}
