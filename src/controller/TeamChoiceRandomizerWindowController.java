@@ -19,16 +19,16 @@ public class TeamChoiceRandomizerWindowController implements Initializable {
 	private TextArea textAreaResults;
 
 	@FXML
-	private CheckBox cbJagoSillies;
+	private CheckBox cbGroup;
 	
-	private int jagoSillies = 0;
+	private int fullGroup = 0;
 
 	@FXML
 	private void jagoSillies(ActionEvent event) {
-		if (cbJagoSillies.isSelected()) {
-			jagoSillies = 1;
+		if (cbGroup.isSelected()) {
+			fullGroup = 1;
 		} else {
-			jagoSillies = 0;
+			fullGroup = 0;
 		}
 	}
 
@@ -39,7 +39,7 @@ public class TeamChoiceRandomizerWindowController implements Initializable {
 		int result, count = spinnerCount.getValue();
 		StringBuilder results = new StringBuilder("");
 		for (int i = 0; i < count; i++) {
-			result = r.nextInt(3 + jagoSillies) + 1;
+			result = r.nextInt(4 + fullGroup) + 1;
 			switch (result) {
 			case 1:
 				results.append("Roll ").append(i + 1).append(" result: ").append("Oceanic Trio. Exact value: ")
@@ -55,9 +55,14 @@ public class TeamChoiceRandomizerWindowController implements Initializable {
 				results.append("Roll ").append(i + 1).append(" result: ").append("Sunny Duo. Exact value: ")
 						.append(result).append("\n");
 				break;
-
+				
 			case 4:
-				results.append("Roll ").append(i + 1).append(" result: ").append("Jago Sillies. Exact value: ")
+				results.append("Roll ").append(i + 1).append(" result: ").append("Dreemurr Siblings. Exact value: ")
+						.append(result).append("\n");
+				break;
+
+			case 5:
+				results.append("Roll ").append(i + 1).append(" result: ").append("Full Group. Exact value: ")
 						.append(result).append("\n");
 				break;
 			}
